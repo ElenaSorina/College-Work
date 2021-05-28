@@ -1,0 +1,993 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.29)  3 APR 2021 12:06
+entering extended mode
+**./document.tex
+(document.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18> (E:\Latex\tex/latex/base\article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(E:\Latex\tex/latex/base\size12.clo
+File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count179
+\c@section=\count180
+\c@subsection=\count181
+\c@subsubsection=\count182
+\c@paragraph=\count183
+\c@subparagraph=\count184
+\c@figure=\count185
+\c@table=\count186
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (E:\Latex\tex/latex/outlines\outlines.sty
+Package: outlines 2012/1/23 1.1 Ch. Pecheur
+(E:\Latex\tex/latex/base\ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)) (E:\Latex\tex/latex/graphics\graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+(E:\Latex\tex/latex/graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(E:\Latex\tex/latex/graphics\graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+ (E:\Latex\tex/latex/graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (E:\Latex\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(E:\Latex\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen139
+\Gin@req@width=\dimen140
+)
+(E:\Latex\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count187
+\float@exts=\toks16
+\float@box=\box47
+\@float@everytoks=\toks17
+\@floatcapt=\box48
+)
+(E:\Latex\tex/latex/mathtools\mathtools.sty
+Package: mathtools 2021/03/18 v1.25 mathematical typesetting tools
+
+(E:\Latex\tex/latex/latex-tools\calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count188
+\calc@Bcount=\count189
+\calc@Adimen=\dimen141
+\calc@Bdimen=\dimen142
+\calc@Askip=\skip49
+\calc@Bskip=\skip50
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count190
+\calc@Cskip=\skip51
+)
+(E:\Latex\tex/latex/mathtools\mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+(E:\Latex\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip52
+
+For additional information on amsmath, use the `?' option.
+(E:\Latex\tex/latex/amsmath\amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (E:\Latex\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen143
+)) (E:\Latex\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen144
+)
+(E:\Latex\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count191
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count192
+\leftroot@=\count193
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count194
+\DOTSCASE@=\count195
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box49
+\strutbox@=\box50
+\big@size=\dimen145
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count196
+\c@MaxMatrixCols=\count197
+\dotsspace@=\muskip16
+\c@parentequation=\count198
+\dspbrk@lvl=\count199
+\tag@help=\toks19
+\row@=\count266
+\column@=\count267
+\maxfields@=\count268
+\andhelp@=\toks20
+\eqnshift@=\dimen146
+\alignsep@=\dimen147
+\tagshift@=\dimen148
+\tagwidth@=\dimen149
+\totwidth@=\dimen150
+\lineht@=\dimen151
+\@envbody=\toks21
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count269
+\l_MT_multwidth_dim=\dimen152
+\origjot=\skip55
+\l_MT_shortvdotswithinadjustabove_dim=\dimen153
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen154
+\l_MT_above_intertext_sep=\dimen155
+\l_MT_below_intertext_sep=\dimen156
+\l_MT_above_shortintertext_sep=\dimen157
+\l_MT_below_shortintertext_sep=\dimen158
+\xmathstrut@box=\box51
+\xmathstrut@dim=\dimen159
+)
+(E:\Latex\tex/latex/latex-tools\enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks23
+)
+(E:\Latex\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(E:\Latex\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (E:\Latex\tex/generic/iftex\iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count270
+\Gm@cntv=\count271
+\c@Gm@tempcnt=\count272
+\Gm@bindingoffset=\dimen160
+\Gm@wd@mp=\dimen161
+\Gm@odd@mp=\dimen162
+\Gm@even@mp=\dimen163
+\Gm@layoutwidth=\dimen164
+\Gm@layoutheight=\dimen165
+\Gm@layouthoffset=\dimen166
+\Gm@layoutvoffset=\dimen167
+\Gm@dimlist=\toks24
+
+(E:\Latex\tex/latex/geometry\geometry.cfg))
+(E:\Latex\tex/generic/babel\babel.sty
+Package: babel 2021/03/24 3.56 The Babel package
+ (E:\Latex\tex/generic/babel\babel.def
+File: babel.def 2021/03/24 3.56 Babel common definitions
+\babel@savecnt=\count273
+\U@D=\dimen168
+\l@babelnohyphens=\language79
+
+(E:\Latex\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+)
+\bbl@dirlevel=\count274
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(E:\Latex\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(E:\Latex\tex/latex/babel-english\english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for ukenglish
+(babel)             (\language73) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for ukenglish
+(babel)             (\language73) on input line 108.
+))
+(E:\Latex\tex/latex/latex-tools\array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen169
+\ar@mcellbox=\box52
+\extrarowheight=\dimen170
+\NC@list=\toks25
+\extratabsurround=\skip56
+\backup@length=\skip57
+\ar@cellbox=\box53
+)
+(E:\Latex\tex/latex/wrapfig\wrapfig.sty
+\wrapoverhang=\dimen171
+\WF@size=\dimen172
+\c@WF@wrappedlines=\count275
+\WF@box=\box54
+\WF@everypar=\toks26
+Package: wrapfig 2003/01/31  v 3.6
+)
+(E:\Latex\tex/latex/multirow\multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip58
+\multirow@cntb=\count276
+\multirow@dima=\skip59
+\bigstrutjot=\dimen173
+) (E:\Latex\tex/latex/tabu\tabu.sty
+Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
+
+(E:\Latex\tex/latex/varwidth\varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box55
+\sift@deathcycles=\count277
+\@vwid@loff=\dimen174
+\@vwid@roff=\dimen175
+)
+\c@taburow=\count278
+\tabu@nbcols=\count279
+\tabu@cnt=\count280
+\tabu@Xcol=\count281
+\tabu@alloc=\count282
+\tabu@nested=\count283
+\tabu@target=\dimen176
+\tabu@spreadtarget=\dimen177
+\tabu@naturalX=\dimen178
+\tabucolX=\dimen179
+\tabu@Xsum=\dimen180
+\extrarowdepth=\dimen181
+\abovetabulinesep=\dimen182
+\belowtabulinesep=\dimen183
+\tabustrutrule=\dimen184
+\tabu@thebody=\toks27
+\tabu@footnotes=\toks28
+\tabu@box=\box56
+\tabu@arstrutbox=\box57
+\tabu@hleads=\box58
+\tabu@vleads=\box59
+\tabu@cellskip=\skip60
+)
+\@indexfile=\write3
+\openout3 = `document.idx'.
+
+
+Writing index file document.idx
+(E:\Latex\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count284
+\l__pdf_internal_box=\box60
+) (document.aux)
+\openout1 = `document.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+
+(E:\Latex\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count285
+\scratchdimen=\dimen185
+\scratchbox=\box61
+\nofMPsegments=\count286
+\nofMParguments=\count287
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count288
+\MPscratchDim=\dimen186
+\MPnumerator=\count289
+\makeMPintoPDFobject=\count290
+\everyMPtoPDFconversion=\toks30
+) (E:\Latex\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(E:\Latex\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+[1
+
+{C:/Users/Sorina/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+(document.toc [1
+
+]
+Overfull \hbox (10.43864pt too wide) in paragraph at lines 44--44
+ [][] []\OT1/cmr/m/n/12 Algoritmul de scalare al pozelor []i de mod-i-fi-care a
+l bounding- 
+ []
+
+)
+\tf@toc=\write4
+\openout4 = `document.toc'.
+
+ [2] (document.lof
+
+LaTeX Warning: Citation `zurada1992introduction' on page 3 undefined on input l
+ine 2.
+
+
+LaTeX Warning: Citation `zurada1992introduction' on page 3 undefined on input l
+ine 3.
+
+
+LaTeX Warning: Citation `v_v_2017' on page 3 undefined on input line 4.
+
+
+LaTeX Warning: Citation `v_v_2017' on page 3 undefined on input line 5.
+
+
+LaTeX Warning: Citation `v_v_2017' on page 3 undefined on input line 6.
+
+
+LaTeX Warning: Citation `v_v_2017' on page 3 undefined on input line 7.
+
+
+LaTeX Warning: Citation `brandonrohrer' on page 3 undefined on input line 9.
+
+
+LaTeX Warning: Citation `brandonrohrer' on page 3 undefined on input line 10.
+
+
+LaTeX Warning: Citation `brandonrohrer' on page 3 undefined on input line 11.
+
+
+LaTeX Warning: Citation `budhiraja_budhiraja_2016' on page 3 undefined on input
+ line 12.
+
+
+LaTeX Warning: Citation `budhiraja_budhiraja_2016' on page 3 undefined on input
+ line 13.
+
+
+LaTeX Warning: Citation `salton_prado_salton_prado_2017' on page 3 undefined on
+ input line 14.
+
+
+LaTeX Warning: Citation `salton_prado_salton_prado_2017' on page 3 undefined on
+ input line 15.
+
+
+LaTeX Warning: Citation `wikipedia_2019' on page 3 undefined on input line 32.
+
+[3])
+\tf@lof=\write5
+\openout5 = `document.lof'.
+
+ [4] [5] [6]
+
+LaTeX Warning: Citation `shehu2010using' on page 7 undefined on input line 132.
+
+
+
+LaTeX Warning: Citation `ishii2004face' on page 7 undefined on input line 141.
+
+
+LaTeX Warning: Citation `jha2007class' on page 7 undefined on input line 146.
+
+[7]
+
+LaTeX Warning: Citation `kumar2011real' on page 8 undefined on input line 160.
+
+
+LaTeX Warning: Citation `viola2001rapid' on page 8 undefined on input line 164.
+
+
+
+LaTeX Warning: Citation `mackiewicz1993principal' on page 8 undefined on input 
+line 164.
+
+
+LaTeX Warning: Citation `bhalla2013bluetooth' on page 8 undefined on input line
+ 170.
+
+[8]
+
+LaTeX Warning: Citation `ahmad2014touchin' on page 9 undefined on input line 17
+9.
+
+
+LaTeX Warning: Citation `joy2000java' on page 9 undefined on input line 181.
+
+
+LaTeX Warning: Citation `kadry2013wireless' on page 9 undefined on input line 1
+86.
+
+
+LaTeX Warning: Citation `kadry2013wireless' on page 9 undefined on input line 1
+88.
+
+
+LaTeX Warning: Citation `mohamed2012fingerprint' on page 9 undefined on input l
+ine 193.
+
+[9]
+
+LaTeX Warning: Citation `patel2014development' on page 10 undefined on input li
+ne 199.
+
+[10]
+Overfull \hbox (2.64003pt too wide) in paragraph at lines 212--213
+[]\OT1/cmr/m/n/12 Procesul de ^nvatare ^ncepe cu date pre-cum ex-em-ple, exp
+erien[]a di-recta sau instruc[]iuni
+ []
+
+
+LaTeX Warning: Citation `expert_system_2017' on page 11 undefined on input line
+ 214.
+
+
+LaTeX Warning: Citation `expert_system_2017' on page 11 undefined on input line
+ 230.
+
+
+LaTeX Warning: Citation `expert_system_2017' on page 11 undefined on input line
+ 234.
+
+[11]
+
+LaTeX Warning: Citation `expert_system_2017' on page 12 undefined on input line
+ 240.
+
+
+LaTeX Warning: Citation `expert_system_2017' on page 12 undefined on input line
+ 244.
+
+
+LaTeX Warning: File `"neuronal newtwork".png' not found on input line 254.
+
+
+! Package pdftex.def Error: File `neuronal newtwork.png' not found: using draft
+ setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.254 ...ght, width=10cm]{"neuronal newtwork".png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `zurada1992introduction' on page 12 undefined on input 
+line 255.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Citation `zurada1992introduction' on page 12 undefined on input 
+line 258.
+
+[12]
+Overfull \hbox (2.47475pt too wide) in paragraph at lines 268--270
+[]\OT1/cmr/m/n/12 Acest pro-cedeu de ajustare a pon-der-ilor din re[]ea, este e
+chiva-len-tul ar-ti-fi-cial al ^nva[]arii,
+ []
+
+
+LaTeX Warning: File `"perceptron".png' not found on input line 273.
+
+
+! Package pdftex.def Error: File `perceptron.png' not found: using draft settin
+g.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.273 ..., width=0.3\textheight]{"perceptron".png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `zurada1992introduction' on page 13 undefined on input 
+line 274.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[13]
+
+LaTeX Warning: Citation `parmar_parmar_2018' on page 14 undefined on input line
+ 289.
+
+
+LaTeX Warning: Citation `parmar_parmar_2018' on page 14 undefined on input line
+ 295.
+
+
+LaTeX Warning: Citation `parmar_parmar_2018' on page 14 undefined on input line
+ 304.
+
+[14]
+Overfull \hbox (0.84282pt too wide) in paragraph at lines 308--309
+[] \OT1/cmr/m/n/12 Aceasta ma-sura este se-m-ana-toare cu (1) doar ca nece-si
+ta in-stru-mente mai avansate
+ []
+
+
+LaTeX Warning: Citation `parmar_parmar_2018' on page 15 undefined on input line
+ 313.
+
+
+LaTeX Warning: Citation `v_v_2017' on page 15 undefined on input line 322.
+
+
+LaTeX Warning: Citation `v_v_2017' on page 15 undefined on input line 324.
+
+
+LaTeX Warning: File `"liniar".png' not found on input line 329.
+
+
+! Package pdftex.def Error: File `liniar.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.329 ...hics[width=3cm, height=3cm]{"liniar".png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `v_v_2017' on page 15 undefined on input line 330.
+
+
+LaTeX Warning: File `"sigmoid".png' not found on input line 334.
+
+
+! Package pdftex.def Error: File `sigmoid.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.334 ...ics[width=3cm, height=3cm]{"sigmoid".png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `v_v_2017' on page 15 undefined on input line 335.
+
+
+LaTeX Warning: File `"relu".png' not found on input line 339.
+
+
+! Package pdftex.def Error: File `relu.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.339 ...aphics[width=3cm, height=3cm]{"relu".png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `v_v_2017' on page 15 undefined on input line 340.
+
+
+LaTeX Warning: File `"tanh".png' not found on input line 344.
+
+
+! Package pdftex.def Error: File `tanh.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.344 ...aphics[width=3cm, height=3cm]{"tanh".png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `v_v_2017' on page 15 undefined on input line 345.
+
+[15]
+
+LaTeX Warning: File `"gradient".png' not found on input line 361.
+
+
+! Package pdftex.def Error: File `gradient.png' not found: using draft setting.
+
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.361 ...cs[width=6cm, height=5cm]{"gradient".png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (34.15132pt too wide) in paragraph at lines 361--362
+[][] 
+ []
+
+[16]
+
+LaTeX Warning: Citation `rizwan_2018_rms' on page 17 undefined on input line 39
+5.
+
+
+LaTeX Warning: Citation `gandhi_gandhi_2018' on page 17 undefined on input line
+ 397.
+
+
+LaTeX Warning: Citation `gandhi_gandhi_2018' on page 17 undefined on input line
+ 415.
+
+
+LaTeX Warning: Citation `gandhi_gandhi_2018' on page 17 undefined on input line
+ 431.
+
+[17]
+
+LaTeX Warning: Citation `kakizaki2019adversarial' on page 18 undefined on input
+ line 453.
+
+
+LaTeX Warning: Citation `kakizaki2019adversarial' on page 18 undefined on input
+ line 457.
+
+
+LaTeX Warning: Citation `brandonrohrer' on page 18 undefined on input line 460.
+
+
+
+LaTeX Warning: File `"filtru".jpg' not found on input line 472.
+
+
+! Package pdftex.def Error: File `filtru.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.472 ...hics[width=5cm, height=4cm]{"filtru".jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `brandonrohrer' on page 18 undefined on input line 473.
+
+
+
+LaTeX Warning: File `"filters".jpg' not found on input line 486.
+
+
+! Package pdftex.def Error: File `filters.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.486 ...ics[width=5cm, height=4cm]{"filters".jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `brandonrohrer' on page 18 undefined on input line 487.
+
+
+
+LaTeX Warning: Citation `brandonrohrer' on page 18 undefined on input line 487.
+
+
+
+LaTeX Warning: Citation `brandonrohrer' on page 18 undefined on input line 496.
+
+
+
+Overfull \hbox (8.15381pt too wide) in paragraph at lines 501--502
+[] \OT1/cmr/m/n/12 Acest strat co-mu-nica cu mediul ex-tern []i are ca prin-ci
+-pal obiec-tiv recep[]ionarea
+ []
+
+
+LaTeX Warning: Citation `brandonrohrer' on page 18 undefined on input line 504.
+
+
+[18] [19]
+
+LaTeX Warning: Citation `brandonrohrer' on page 20 undefined on input line 508.
+
+
+
+LaTeX Warning: Citation `brandonrohrer' on page 20 undefined on input line 512.
+
+
+
+LaTeX Warning: File `"pooling".jpg' not found on input line 518.
+
+
+! Package pdftex.def Error: File `pooling.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.518 ...ics[width=5cm, height=4cm]{"pooling".jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `brandonrohrer' on page 20 undefined on input line 519.
+
+
+
+LaTeX Warning: Citation `budhiraja_budhiraja_2016' on page 20 undefined on inpu
+t line 529.
+
+
+LaTeX Warning: File `"before-dropout".jpg' not found on input line 541.
+
+
+! Package pdftex.def Error: File `before-dropout.jpg' not found: using draft se
+tting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.541 ...th=5cm, height=4cm]{"before-dropout".jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `budhiraja_budhiraja_2016' on page 20 undefined on inpu
+t line 542.
+
+
+LaTeX Warning: Citation `budhiraja_budhiraja_2016' on page 20 undefined on inpu
+t line 542.
+
+
+LaTeX Warning: File `"after dropout".jpg' not found on input line 546.
+
+
+! Package pdftex.def Error: File `after dropout.jpg' not found: using draft set
+ting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.546 ...dth=5cm, height=4cm]{"after dropout".jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `budhiraja_budhiraja_2016' on page 20 undefined on inpu
+t line 547.
+
+
+LaTeX Warning: Citation `budhiraja_budhiraja_2016' on page 20 undefined on inpu
+t line 547.
+
+[20]
+
+LaTeX Warning: Citation `hui_hui_2018' on page 21 undefined on input line 559.
+
+
+LaTeX Warning: Citation `hui_hui_2018' on page 21 undefined on input line 569.
+
+
+LaTeX Warning: Citation `hui_hui_2018' on page 21 undefined on input line 580.
+
+[21]
+
+LaTeX Warning: Citation `pietikinen' on page 22 undefined on input line 594.
+
+
+LaTeX Warning: Citation `salton_prado_salton_prado_2017' on page 22 undefined o
+n input line 594.
+
+
+LaTeX Warning: Citation `dalal2005histograms' on page 22 undefined on input lin
+e 596.
+
+
+LaTeX Warning: Citation `salton_prado_salton_prado_2017' on page 22 undefined o
+n input line 596.
+
+
+LaTeX Warning: Citation `salton_prado_salton_prado_2017' on page 22 undefined o
+n input line 599.
+
+
+LaTeX Warning: Citation `salton_prado_salton_prado_2017' on page 22 undefined o
+n input line 600.
+
+
+LaTeX Warning: Citation `salton_prado_salton_prado_2017' on page 22 undefined o
+n input line 601.
+
+
+LaTeX Warning: Citation `salton_prado_salton_prado_2017' on page 22 undefined o
+n input line 602.
+
+[22]
+
+LaTeX Warning: Citation `salton_prado_salton_prado_2017' on page 23 undefined o
+n input line 606.
+
+
+LaTeX Warning: Citation `salton_prado_salton_prado_2017' on page 23 undefined o
+n input line 610.
+
+
+LaTeX Warning: File `"lpbh".jpg' not found on input line 613.
+
+
+! Package pdftex.def Error: File `lpbh.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.613 ...eight, height=0.2\textheight]{"lpbh".jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `salton_prado_salton_prado_2017' on page 23 undefined o
+n input line 614.
+
+
+LaTeX Warning: Citation `salton_prado_salton_prado_2017' on page 23 undefined o
+n input line 620.
+
+
+LaTeX Warning: File `"regions".jpg' not found on input line 623.
+
+
+! Package pdftex.def Error: File `regions.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.623 ...t, height=0.15\textheight]{"regions".jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `salton_prado_salton_prado_2017' on page 23 undefined o
+n input line 624.
+
+
+LaTeX Warning: Citation `salton_prado_salton_prado_2017' on page 23 undefined o
+n input line 631.
+
+[23] [24]
+Overfull \hbox (5.21638pt too wide) in paragraph at lines 645--646
+  \OT1/cmr/m/n/12 Am pro-pus un sis-tem (fig.15[]) ce poate sa vina ^n aju-t
+orul tu-toror prob-lemelor men[]ionate
+ []
+
+[25]
+
+LaTeX Warning: File `"pasi".jpg' not found on input line 663.
+
+
+! Package pdftex.def Error: File `pasi.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.663 ...ight, height=0.29\textheight]{"pasi".jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (36.83714pt too wide) in paragraph at lines 663--664
+ [][] 
+ []
+
+
+LaTeX Warning: Citation `strom2006methods' on page 26 undefined on input line 6
+68.
+
+
+LaTeX Warning: Citation `bray2017javascript' on page 26 undefined on input line
+ 676.
+
+
+LaTeX Warning: File `"register".jpg' not found on input line 683.
+
+
+! Package pdftex.def Error: File `register.jpg' not found: using draft setting.
+
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.683 ...t, height=0.2\textheight]{"register".jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[26]
+
+LaTeX Warning: Citation `bray2017javascript' on page 27 undefined on input line
+ 692.
+
+
+LaTeX Warning: File `"login_post_api".jpg' not found on input line 699.
+
+
+! Package pdftex.def Error: File `login_post_api.jpg' not found: using draft se
+tting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  fo

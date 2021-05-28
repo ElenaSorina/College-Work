@@ -1,0 +1,1475 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{outlines}
+\usepackage{graphicx}
+%\usepackage{times}
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage{enumerate}
+\usepackage{geometry}
+\usepackage[english]{babel}
+\usepackage{array}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{tabu}
+\addto{\captionsenglish}{%
+	\renewcommand{\refname}{Referințe bibliografice}%
+	\renewcommand{\contentsname}{Curpins}
+	\renewcommand{\listfigurename}{Lista imaginilor}
+}
+
+\geometry{
+	a4paper,
+	left=25mm,
+	top=25mm,
+	bottom=25mm,
+	right=25mm,
+}
+
+\renewcommand{\baselinestretch}{1.5}
+
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+	{-2.5ex\@plus -1ex \@minus -.25ex}%
+	{1.25ex \@plus .25ex}%
+	{\normalfont\normalsize\bfseries}}
+\makeatother
+\setcounter{secnumdepth}{4} % how many sectioning levels to assign numbers to
+\setcounter{tocdepth}{4}    % how many sectioning levels to show in ToC
+
+
+\makeindex
+\begin{document}
+\begin{titlepage}
+	\begin{center}
+		\vspace{0.5cm}
+		\LARGE \textsc{Universitatea "Babeș Bolyai"}
+		\LARGE \textsc{Cluj-Napoca}
+		\\
+		\vspace{0.5cm}
+		\Large \textsc{Facultatea de matematică și informatică}
+		\\
+		\Large \textsc{Specializare informatică}
+	
+		
+		\vspace{1.5cm}
+		
+		\Huge O soluție mobilă pentru detecția prezenței studenților folosind tehnici de machine learning și computer vision
+		\\
+		\bigskip
+		\Large Machine learning și computer vision
+		\\
+		\vspace{0.5cm}		
+		\Large LUCRARE DE LICENȚĂ
+		
+		\vfill
+		
+		\Large
+		\textsc{Coordonator}\hfill \textsc{Autor}
+		\\
+		\large
+		\textsc{Lect. dr. MIRCEA Ioan Gabriel}\hfill \textsc{ONU Eduard Gabriel}
+		
+		\vspace{1.5cm}
+		\textsc{Cluj-Napoca, România}\\
+		\textsc{Iulie 2019}
+		
+	\end{center}
+\end{titlepage}
+	
+
+\restoregeometry
+
+\tableofcontents
+\newpage
+
+\listoffigures
+
+
+
+
+\newpage
+\section{Introducere și motivație}
+\bigskip
+\quad\space Toate organizațiile folosesc sisteme de prezență pentru a înregistra momentul în care proprii angajați au ajuns sau au plecat de la lucru ori unde și în ce departament aceștia au început să lucreze.
+
+Deoarece un factor important în obținerea unei bune performanțe academice îl are prezența la ore, toate instituțiile academice se concentrează pe obținerea unei valori cât mai ridicate pentru această măsură.
+
+În acest scop, pentru a rezolva această problemă, fiecare instituție a venit cu propria sa soluție: unele pentru a efectua prezența în mod regulat au recurs la  strigarea studenților după nume, altele prin semnarea individuală pe hârtii de către studenți, dar aceste metode sunt destul de costistitoare din punct de vedere al timpului alocat atât de elevi cât și de profesori.
+
+Pe de altă parte, în cazul în care avem de-a face cu instituții academice ce au un număr foarte mare de studenți, o astfel de abordare nu oferă un grad ridicat de securitate, acele foi putând fi modificate cu ușurință.
+
+De accea, acest proces ar trebui automatizat, prin introducerea unui sistem de efectuare a prezențelor, un sistem semi-automat în care profesorul să poată observa și să modifice situația prezențelor, ușor de folosit ce are un cost redus și poate oferi rezultate în timp relativ scurt.
+
+\bigskip
+\subsection{Contribuție personală}
+\quad\space Am propus un sistem de prezențe semi-semiautomat ce folosește recunoașterea facială pentru identificarea persoanelor din sala de clasă, sistem alcătuit din două mari componente: \textbf{recunoașterea facială} și \textbf{detecția facială}.
+ 
+Acesta, pentru prima parte de detecție facială, folosește rețele neuronale convoluționale iar pentru cea de a doua parte, recunoașterea facială, algoritmul LBPH (Local Binary Pattern Histograms).
+
+Totodată, sistemul propus permite modificarea situației prezențelor, vizualizarea rezultatelor în timp real, este intuititiv, foarte ușor de folosit și personalizat. În plus, se permite înscrierea studenților la diferite cursuri, oferind posibilitatea profesorilor să adauge noi materii.
+\bigskip
+\subsection{Structura lucrării}
+\bigskip
+\quad\space Pentru o mai bună înțelegere a modului în care soluția a fost implementată, lucrarea este împarțită pe mai multe capitole, în fiecare prezentându-se diferite aspecte ale problemei:
+\begin{enumerate}[I]
+	\item În \textbf{Capitolul 2} se prezintă modurile în care a mai fost abordată această problemă, felul în care aceasta a fost abordată și aspectele pozitive, respectiv cele negative ale fiecărei soluții în parte.
+	\item În \textbf{Capitolul 3} se vor introduce noțiunile de bază ce sunt folosite în diferite aspecte ale soluției precum: \textbf{rețele neuronale artificiale}, \textbf{rețele neuronale artificiale convoluționale}, \textbf{algoritmul de recunoaștere facială folosit(LBPH)}, dar și toate celelalte noțiuni necesare înțelegerii complete a termenilor folosiți.
+	\item În \textbf{Capitolul 4} se va explica soluția propusă în detaliu de la abstract spre concret. Se vor prezenta diferite diagrame pentru o mai bună înțelegere a structurii soluției, detalia toate tehnologiile folosite și nu în ultimul rând, se va prezenta modul în care aplicația a fost implementată.
+	\item În \textbf{Capitolul 5} se va explica modul în care a fost testat modelul folosit și se vor prezenta rezultatele obținute.
+	\item În \textbf{Capitolul 6} se vor menționa problemele întâlnite în dezvoltarea solției și modul în care acestea au fost rezolvate
+	\item În \textbf{Capitolul 7} se vor prezenta concluziile și viitoarele posibile îmbunătățiri
+	\item În \textbf{Capitolul 8} este prezentată bibliografia
+\end{enumerate}
+
+
+\newpage
+\section{Abordări înrudite}
+\bigskip
+\bigskip
+\subsection {Sisteme bazate pe recunoașterea facială}
+\bigskip
+\quad\space În \textbf{\cite{shehu2010using}} doi cercetătători, Visar Shehu și Agni Dika au porpus un    sistem ce folosește, pentru efectuarea prezențelor atât vederea artificială cât și recunoașterea facială.
+
+Sistemul este implementat folosind o camera digitală, instalată în sala de clasă, ce are ca principal obiectiv realizarea de fotografii ale elevilor, detectarea și extragerea tuturor fețelor din imagini.
+
+După ce toate fețele au fost detectate și extrase, acestea vor fi comparate cu fețele existente din baza de date iar dacă un student este identificat cu succes, o lista cu prezențe este generată și salvată în baza de date.
+
+Însa din aceasta abordare reies anumite probleme precum detecția facială în timp real în medii ce conțin obiecte multiple, probleme cu algoritmii de recunoaștere facială și probleme de natura socială și pedagocică legate de tehicile aplicate. 
+
+\bigskip
+În \textbf{\cite{ishii2004face}} a fost propusă, într-un sistem de supraveghere in timp real, o metoda pentru detectarea simultană a capului și a feței ce implică patru caracteristici direcționale (FDF) si analiza diferențială liniara. FDF este una dintre cele mai robuste caracteristici pentru a distinge modele, iar in esență aceasta este alcatuită din patru componente pentru identificarea marginilor (vertical, orizontal, prima diagonală, a doua diagonală).
+
+Având in vedere că această metodă a atins performanța de aproximativ 10 cadre pe secundă pentru detecția facială, ar mai fi nevoie de foarte multe îmbunătățiri.
+
+\bigskip
+În \textbf{\cite{jha2007class}} a fost implementat un sistem complet automat pentru efectuarea prezențelor ce se dovedește a fi practic, de încredere și elimină pierderea de timp din sisemele tradiționale de prezență.
+
+În acest sistem întalnim 3 actori: studentul, profesorii și administratorul, fiecare având câte un rol bine definit. 
+
+\begin{itemize}
+\item\textbf{Studentul} poate să își urmărească situația prezențelor (pentru acest lucru trebuie să se autentifice în prealabil folosind id-ul și parola asociate).
+\item\textbf{Profesorul} poate să țină evidența prezențelor de la cursurile sale(trebuie să fie autentificat in prealabil).
+\item\textbf{Administratorul} introduce toți actorii (studenții, profesorii), toate cursurile și resetează parolele.
+Pentru detecția facială s-au folosit diferite tehnici precum detecția bazată pe culoare sau PCA (Principal Component Analysis) și pentru extragerea de caracterstici PCA și LDA (Linear Discriminate Analysis). Detecția bazată pe culoare reprezintă identificarea acelor zone din imagine asemanatoare cu pielea umană.
+\end{itemize}
+
+Aceasta abordare însa ridică anumite probleme. Pe de o parte, probleme ce privesc experiența utilizatorului precum faptul că nu exista niciun mecanism prin care profesorul să poată modifica rezultatele prezențelor sau sa poată să iși modifice cursurile pe care le predă, iar pe de altă parte numarul ridicat de detecții fals pozitive.
+\bigskip
+
+În \textbf{\cite{kumar2011real}} a fost propus un sistem de prezențe automat ce poate funcționa in timp real, având un timp de detecție și recunoaștere foarte bun, bazat pe identitatea facială, alcătuit din doua componente principale: detecția și  recunoașterea facială. Rezultatele prezenței automate sunt afișate într-o foaie de lucru excel.
+
+Acest sistem primește ca și date de intrare imagini cu ajutorul unei camere video, ce functionează continuu până când sistemul este oprit. Modulul de detecție păstrează numai informația facială din pozele primite de la camere, iar modulul de recunoaștere facială încearcă să identifice persoanele din aceste imagini și să le înregistreze că fiind prezente.
+
+Pentru detecția facială s-a folosit algoritmul Viola Jones \textbf{\cite{viola2001rapid}} împreună cu clasificatorul Haar, în timp ce mecanismul de recunoaștere utilizează PCA și Fast PCA \textbf{\cite{mackiewicz1993principal}}.
+
+Cu toate că este un sistem ce poate funcționa în timp real, lipsa unei soluții pentru modificarea manuală a prezențelor de către profesori reprezintă un mare minus pentru această abordare.
+
+\subsection{Sisteme bazate pe bluetooth}
+\bigskip
+\quad\space În 2013, Vishal Bhalla et al. \textbf{\cite{bhalla2013bluetooth}} a propus un sistem care poate să înregistreze prezența cu ajutorul tehnologiei Bluetooth. 
+
+În acest sistem, prezențele sunt înregistrate folosind telefonul profesorului. O aplicație ce este instalată pe telefonul cadrului didactic va interoga, prin Bluetooth, telefonul studentului iar prin transferul adresei MAC(Media Access Controll) a telefonului elevului, prezența poate fi memorată și adaugată in aplicație.
+
+Un principal dezavantaj al acestei abordări este acela că nu e nevoie ca studentul să fie prezent în clasă, fiind îndeajuns doar ca un alt student să aibă telefonul acestuia, pentru ca prezența să fie înregistrată.
+
+
+\subsection{Sisteme bazate pe NFC}
+\bigskip
+\quad\space În \textbf{\cite{ahmad2014touchin}} autorul ne prezinta implementarea unui sistem de prezență care este bazat atât pe Bluetooth cât și pe tehnologii NFC(Near Field Comuication). Utilizează amprenta și adresa bluetooth a telefonului ce are NFC-ul pornit pentru a înregistra identitatea acestuia.
+
+O aplicație scrisă in Java \textbf{\cite{joy2000java}}  recepționează id-urile NFC împreună cu alte informații referitoare la telefonul mobil și utilizator, urmând ca acestea să fie trimise către un analizator pentru interpretarea comportamentului acestuia.
+O constrângere este aceea că, pentru a folosi acest sistem trebuie ca fiecare student să aibă telefon compatibil cu tehnologia NFC, pentru a i se înregistra prezența, ceea ce implică costuri suplimentare.
+
+\subsection{Sisteme bazate pe scanarea irisului}
+\bigskip
+\quad\space În 2010, Seifedine Kadry și Mohamad Smaili au propus un sistem de prezență care este conceput și implementat utilizând algoritmul lui Daugman. Acest sistem rezolvă problema prezențelor false utilizând tehicii de scanare a irisului și totodată facilitează procesul de efectuare al prezențelor. \textbf{\cite{kadry2013wireless}}
+
+Însă pricipala problemă pe care un astfel de sistem o ridică este costul foarte mare pentru realizarea sa. Pe lângă această problemă, un student tebuie să aștepte un numar considerabil de secunde pentru a-i fi scanat irisul. \textbf{\cite{kadry2013wireless}}
+
+
+\subsection{Sisteme bazate pe amprentă}
+\bigskip
+\quad\space În \textbf{\cite{mohamed2012fingerprint}}, Mohamed et al., a creat un dispozitiv bazat pe amprentă folosit în sistemele de prezență automată. Studenților li se acordă prezența dupâ ce își plasează degetul pe senzorul dispozitivului.
+
+Însă acest sistem nu s-a dovedit a fi așa de folositor deoarece pe de o parte, dispozitivul ce conținea senzorul de amprentă se strica frecvent, iar pe de altă parte, necesită destul de mult timp pentru efectuarea prezenței deoarece studenții trebuiau să astepte la coadă pentru acel dispozitiv.
+
+\subsection{Sisteme  bazate pe RFID}
+\bigskip
+\quad\space BIS în \textbf{\cite{patel2014development}} prezintă un sistem comercial bazat pe RFID (Radio Frequency Identification) de prezentă automată pentru școli si licee. Sistemul poate să trimită mesaje SMS sau alerte email către parinți sau cadre didactice în mod automat. Aceștia se vor înregistra la poartă, atingând dispozitivul RFID cu ecusonul, urmând ca datele să fie trimise către un server din școală. Acest server va procesa datele și va trimite SMS-uri către pariniți.
+
+Principala problemă a acestui sistem constă în faptul că nu este efectuată verificarea situației prezențelor. Totodată, sistemul nu dispune de o metodă pentru modificarea prezențelor acordate în mod automat.
+
+După cum putem observa, cu toate că există o varietate de implementări pentru sistemele de prezență automată, nu există o implementare care să ofere atât o performanță acceptabilă, cât și o bună experiență a utilizatorului la un preț acceptabil. De aceea un sistem de prezențe semiautomat, bazat pe recunoaștere facială, în care profesorul să poată să intervină asupra rezultatelor reprezintă cea mai bună soluție.
+	
+\newpage
+\section{Fundamente teoretice}
+\bigskip
+\subsection{Învățarea automată}
+\bigskip
+\quad\space Învățarea automată este un domeniu al inteligeței artificiale(AI) ce oferă unor sisteme abilitatea de a învăța și de a se autodepăși fără a necesita programarea în mod explicit. Acest domeniu are ca principal obiectiv dezvoltarea programelor pentru calculatoare ce pot accesa date cu scopul de a învăța.
+
+Procesul de învătare începe cu date precum exemple, experiența directă sau instrucțiuni ce au ca principal obiectiv găsirea unor modele în date și de efectuarea unor predicții bazate pe experiențele din trecut.
+
+Acești algoritmi vor produce o funcție ce are ca principal obiectiv identificarea unei legături între datele de intrare și rezultatele obținute de la sistem. Această funcție se numește \textbf{model}. \textbf{\cite{expert_system_2017}}
+
+\bigskip	
+Există trei tipuri de modele:
+\begin{itemize}
+\item\textbf{Modele geometrice}: acestea pot avea 1, 2 sau mai multe dimensiuni și sunt învațate din date. Deseori sunt folosite în probleme în care dorim să clasificăm datele în categorii.
+\item\textbf{Modele probabilistice}: acestea încearca să determine distribuția probabilistică a datelor, rezultatul lor fiind de obicei o valoare intre 0 și 1.
+\item\textbf{Modele logice}: acestea încearca din punct de vedere logic să ofere un rezultat. Domeniul de valori este discret, find deseori etichete.
+\end{itemize}
+
+\begin{outline}[enumerate]
+\1 \textbf{Învățarea supervizată}
+
+\bigskip
+\quad\space Se cunosc atât datele de antrenament cât și etichetele acestora.
+
+\quad\space Se va învăța din exemple și se va produce o funcție capabilă să facă predicții despre datele de ieșire, însă deseori pentru rezultate cât mai bune este nevoie de un număr foarte mare de date, ceea ce cateodată nu este posibil. \textbf{\cite{expert_system_2017}}
+\1 \textbf{Învățarea nesupervizată} 
+
+\bigskip
+\quad\space Este utilizată atunci când datele nu sunt nici calsificate nici etichetate. Învătarea nesupervizată studiază modul în care sistemele pot determina o modalitate de descriere a structurile ascunse din datele neetichetate.\textbf{\cite{expert_system_2017}}
+\1 \textbf{Învățarea semi-supervizată} 
+
+\bigskip
+\quad\space Aceasta se încadrează între învățarea supervizată și cea nesupervizată deoarece se folosesc atât date etichetate cât și date neetichetate pentru antrenare. De obicei se utilizează un număr foarte mare de date neetichetate și un număr relativ mic de date etichetate.
+
+\quad\space Algoritmii care utilizează învățarea semi-supervizată sunt folosiți când este nevoie să se rezolve o problemă ce necesită date ce nu pot fi etichetate foarte ușor, fiind nevoie de specialiști în domeniu pentru a realiza acest lucru.\textbf{\cite{expert_system_2017}}
+
+\1 \textbf{Învățarea prin întarire}
+
+\quad\space Aceasta este o metoda de învățare în care se interacționează cu mediul, permițând  mașinilor și programelor să determine în mod automat comportamentul ideal într-un context specific cu scopul de a maximiza câstigul. Este introdus conceptul de recompensă și penalizare, acestea fiind utilizate în procesul de antrenare al agentului.\textbf{\cite{expert_system_2017}}
+\end{outline}
+
+De-a lungul timpului, pentru fiecare tip de învățare au fost dezvoltați și implementați diferiți algoritmi de inteligență artificială, aceștia împarțindu-se in două mari categorii: \textbf{algoritmi de învățare supervizați} și \textbf{algoritmi de învățare nesupervizați}.
+
+\bigskip
+\subsection{Rețele neuronale artificiale}
+\bigskip
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=0.3\textheight, width=10cm]{"neuronal newtwork".png}
+	\caption{Neuronal network \textbf{\cite{zurada1992introduction}}}
+	\label{fig:network}
+\end{figure}
+\quad\space Rețelele neuronale artificiale(figura \ref{fig:network}) reprezintă o serie de algoritmi, inspirați din modul de funcționare al creierului uman, ce au ca principal obiectiv identificarea de tipare în date. „Tiparele” pe care acestea le recunosc sunt de natură numerică, reprezentate sub forma de vectori iar de accea indiferent că lucrăm cu sunete, text sau imagini singurul mod în care rețeaua poate să interacționeze cu aceste date este translatarea acestora în vectori. \textbf{\cite{zurada1992introduction}}
+
+Rețelele neuronale pot fi folosite cu success in probleme de \textbf{clasificare}, \textbf{grupare de date} și in \textbf{analize predictive}.
+
+O rețea neuronală este alcatuită din mai multe straturi de neuroni, adică acele componente ce se ocupă de procesarea datelor. 
+
+\subsubsection{Neuronul artificial}
+\bigskip
+\qquad\textbf{Neuronul artificial} combină datele de intrare cu un set de coeficienti sau ponderi, care amplifică sau micșorează cantitatea fiecărui parametru al acestor date.
+
+Acest procedeu de ajustare a ponderilor din rețea, este echivalentul artificial al învațării, reprezentând procesul principal ce stă la baza funcționării unei rețele neuronale.
+Aceste ponderi de intrare sunt adunate, iar suma este trimisă mai departe spre o \textbf{funcție de activare} (figura \ref{fig:neuron}), cu scopul de a vedea dacă și in ce măsură acel semnal ar trebui trimis mai departe, iar in acest caz se spune că neuronul a fost activat.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=0.2\textheight, width=0.3\textheight]{"perceptron".png}
+	\caption{Procesul de activare al unui neuron \textbf{\cite{zurada1992introduction}} }
+	\label{fig:neuron}
+\end{figure} 
+
+O rețea neuronală este alcatuită dintr-un \textbf{strat de intrare}, unul sau mai multe \textbf{straturi ascunse} și un \textbf{strat de ieșire}, fiecare dintre aceste straturi folosind datele obținute din stratul anterior, exceptând stratul de intrare.
+
+Având în vedere că operațiile de pe același strat sunt independente, calculele pot fi paralelizate, folosind un GPU, pentru a accelera procesul de învatare al rețelei.
+
+Rețelele neuronale profunde se deosebesc de rețelele neuronale clasice, cu un singur strat ascuns, prin profunzimea lor, mai precis prin numărul de straturi prin care datele trebuie să treacă intr-un proces de identificare al tiparelor din date.
+
+Cu cât avansăm mai mult in interiorul rețelei neuronale, cu atât caracteristicile identificate sunt mai complexe deoarece acestea recombină și agregă caracteristicile obținute de straturile anterioare.
+
+\subsubsection{Funcția de eroare}
+\qquad Această funcție are ca principal obiectiv măsurarea performanței algoritmului.
+
+Cu cât eroarea este mai mică cu atât rețeaua modelează mai bine setul de date iar din această cauză scopul antrenării unei rețele neuronale este minimizarea funcției de eroare (întalnită sub numele de funcție de loss). Printre cele mai comune funcții de eroare amintim \textbf{\cite{parmar_parmar_2018}}: 
+
+\begin{outline}
+\1 Mean Squared Error sau Quadratic Loss 
+
+	\begin{equation}
+		MSE = \frac{\sum_{i=0}^{n} (y_i - Y_i)^2}{n} \space \textbf{\cite{parmar_parmar_2018}}
+	\end{equation}
+	\quad Este măsurată ca media diferenței pătratice dintre predicția rețelei si rezultatul așteptat.
+	
+	\quad Aceasta se concentrează pe magnitudinea medie a erorii, neținând cont de direcție. Totuși din cauza ridicării la putere, predicțiile ce diferă mult sunt penalizate foarte tare în comparație cu cele ce sunt mai apropiate de rezultatul așteptat.   
+	
+\1 Mean Absolute Error 
+
+	\begin{equation}
+		MAE = \frac{\sum_{i=0}^{n} \left|y_i - Y_i\right|}{n} \space \textbf{\cite{parmar_parmar_2018}}
+	\end{equation}
+	\quad Este măsurată ca media diferenței dintre predicția rețelei și rezultatul așteptat. 
+	
+	\quad Această masura este semanatoare cu (1) doar că necesită instrumente mai avansate pentru calcularea gradienților. Spre deosebire de (1), este mai robustă la valorile extreme deoarece nu utilizează ridicarea la pătrat.
+	
+\1 Cross Entropy Loss 
+
+	\begin{equation}
+		CrossEntropyLoss = -(y_i\log(Y_i) + (1-y_i)\log(1-Y_i)) \space \textbf{\cite{parmar_parmar_2018}}
+	\end{equation}
+	 Este deseori folosită în probleme de clasificare.
+	
+\end{outline}
+
+Pentru minimizarea acestei funcții de eroare, se folosește așa numita tehnica a \textbf{gradientului descrescător}.
+
+\subsubsection{Funcția de activare}
+\quad\space Fiecare neuron poate să modifice sau nu informația primită, cu ajutorul funcției de activare. Există mai multe tipuri de funcții de activare \textbf{\cite{v_v_2017}} printre: \textbf{funcția liniara} (fig.\ref{fig:liniar}), \textbf{funcția sigmoid}(fig.\ref{fig:sigmoid}), \textbf{ReLu} (fig.\ref{fig:relu}), \textbf{tanh} (fig.\ref{fig:tanh}).
+
+Din nefericire nu există un algoritm cu ajutorul căruia să alegem funcția de activare ce se portivește cel mai bine tipului nostru de problemă. \textbf{\cite{v_v_2017}}
+
+\begin{figure}[!htb]
+	\begin{minipage}{0.48\textwidth}
+		\centering
+		\includegraphics[width=3cm, height=3cm]{"liniar".png}
+		\caption{Funcția liniara \textbf{\cite{v_v_2017}}}\label{fig:liniar}
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\textwidth}
+		\centering
+		\includegraphics[width=3cm, height=3cm]{"sigmoid".png}
+		\caption{Funcția sigmoid \textbf{\cite{v_v_2017}} }\label{fig:sigmoid}
+	\end{minipage}\par
+	\begin{minipage}{0.48\textwidth}
+		\centering
+		\includegraphics[width=3cm, height=3cm]{"relu".png}
+		\caption{Funcția ReLu \textbf{\cite{v_v_2017}} }\label{fig:relu}
+	\end{minipage}
+	\begin{minipage}{0.48\textwidth}
+		\centering
+		\includegraphics[width=3cm, height=3cm]{"tanh".png}
+		\caption{Funcția Tanh \textbf{\cite{v_v_2017}}}\label{fig:tanh}
+	\end{minipage}
+\end{figure}
+\subsubsection{Tehnica gradientului descrescător}
+
+\quad\space Acest proces reprezintă tehnica prin care ponderile rețelei sunt ajustate în concordanță cu eroarea. Gradientul nu este altceva decât un alt termen folosit pentru cuvantul „pantă” și reprezintă modul în care două variabile se influentează reciproc.
+
+În cazul unei rețele neuronale ne interesează „panta” ce descrie relația dintre aceasta și o anume pondere, iar ceea ce ne dorim este să aflăm cât de mult înfluențează acea pondere valoarea erorii.
+
+Pe măsură ce rețeaua neuronală învață, se vor ajusta treptat foarte multe ponderi, iar relația dintre \textbf{eroarea rețelei} și acele ponderi este o derivată (a erorii in raport cu ponderea) ce măsoara cum o schimbare mică a ponderii cauzează o schimbare mică a erorii.
+
+
+
+\begin{figure}[!htb]
+	\centering
+	\begin{minipage}{0.3\textwidth}
+		\includegraphics[width=6cm, height=5cm]{"gradient".png}
+	\end{minipage}%
+	\hfill%
+	\begin{minipage}{0.6\textwidth}\raggedleft
+		\[
+			\frac{\partial Error}{\partial pondere}	 = \frac{\partial Error}{\partial activation} * \frac{\partial activation}{\partial pondere}
+		\]
+		\par
+		\[
+			pondere_j = pondere_j - \alpha*\frac{\partial Error}{\partial pondere_j}(pondere)
+		\]
+	\end{minipage}
+	\caption{Formula de ajustare a ponderilor}
+	\label{fig:descent}
+\end{figure}
+
+Unde $\alpha$ din (fig. \ref{fig:descent}) reprezintă rata de învătare, adică acel număr ce indică cât de mult să ne deplasăm spre minimul funcției, iar Error este funcția de eroare. 
+
+Totuși, dacă rata de învățare are o valoare foarte mare putem să sărim peste valoare minimă iar rețeaua să nu fie capabilă să învețe. Acest procedeu de actualizare a parametrilor în funcție de output poartă numele de back-propagation.
+
+Pentru rețele cu un număr foarte mare de straturi ce au anumite funcții de activare este totuși posibil ca învătarea să decurgă foate lent din cauza faptului că gradienții funcției de eroare se pot apropia de valoarea 0.
+Această problema este intalnită sub numele de \textbf{problema gradientului ce dispare}(vanishing gradient).
+
+Un alt factor ce ar putea duce la probleme de învățare este \textbf{problema gradientului ce explodează} (exploding gradient).
+
+În estență este fix problema inversă celei menționate mai sus unde de această dată, din cauză că valorile ponderilor pot să ajungă foarte mari, acestea pot să nu mai încapă într-o reprezentare în virgulă flotantă(fenomenul de depașire).
+Pentru evitarea acestor probleme s-au propus diferiți optimizatori pentru algoritmul de gradient descrescător.
+
+\bigskip
+\subsubsection{Optimizatori pentru algoritmul de gradient descrescător}
+\quad\space Există foarte mulți optimizatori pentru algoritmul de gradient de descrescător iar în această lucrare se vor prezenta doi dintre aceștia: \textbf{RMSprop} și \textbf{Adam}
+\begin{outline} 
+	\1 \textbf{RMSProp} \par
+	\bigskip
+	\quad Root Mean Square Prop sau RMSProp este un algoritm care utilizează același concept ca și gradientul descrescător cu impuls \textbf{\cite{rizwan_2018_rms}} și anume media ponderata a gradienților .
+	
+	\quad Modul de calculare al gradiențiilor diferă intre gradient descent și RMSProp \textbf{\cite{gandhi_gandhi_2018}}:
+	
+	\begin{figure}[H]
+		\centering
+		\begin{minipage}{0.4\linewidth}
+			\[
+				v_{dw} = v_{dw} * \beta  + (1-\beta) * dw
+			\]
+			\[
+				v_{db} = v_{db} * \beta  + (1 - \beta) * db
+			\]
+			\[
+				W = W  - \alpha * v_{dw}
+			\]
+			\[
+				b = b - \alpha * v_{db}
+			\]
+			
+			Modul de calcularea al gradienților in gradient descent \textbf{\cite{gandhi_gandhi_2018}}
+		\end{minipage}\hfil
+		\begin{minipage}{0.4\linewidth}
+			\[
+				v_{dw} = v_{dw} * \beta  + (1-\beta) * dw^2 
+			\]
+			\[
+				v_{db} = v_{db} * \beta  + (1 - \beta) * db^2
+			\]
+			\[
+				W = W  - \alpha * \frac{v_{dw}}{\sqrt{{v_{dw}}} + \epsilon} 
+			\]
+			\[
+				b = b - \alpha * \frac{v_{db}}{\sqrt{{v_{db}}} + \epsilon}  
+			\]
+			
+			Modul de calculare al gradienților in RMSProp \textbf{\cite{gandhi_gandhi_2018}}
+		\end{minipage}\hfil
+	\end{figure}
+		
+		
+	
+	\quad Așa cum putem observa, acest optimizator restricționează oscilațiile gradientului în direcția verticală asfel incât algoritmul să conveargă mai repede.
+	
+	
+\1 \textbf{Adam}
+
+\bigskip
+	\quad Acest algoritm de optimizare combină avantajele algoritmului RMSProp cu AdaGrad într-o singură implementare. În loc să adapteze rata de învățare a fiecărui parametru bazat pe media primului impuls precum RMSProp, acesta utilizează media impulsurilor secundare  a gradienților.
+	
+	\quad Este printre cei mai folosiți algoritmi de optimizare datorită faptului că acesta obține rezultate foarte bune, într-un timp relativ scurt .
+\end{outline}
+
+
+\bigskip
+\subsection{Rețele neuronale artificiale convoluționale}
+\bigskip
+
+\quad \space În învățarea profundă, o rețea neuronală convoluțională (CNN sau ConvNet) este o clasă a rețelelor neuronale profunde, aplicată deseori pe probleme de analiză a imaginilor. Deși conceptul este relativ vechi, acestea au fost inventate în anii 1980, CNN-urile au început să fie folosite de abia în ultimii ani, acest lucru fiind datorat creșterii puterii de procesare al plăcilor video(GPU) \textbf{\cite{kakizaki2019adversarial}}.
+
+În esență, o astfel de rețea este alcătuită din mai multe straturi de neuroni artificiali.
+
+Întâlnim straturi de intrare, de ieșire, fully-connected, straturi de pooling, de dropout și de convoluție. Acestea din urmă reprezintă conceptul ce diferențează o rețea neuronală artificială convoluțională de rețelele neuronale artificiale clasice (ANN). \textbf{\cite{kakizaki2019adversarial}}.
+\bigskip
+\begin{outline}
+\1 \textbf{Statul de convoluție (convoluțional layer)} \textbf{\cite{brandonrohrer}}
+	\2 \quad Reprezintă stratul prin care o rețea neuronală convoluțională se diferențează de o rețea neuronală clasică. Scopul acestui strat este identificarea unor caracteristici ale obiectelor în imagine. 
+	
+	\quad Prima oară când o imagine este prezentată unei rețele neuronale aceasta nu știe „după ce să se uite”, dar cu timpul aceasta va învăța anumite filtre, pe care le va aplica pe imagine, pentru a găsi acele caracteristici ce definesc obiectul căutat.
+	
+	\bigskip
+	\bigskip
+	
+	\begin{figure}[!htb]
+		\centering
+		\begin{minipage}{0.4\textwidth}
+			\centering
+			\includegraphics[width=5cm, height=4cm]{"filtru".jpg}
+			\caption{Exemplu de filtru \textbf{\cite{brandonrohrer}} }\label{fig:filtru}
+		\end{minipage}
+		\begin{minipage}{0.5\textwidth}
+			\centering
+			
+			\quad Un filtru (fig. \ref{fig:filtru}) este o matrice cu valori de 1 și -1. Convoluția reprezintă înmulțirea element cu element a numerelor din filtru cu pixelul coresponedent din imagine, adunarea acestor numere și împărțirea lor la numărul total de elemente din filtru. Se obține astfel o nouă matrice cu valori între -1 și 1.
+		\end{minipage}\par
+	\end{figure}
+	
+	\begin{figure}[!htb]
+		\centering
+		\begin{minipage}{0.4\textwidth}
+			\centering
+			\includegraphics[width=5cm, height=4cm]{"filters".jpg}
+			\caption{Aplicarea diferitelor filtre \textbf{\cite{brandonrohrer}} }\label{fig:filtre}
+		\end{minipage}
+		\begin{minipage}{0.5\textwidth}
+			\centering
+			Acest procedeu se repetă (fig. \ref{fig:filtre}) până când este acoperită toată matricea, după care același lucru se recalculează și cu alte filtre rezultând mai multe matrici, o matrice per filtru aplicat. Fiecare element al acelei matrici reprezintă procentajul de potrivire al caracteristicii căutate (cu ajutorul filtrului) în acea bucățică din imagine. Datorită acestui proces, fiecare strat de convoluție mărește numărul de imagini ce trebuie să fie procesat de următorul strat din rețea, iar din această cauză procesul de învățare a acestor rețele este atât de lent. Valorile negative se elimină cu ajutorul funcției ReLu (fig. \ref{fig:relu})
+		\end{minipage}\par
+		
+	\end{figure}\par
+\bigskip
+\1 \textbf{Stratul de intrare (input layer)} (identic ca la ANN) \textbf{\cite{brandonrohrer}}
+	\2 \quad Stratul de intrare poate fi văzut drept condiția pentru care noi antrenăm rețeaua neuronală. 
+	
+	\quad Fiecare neuron poate fi văzut ca o variabilă independentă ce are o foarte mare influență asupra rezultatului obținut de rețeaua neuronală. 
+	
+	\quad Acest strat comunică cu mediul extern și are ca principal obiectiv recepționarea informației și transmiterea acesteia către straturile următoare.
+
+\bigskip
+\1 \textbf{Stratul de iesire (output layer)} (identic ca la ANN) \textbf{\cite{brandonrohrer}}
+	\2 \quad Stratul de ieșire colectează informația primită de la straturile anterioare și o transmite din rețeaua neuronală mai departe spre mediul exterior, într-un mod ce depinde de tipul de problemă rezolvată. Acest strat poate să transmită fie un număr, o etichetă, o listă de numere, practic, orice, depinzând în totalitate de problema pe care o rezolvă rețeaua neuronală.
+	
+	\quad Modelul identificat de acest strat poate fi întors înapoi către stratul de intrare. Numărul neuronilor din acest strat trebuie să fie corespunzător cu tipul de problemă pe	care rețeaua neuronală îl rezolvă.
+\1 \textbf{Stratul ascuns (hidden layer)} (identic ca la ANN)	 \textbf{\cite{brandonrohrer}}
+	\2 \quad Stratul ascuns este un strat intermediar ce este alcătuit dintr-o colecție de neuroni, fiecare neuron având câte o funcție de activare. Scopul său este să procesese informația primită de la stratul anterior adică să găsească și să extragă caracteristici din aceste date.
+
+\bigskip
+\1 \textbf{Stratul de unificare (pooling layer)} \textbf{\cite{brandonrohrer}}
+\bigskip
+\begin{figure}[!htb]
+	\centering
+	\begin{minipage}{0.4\textwidth}
+		\centering
+		\includegraphics[width=5cm, height=4cm]{"pooling".jpg}
+		\caption{Pooling \textbf{\cite{brandonrohrer}} }\label{fig:pooling}
+	\end{minipage}
+	\begin{minipage}{0.5\textwidth}
+		\centering
+		Acest strat are ca principal obiectiv micșorarea imaginii, păstrând cea mai relevantă informație din acestea. Acest procedeu este realizat prin “glisarea” unei matrice de dimensiune 2x2 sau 3x3 de-a lungul imaginii și calcularea valorii maxime din acea porțiune. Doar valoarea maximă va fi salvată în noua imagine, ce va avea dimenisune de 2, respectiv 3 ori mai mică.
+		
+	\end{minipage}
+
+\end{figure}
+
+\1 \textbf{Stratul de regularizare (dropout layer)} \textbf{\cite{budhiraja_budhiraja_2016}}
+
+	\quad Acest strat are ca obiectiv principal evitarea învătarii mecanice într-o rețea neuronală. 
+	
+	\quad Acest lucru se realizează prin „ignorarea” unor neuroni în procesul de propagare inversă a erorii. 
+	
+	\quad Folosirea startului de regularizare dublează numărul de iterații necesare pentru a converge, dar acest proces forțează reteaua să învețe caracteristici mai robuste.
+	
+	\begin{figure}[!htb]
+		\centering
+		\begin{minipage}{0.4\textwidth}
+			\centering
+			\includegraphics[width=5cm, height=4cm]{"before-dropout".jpg}
+			\caption{Înainte de a efectua regularizarea \textbf{\cite{budhiraja_budhiraja_2016}}}
+		\end{minipage}\hfill
+		\begin{minipage}{0.5\textwidth}
+			\centering
+			\includegraphics[width=5cm, height=4cm]{"after dropout".jpg}
+			\caption{După ce s-a efectuat regularizarea \textbf{\cite{budhiraja_budhiraja_2016}}}
+		\end{minipage}
+	\end{figure}
+		
+\bigskip
+\end{outline}
+
+\subsubsection{Metode de măsurare a performanței unei rețele neuronale}
+\bigskip
+\quad Pentru măsurarea performanței unei rețele neuronale s-au introdus, de a lungul timpului mai multe metrici, printre care se număra:
+\bigskip
+\begin{outline}
+\1 \textbf{Măsura recall} \textbf{\cite{hui_hui_2018}}
+
+	\quad Folosită pentru măsurarea performanței unei rețele neuronale. Încearcă să identifice ce proporție din actualele pozitive au fost identificate în mod corect.
+	
+	\quad Se poate calcula dupa următoarea formulă:
+	\begin{equation}
+		Recall = \frac{TP}{TP + FN}
+	\end{equation}
+	\quad TP reprezintă valorile adevarat-pozitive, FN reprezintă valorile fals-negative
+\bigskip
+\1 \textbf{Măsura precision} \textbf{\cite{hui_hui_2018}}
+
+	\bigskip
+	\quad Folosită pentru a măsura procentajul de exactitate al predicției făcute.
+	
+	\quad Se poate calcula dupa următoarea formulă:
+	\begin{equation}
+		Precision = \frac{TP}{TP + FP}
+	\end{equation}
+	\quad FP reprezintă valorile fals-pozitive
+\bigskip
+\1 \textbf{Măsura mean average precision} \textbf{\cite{hui_hui_2018}}\par
+	\bigskip
+	\quad Se poate calcula ca aria de sub graficul fucției p(r), valoarea acesteia fiind:
+	\begin{equation}
+		AP = \int_{0}^{1} p(r)
+	\end{equation}
+\end{outline}
+
+\bigskip
+\subsection{Algoritmul de recunoaștere facială LPBH}
+
+\bigskip
+\quad Recunoașterea facială este procesul prin care o imagie este asociată cu o etichetă unică pe baza caracteristilor indentificate în aceasta. Oamenii, fară efort, efectuează zilnic un astfel de proces iar pe cât se pare că este de ușor pentru noi, pe atât de greu este pentru un sistem soft.
+
+Algoritmul LBPH \textbf{\cite{pietikinen}} (Locally Binary Pattern Histograms) este încă un operator de textură foarte eficient ce etichetează pixelii din imagine prin aplicarea unui prag în vecinătatea fiecărui pixel și întoarce rezultatul sub forma unui numar binar. \textbf{\cite{salton_prado_salton_prado_2017}}
+
+S-a constatat că dacă algoritmul clasic (LBP)  este combinat cu descriptorul de histograme pe gradienți (HOG \textbf{\cite{dalal2005histograms}}) se va obține o performanță considerabil mai bună pe anumite seturi de date. Fiind un algoritm, acesta poate fi descris sub forma unor succesiuni de pasi. \textbf{\cite{salton_prado_salton_prado_2017}}
+\begin{outline}[enumerate]
+\1 \textbf{Setarea parametrilor}
+		\2 \textbf{Raza}: aceasta este folosită pentru a construi modelul circular local binar și reprezintă raza în jurul pixelului central. De obicei este setat cu valoarea 1. \textbf{\cite{salton_prado_salton_prado_2017}}
+		\2 \textbf{Vecinii}: numărul de puncte necesare pentru a construi modelul circular binar. Cu cât acest număr este mai mare cu atât constul de procesare crește. De obicei acesta are valoarea 8. \textbf{\cite{salton_prado_salton_prado_2017}}
+		\2 \textbf{Dimensiunea grilei pe X (grid X)}: numărul de celule in direcția orizontală. Cu cât avem un număr mai mare de celule cu atât grila este mai fină dar crește și dimensiunea vectorului de caracterisitici. \textbf{\cite{salton_prado_salton_prado_2017}}
+		\2 \textbf{Dimensiunea grilei pe Y (grid Y)}: numărul de celule in direcția verticală. Cu cât avem un număr mai mare de celule cu atât grila este mai fină dar crește și dimensiunea vectorului de caracterisitici. \textbf{\cite{salton_prado_salton_prado_2017}}
+\1 \textbf{Antrenarea algoritmului}: pentru a obține rezultate, avem nevoie să antrenam algoritmul cu imagini ale persoanelelor pe care dorim să le detectăm. De asemenea, trebuie setat un identificator pentru fiecare imagine, iar imaginile ce aparțin aceleași persoane trebuie să aibă același identificator.
+\1 \textbf{Aplicarea operatiei LBP}: acesta este primul pas ce necesită calcule din algoritmul LBPH(fig. \ref{fig:lbph}) și constă în crearea unei imagini intermediare ce descrie imaginea inițială intr-un mod mai sugestiv pentru algoritm, punând în evidență caracteristicile faciale. 
+
+	\quad Pentru a face acest lucru, algoritmul folosește tehnica ferestrei glisante în care se folosesc cei doi parametrii meționați anterior(\textbf{rază} și \textbf{vecini}). \textbf{\cite{salton_prado_salton_prado_2017}}
+	
+	\quad Se împarte imaginea în subimagini de dimensiunea ferestrei și se alege ca și prag valoarea din mijloc. Aceasta va fi folosită pentru a determina valorile vecinilor (1 dacă valoarea este mai mare decât cea a pragului si 0 alfel). 
+	
+	\quad După concatenarea acestor valori binare se va obține un număr întreg ce reprezintă valoarea pixelului central din noua imagine. \textbf{\cite{salton_prado_salton_prado_2017}}
+	\begin{figure}[!htb]
+		\centering
+		\includegraphics[width=0.5\textheight, height=0.2\textheight]{"lpbh".jpg}
+		\caption{Descrierea procesului \textbf{\cite{salton_prado_salton_prado_2017}}}\label{fig:lbph}
+	\end{figure}
+\1 \textbf{Extragerea histogramelor} 
+
+	\quad Imaginea generată la pasul anterior va fi împărțită pe baza parametrilor (\textbf{grid X} și \textbf{grid Y}) în regiuni (fig. \ref{fig:regions}) iar apoi pe fiecare regiune în parte vom calcula histogramele (numărul de apariții a fiecărei culoare a pixelilor).
+	
+	\quad Ulterior, se vor concatena toate aceaste histograme obținând astfel caracterisiticile imaginii originale.\textbf{\cite{salton_prado_salton_prado_2017}}
+	 \begin{figure}[!htb]
+	 	\centering
+	 	\includegraphics[width=0.6\textheight, height=0.15\textheight]{"regions".jpg}
+	 	\caption{Împărțirea imaginii în regiuni \textbf{\cite{salton_prado_salton_prado_2017}}}\label{fig:regions}
+	 \end{figure}
+ 
+\1 \textbf{Efectuarea recunoașterii faciale} 
+
+	\quad Vom repeta din nou pașii anteriori pentru a creea o histogramă pentru această imagine. După aceea vom parcurge setul de histograme folosite pentru antrenare și o vom alege pe aceea care este la distanța cea mai mică de ea.
+	
+	\quad Se pot folosi diferite distanțe printre care și distanța euclidiană.\textbf{\cite{salton_prado_salton_prado_2017}}. 
+	
+	\quad Algoritmul va întoarce identificatorul imaginii și un număr ce reprezintă nivelul de încredere al predicției(care nu este nimic altceva decât distanța dintre cea mai apropiată histogramă și histograma pozei curente). 
+	
+	\quad Cu cât acel număr este mai mic, cu atât predicția facută este mai exactă.
+		
+\end{outline}
+
+\newpage
+\bigskip
+\section{Soluția propusă}
+
+\bigskip
+\subsection{Prezentarea ideii}
+\quad\space Am propus un sistem (fig.\ref{fig:steps}) ce poate să vină în ajutorul tutoror problemelor menționate anterior, un sistem semi-automat de prezențe bazat pe recunoașterea facială, simplu și ușor de folosit, în care studenții iși pot alege la ce materii vor să fie înregistrați de sistem pentru a li se acorda prezențele, cu ajutorul procesului de înrolare la o materie, primesc notificări în timp real, odată ce un proces de prezență automată a fost finalizat și totodată pot vedea un scurt istoric al prezențelor la fiecare materie la care s-au înscris, atât la seminar, laborator cât și la curs. Profesorii pot alege ce materii doresc să predea și au control total asupra prezențelor efectuate de sistem putând să elimine atât prezențele false cât și să adauge persoane neidentificate.
+
+Inițial un utlizator iși va face cont pentru a se putea autentifica în aplicație, prin completarea unui formular (nume de utilizator, parola și confirmarea parolei), iar după ce administratorul îi confirmă contul (fie ca profesor, fie ca student), acesta are acces la aplicația propriu-zisă.
+
+În cazul în care contul creat este un cont de tip student, după autentificare, studentul trebuie să aleagă acele materii la care dorește să se înscrie, dar înainte de aceasta, utilizatorul trebuie să încarce două videoclipuri (de maxim 10 secunde fiecare) ce conțin imagini cu fața sa din diferite unghiuri.
+
+Aceste videoclipuri vor fi utilizate pentru extragerea informațiilor legate de fața utilizatorului, în diferite poziții, cât mai diversificate, ce vor fi memorate într-o bază de date, fiind folosite în antrenarea modulului de recunoaștere facială.
+
+După ce procesul de încărcare de videoclipuri, a fost finalizat cu succes, acesta se poate întoarce către pagina principală, unde i se vor arăta rezultatele prezențelor la toate materiile la care s-a înrolat, bineînțeles dacă există rezultate pentru acea materie.
+
+În cazul în care contul creat este de tip profesor, acesta poate să adauge noi materii iar apoi să selecteze cu ce grupa și la ce materie dorește să efectueze prezența, urmând mai apoi să încarce un videclip(de lungime maxim 10 secunde ) cu clasa.
+
+Din acest videoclip vor fi extrase persoanele existente, iar după accea pe baza modului de recunoaștere facială se vor identifica studenții in parte, urmând mai apoi ca modulul de prezență automată să folosească aceste informații pentru a înregistra o prezență pentru fiecare student. Ulterior, după ce procesul se termină, un raspuns va fi trimis atât către fiecare student identificat cât și către profesorul ce a încărcat videoclipul.
+
+După ce a primit rezultatul prezenței, profesorul poate să modifice persoanele absente sau prezente, fiecare modificare declanșând câte o notificare către acel student.
+\bigskip
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.7\textheight, height=0.29\textheight]{"pasi".jpg}
+	\caption{Pașii principali ai sistemului de prezență automată}\label{fig:steps}
+\end{figure}
+\subsection{Implementarea ideii sub forma unui API} 
+
+\quad\space Sistemul are la bază componente critice, fară de care acesta nu ar putea să funcționeze. Aceste componente pot fi folosite indiferent de context, căci reprezintă niște apeluri  de metode (API \textbf{\cite{strom2006methods}}) ce se află pe o altă mașină (un server).
+
+În următoarele secțiuni sunt descrise cele mai importante API-uri ale sistemului, modul în care acestea primesc datele de intrare și ceea ce întorc ca răspuns.
+\subsubsection{API pentru înregistrare (POST)} 
+
+\bigskip
+\quad\space\space Calea de acces(endpoint): /auth/register 
+
+Acesta este folosit atunci cand un utilizator dorește să își creeaze un cont nou. Primește ca date de intrare un obiect de tip JSON\textbf{\cite{bray2017javascript}} cu doua câmpuri: \textbf{usern} și \textbf{passwd}. 
+
+Câmpul \textbf{usern} reprezintă numele de utilizator pe care actorul l-a introdus iar \textbf{passwd} reprezintă parola.
+
+Acest API întoarce un JSON cu două campuri ca și raspuns: \textbf{status} și \textbf{message}. Valoarea pe care status o poate avea este fie 200 fie 500, în funcție dacă datele introduse sunt sau nu corecte și dacă nu există in baza de date un utilizator ce are același nume ca și cel introdus, mesajul fiind setat corespunzător.
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.6\textheight, height=0.2\textheight]{"register".jpg}
+	\caption{Apelul api-ului de înregistrare}\label{fig:register}
+\end{figure}
+\bigskip
+\subsubsection{API pentru authentificare (POST)} 
+
+\bigskip
+\quad\space\space Calea de acces(endpoint): /auth/login 
+
+Acesta este folosit atunci cand un utilizator dorește să se autentifice in aplicație. Primește ca date de intrare un obiect de tip JSON\textbf{\cite{bray2017javascript}} cu două câmpuri: \textbf{usern} și \textbf{passwd}. 
+
+Câmpul \textbf{usern} reprezintă numele de utilizator pe care actorul l-a introdus iar \textbf{passwd} reprezintă parola.
+
+Acest API întoarce un JSON cu două câmpuri ca și raspuns: \textbf{status} și \textbf{message}. Valoarea pe care status o poate avea este fie 200 fie 404, în funcție dacă datele introduse sunt sau nu corecte, iar mesajul este setat corespunzător.
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.6\textheight, height=0.2\textheight]{"login_post_api".jpg}
+	\caption{Apelul api-ului de authentificare}\label{fig:login}
+\end{figure}
+\bigskip
+\subsubsection{API pentru încărcarea de videoclip cu poze ce conțin fața (POST)} 
+
+\bigskip
+\quad\space\space Calea de acces(endpoint): /stream/update-left-right 
+
+Acest api este folosit în momentul în care un student dorește să încarce imagini cu fața sa, pentru a putea fi recunoscut de către sistem.
+
+Primește datele de intrare sub forma unui form, ce conține 3 câmpuri obligatorii: \textbf{fileLeftRight}, \textbf{user}, \textbf{fileUpDown}, acestea reprezentând pe rând, imaginile cu fața in momentul în care utilizatorul mișcă capul stanga-dreapta, numele utilizatorului și imaginile cu fața in momentul în care utilizatorul mișcă capul sus-jos.
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.6\textheight, height=0.2\textheight]{"face_video".jpg}
+	\caption{Apelul api-ului de încărcare de poză}\label{fig:face_video}
+\end{figure}
+\bigskip
+
+\bigskip
+\subsubsection{API pentru înscrierea la o materie  (POST)} 
+\bigskip
+\quad\space\space Calea de acces(endpoint): /enrollment/add 
+Acest api este folosit în momentul în care un student dorește să de înscrie la o materie predată de un anumit profesor.
+\bigskip
+Primește ca date de intrare un obiect de tip JSON\textbf{\cite{bray2017javascript}} cu cinci câmpuri:
+\begin{itemize}
+	\item \textbf{student}: Numele de utilizator al studentului ce dorește să se înscrie
+	\item \textbf{coursType}: Tipul cursului la care vrea să se înscrie, poate fi (SEMINAR, COURSE, LABORATORY)
+	\item \textbf{teacher}: Numele de utilizator al profesorului ce a propus materia
+	\item \textbf{courseName}: Numele cursului la care dorește să se înscrie
+	\item \textbf{group}: Grupa din care face parte studentul 
+\end{itemize}
+\quad Rezultatul este fie 200, dacă totul este ok, fie 500 dacă unul din câmpuri nu este introdus corect.
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.6\textheight, height=0.2\textheight]{"enrollment".jpg}
+	\caption{Apelul api-ului de înscriere la o materie}\label{fig:enrollment}
+\end{figure}
+\bigskip
+
+\subsubsection{API pentru a aduce istoricul prezențelor a unui student la o materie (POST)} 
+
+\bigskip
+\quad\space\space Calea de acces(endpoint): /attendance/for-at 
+
+Acest api este folosit pentru a aduce istoricul prezentelor la o materie.
+
+\bigskip
+Primește ca date de intrare un obiect de tip JSON\textbf{\cite{bray2017javascript}} cu patru câmpuri:
+
+\begin{itemize}
+	\item \textbf{student}: Numele de utilizator al studentului ce dorește să se înscrie
+	\item \textbf{coursType}: Tipul cursului, poate fi (SEMINAR, COURSE, LABORATORY)
+	\item \textbf{teacher}: Numele de utilizator al profesorului ce a propus materia
+	\item \textbf{courseName}: Numele cursului
+\end{itemize}
+
+\quad Rezultatul este o listă de prezente (fig.\ref{fig:result_history})
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.6\textheight, height=0.2\textheight]{"attendances_for".jpg}
+	\caption{Apelul pentru istoric}\label{fig:get_history}
+\end{figure}
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.6\textheight, height=0.4\textheight]{"result_history".jpg}
+	\caption{Rezultatul apelului}\label{fig:result_history}
+\end{figure}
+\bigskip
+
+\subsubsection{API pentru a adauga o materie (POST)} 
+
+\bigskip
+\quad\space\space Calea de acces(endpoint): /courses/add 
+
+Acest api este de profesori, pentru a adauga o materie nouă.
+
+\bigskip
+Primește ca date de intrare un obiect de tip JSON\textbf{\cite{bray2017javascript}} cu patru câmpuri:
+
+\begin{outline}
+	\1 \textbf{abr}: Abrevierea cursului
+	\1 \textbf{coursType}: Tipul cursului, poate fi (SEMINAR, COURSE, LABORATORY)
+	\1 \textbf{teacher}: Numele de utilizator al profesorului ce a propus materia
+	\1 \textbf{courseName}: Numele cursului
+\end{outline}
+
+\quad Rezultatul este fie 200 dacă adaugarea a fost realizată cu succes, respectiv 500 în caz contrar.
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.6\textheight, height=0.2\textheight]{"add_course".jpg}
+	\caption{Apelul pentru adăugarea unei materii}\label{fig:add_course}
+\end{figure}
+\bigskip
+
+
+\subsubsection{API pentru a încărca poza clasei și a efectua prezența automată (POST)} 
+
+\bigskip
+\quad\space\space Calea de acces(endpoint): /stream/attendance-video 
+
+Acest api este destinat profesorilor, în momentul în care aceștia doresc să facă prezența.
+
+\bigskip
+Primește ca date de intrate un form cu 5 câmpuri
+\begin{itemize}
+	\item \textbf{video}: Videoclipul ce conține imagini cu clasa
+	\item \textbf{cls}: Numarul  grupei din care fac parte studenții
+	\item \textbf{teacher}: Numele profesorului
+	\item \textbf{courseName}: Numele cursului
+	\item \textbf{courseType}: Tipul cursului, poate fi (SEMINAR, COURSE, LABORATORY)
+\end{itemize}
+
+\quad Rezultat: profesorul și studenții identificați sunt informați de rezultatul procesului
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.6\textheight, height=0.2\textheight]{"video_attendance".jpg}
+	\caption{Apelul pentru prezența automată}\label{fig:video_attendance}
+\end{figure}
+\bigskip
+
+\subsubsection{API pentru a modifica rezultatul prezenței (POST) } 
+
+\bigskip
+\quad\space\space Calea de acces(endpoint): /attendance/modify 
+
+Acest api este destinat profesorilor, în momentul în care aceștia doresc să modifice rezultatul unui istoric.
+
+\bigskip
+Primește ca date de intrare un obiect de tip JSON\textbf{\cite{bray2017javascript}} cu cinci câmpuri:
+
+\begin{itemize}
+	\item \textbf{historyId}: Id-ul istoricului pe care profesorul dorește să îl modifice
+	\item \textbf{type}: Tipul cursului, poate fi (SEMINAR, COURSE, LABORATORY)
+	\item \textbf{courseName}: Numele cursului
+	\item \textbf{teacherName}: Numele profesorului
+	\item \textbf{presents}: O listă cu studentii ce ar trebui să fie prezenți
+\end{itemize}
+
+\quad Rezultat: profesorul și studenții identificați sunt informați de rezultatul procesului
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.6\textheight, height=0.2\textheight]{"modify_attendance".jpg}
+	\caption{Apelul pentru metoda de modificare a prezenței}\label{fig:modify_attendance}
+\end{figure}
+\bigskip
+\subsection{Aplicația}
+\bigskip
+\quad\space Pentru o mai bună ilustrare a modului în care este construit sistemul, in subsecțiuniile următoare se vor prezenta diferite diagrame ale aplicației, începând cu \textbf{diagrama bazată pe componente}, \textbf{diagrama de cazuri de utilizare}, \textbf{diagrama de secvență} și \textbf{diagrama de clasă}. 
+\subsubsection{Diagrama bazată pe componente}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=16cm, height=10cm]{"component_based_diagram".jpg}
+	\caption{Diagrama bazată pe componente}\label{fig:component}
+\end{figure}
+
+
+
+\quad \space Diagrama din (fig.\ref{fig:component}) este folosită pentru a ne arăta relațiile dintre obiecte și modul în care acestea depind unele de altele.
+ 
+După cum se observă și din diagramă, sistemul este alcatuit din două mari componente: \textbf{clientul} și \textbf{serverul}. Sistemul se bazează pe sablonul de proiectare client-server, fiind cea mai fezabilă abordare pentru un sistem ce trebuie să funcționeze cum mai mulți utilizatori deodată.
+
+Pe partea de client, lucrurile sunt mai simple, existând două componente principale, view-urile și service-urile. Fiecare view pentru a-și procura datele sau pentru a efectua cererile catre server se folosește de servicii, servicii singleton, din cauza faptului că aceiași instanță a unui service trebuie să fie partajată de către toate view-urile ce îl folosesc.
+
+Pe partea de server, lucrurile devin mai complicate, arhitectura fiind mai complexă. Pentru a nu complica diagrama, am ales să reprezint comonentente de același tip, printr-o singura componentă(controller, service, repository), pentru a economisi spațiu și a nu pierde detaliile esențiale.
+
+\textbf{Controller-ul} este componenta ce îmbină toate celălalte componente de tip controller, scopul acestora fiind crearea de puncte de comunicare între server și client. Acest sistem este alcătuit din urmatoarele tipuri de controller:
+\begin{itemize}
+	\item \textbf{AuthenticationController}: conține API pentru autentificare, înregistrare, shimbare de parolă, a afla informațiile despre un utilizator, a obiține lista de utilizatori și de a seta un anumit rol unui utilizator.
+	\item \textbf{HistoryController}: conține API pentru a returna studenții ce au fost sau nu prezenți la o anumită materie, precum și pentru a vedea întreg istoricul de prezențe făcut de un anumit profesor.
+	\item \textbf{EnrollmentController}: conține API pentru a adăuga o înscriere a unui student la o materie, pentru a anula o înscriere, pentru a verifica dacă un student este înscris sau nu la o materie, pentru calcula câti studenți sunt înscriși la o anumită materie.
+	\item \textbf{ProfileController}: implementează API pentru a salva modificarile asupra profilului unui utilizator, de a afla informații despre profilul acestuia și de a încărca o imagine cu fotografia ce va fi prezentată alături de numele său.
+	\item \textbf{StreamingController}: implementeaza API pentru încărcarea de fotografii cu fața utilizatorului cât și a videoclip-ului pentru prezență automată.
+	\item \textbf{StudentAttendanceController}: conține API pentru a verifica dacă un utlizator are încărcate imaginile cu fața, pentru a vedea prezențele la o anumită materie ( sau la toate materiile), sau pentru modificarea unei prezențe.
+	\item \textbf{TeacherCourseController}: conține API pentru a adăuga un nou curs și pentru a vedea toate cursurile postate de un anumit profesor.
+\end{itemize}
+
+Se observă din diagramă că fiecare controller are nevoie de o implementare pentru un service.
+
+\quad \textbf{Service-ul}, aceasta este componenta ce înglobează totalitatea tipurilor de service-uri, acestea implementând logica aplicației. Sistemul este alcătuit din urmatoarele service-uri:
+\begin{itemize}
+	\item\textbf{AttendanceService}: conține metode necesare pentru toate operațiile ce au legătură cu procesul de prezență.
+	\item\textbf{AuthService}: conține metode necesare pentru toate operațiile ce au legătură cu procesul de autentificare.
+	\item\textbf{CourseService}: conține metode necesare pentru toate operațiile ce au legătură cu procesul de gestionare al cursurilor
+	\item\textbf{ProfileService}: conține metode necesare pentru toate operațiile ce au legătură cu procesul de gestionare al profilului
+	\item\textbf{EnrollmentService}: conține metode necesare pentru toate operațiile ce au legătură cu procesul de înscriere la curs
+	\item\textbf{RecognitionService}: conține metode necesare pentru toate operațiile ce au legătură cu procesul de recunoaștere facială
+	\item\textbf{StreamingService}: conține metode necesare pentru toate operațiile ce au legătură cu procesul de identificare a fețelor din videoclip, pentru a salva imaginile utilizatorului în baza de date
+	\item\textbf{HistoryService}: conține metode necesare pentru toate operațiile ce au legătură cu istoricul de prezențe
+\end{itemize}
+
+Fiecare dintre aceste service-uri au nevoie de un repository pentru a putea fi instanțiate, unele chiar și de alte service-uri sau componente auxiliare. 
+
+\quad \textbf{Repository-ul} este componenta ce se ocupă de persistență, de interogarea datelor, fiind componenta comună din diagramă pentru urmatoarele repository-uri:
+\begin{itemize}
+	\item \textbf{AttendanceRepo}: operații CRUD pentru prezențe
+	\item \textbf{CourseRepo}: operații CRUD pentru cursuri
+	\item \textbf{EnrollmentRepo}: operații CRUD pentru înscriere la cursuri
+	\item \textbf{FaceImagesRepo}: operații CRUD pentru imaginile  cu fața
+	\item \textbf{HistoryRepo}: operații CRUD pentru istoricul de prezențe
+	\item \textbf{UserRepo}: operații CRUD pentru utilizator
+\end{itemize}
+
+Pe langă aceste componente mai sunt și componente auxiare folosite in service-uri pentru recunoașterea facială(\textbf{FaceRecogniser și Recogniser}), pentru detecția facială (\textbf{Detector și DetectorCropper}) și pentru encodarea parolelor (\textbf{Encoder}).
+
+\bigskip
+\subsubsection{Diagrama de cazuri de utilizare}
+\bigskip
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=16cm, height=10cm]{"use_case_diagram".jpg}
+	\caption{Diagrama de cazuri de utilizare}\label{fig:use_case}
+\end{figure}
+
+\quad Această diagramă(fig.\ref{fig:use_case}) ne ajută să înțelegem mai bine care sunt actorii și ce acțiuni pot să întreprindă aceștia.
+
+\quad Conform acestei diagrame, identificăm trei actori: \textbf{profesorul}, \textbf{administratorul}, \textbf{studentul}.
+
+\quad Administratorul poate să se autentifice în aplicație și poate seta rolul unui utilizator (fie profesor, fie student).
+
+\quad Studentul poate să își creeze cont, să se autentifice în aplicație, să încarce o fotografie de profil și să editeze profilul, să se înscrie la o materie și să își încarce videoclip cu fața.
+
+\quad Profesorul poate să își creeze cont, să se autentifice în aplicație, să adauge o materie nouă să încarce o poză cu clasa pentru a efectua prezența, să modifice și sa vadă rezultatul prezenței și să încarce o fotografie de profil și să editeze profilul.
+
+
+\bigskip
+\subsubsection{Diagrame de secvență}
+\bigskip
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=16cm, height=10cm]{"sequence_login".jpg}
+	\caption{Diagrama de secvență pentru procesul de autentificare}\label{fig:sequence_login}
+\end{figure}
+
+\quad Această diagramă(fig.\ref{fig:sequence_login}) este folosită pentru a ilustra secvența de operații ce se execută pentru procesul de \textbf{autentificare}.
+
+\quad Inițial utilizatorul introduce în cadrul view-ului de autentificare, numele de utilizator și parola. Componenta va apela metoda login de pe service-ul de login(LoginService), cu credențialele de autentificare, iar aceasta va face un apel REST către server, pentru a vedea dacă datele introduse sunt corecte.
+
+\quad Controller-ul responsabil pentru acest apel este AuthController. Mai întai, se verifică dacă obiectul primit conține toți parametrii (atât numele de utilizator cât și parola) iar dacă acest criteriu nu este îndeplinit, se va întoarce un mesaj de eroare ce va fi afișat pe view-ul de autentificare.
+
+\quad Dacă obiectul primit are toți parametrii setati corespunzător, atunci se va apela metoda login de pe service-ul de login(AuthService). Aici se criptează parola, și se apelează metoda hasAccount cu numele de utilizator și parola criptată, pentru a vedea dacă în baza de date există un utilizator cu acele credențiale.
+
+\quad În funcție de rezultatul operației se va crea fie un raspuns afirmativ fie unul negativ ce va ajunge înapoi înspre view-ul de login. Dacă răspunsul este negativ, se va afișa un mesaj de eroare iar in caz contrar se va crea
+un obiect de tipul RoleChooser, responsabil cu afișarea ferestrei portrivite în funcție de rolul utilzatorului.
+
+\quad Se va face un apel REST către același controller și se vor aduce informațiile despre utilizator. În funcție de acestea fie utilizatorul va fi redirectat spre pagina principală corespunzătoare rolului său, fie spre o pagina cu un infinite progress bar.
+\bigskip
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=16cm, height=10cm]{"sequence_upload".jpg}
+	\caption{Diagrama de secvență pentru procesul de încărcare a img. cu fața}\label{fig:sequence_upload}
+\end{figure}
+
+\quad Această diagramă(fig.\ref{fig:sequence_upload}) este folosită pentru a ilustra secvența de operații ce se execută pentru procesul de \textbf{încărcarea a imaginilor cu fața}.
+
+\quad Studentul navighează spre opțiunea de încărcare a videoclip-ului. Acesta poate să aleagă anularea procesului, prin apăsarea butonului de cancel, în acest caz sistemul revenind în starea inițială. Dacă alege să continuie, timp de maxim 10 secunde i se vor înregistra caracterisiticile faciale. După ce au trecut primele 10 secunde, o nouă fereastră va aparea, de această dată pentru înregistrarea mișcărilor orizontale ale capului și feței. Utilizatorul poate oricând să oprească procesul.
+
+\quad După aceea se va apela metoda de upload din service-ul ProfileService și se vor trimite datele către server. Controller-ul StreamingController răspunde la apel delegând sarcina mai departe către service-ul StreamingSerivice.
+Cu ajutorul componentei DetectionCropper se vor identifica toate imaginile cu fața din cele doua videoclipuri și se vor salva in baza de date în urma apelului update de pe UserRepository.
+\bigskip
+\subsubsection{Diagrama de clasă pentru modulul de recunoaștere facială}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=17cm, height=12cm]{"class_diagram".jpg}
+	\caption{Diagrama de clasă}\label{fig:class_diagram}
+\end{figure}
+
+\quad Această diagramă(fig.\ref{fig:class_diagram}) este folosită pentru a ilustra structura subsistemului de recunoaștere facială.
+
+\quad Componenta principală a acestui subsistem este service-ul de recunoaștere facială (\textbf{RecognitionService}).Acesta, implementează interfața IRecognitionService iar pentru realizarea procesului, se folosește de alte două componente, FaceRecogniser, pentru recunoașterea de imagini și Recogniser pentru reantrenarea modelului în caz că se înregistrează utilizatori noi.
+
+\quad \textbf{FaceRecogniser} este componenta ce efectuează procesul de recunoaștere, a persoanelor ce apar într-un videoclip. Pentru detecția fețelor în imagini acesta utilizează o instanță a clasei DetectionCropper, iar pentru a identifica persoanele din imagine, se folosește de o instanță a clasei Regoniser.
+
+\quad \textbf{DetectionCropper} va detecta în poză și va întoarce o listă cu toate fețele ce se regasesc intr-o imagine, folosindu-se de o instanță ce implementează clasa IDetector. 
+
+\quad \textbf{IDetector} componentă folosită pentru a detecta zonele din poză ce conțin imagini cu fețe, sub forma unei liste de tupluri cu 4 elemente, fiecare tuplu reprezentând coordonatele colțului stânga sus, dreapta jos al zonei corezpunzătoare.Această interfață are și o implementare concretă, YOLOModel.
+
+\quad \textbf{YOLOModel} componentă pentru localizarea în poză a zonelor ce conțin imagini cu fețe.
+
+\subsubsection{Diagrama de bază de date}
+\bigskip
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm, height=6cm]{"database".jpg}
+	\caption{Diagrama de bază de date}\label{fig:database}
+\end{figure}
+
+
+\quad În această diagramă(fig. \ref{fig:database}) este prezentată structura bazei de date și relațiile dintre entitațile bazei de date. Aceasta a fost modelată astfel încât să se mimeze cât mai bine procesul din viața de zi cu zi. După cum se poate observa din diagramă, baza de date conține 8 tabele: user, face, faceimage, attendance, enrollment, course, history, profile.
+\begin{itemize}
+	\item \textbf{User}: reprezintă tabelul în care se vor memora informațiile despre utilizator.Acesta poate fi considerat drept tabelul principal, deoarece toate celelalte entitați sunt subordonate acestuia.
+	\item \textbf{Face}: acest tabel se afla în legatura one to one cu tabelul user, în incercarea de modelare a procesului natural, fiecare utilizator având o singura față. Poate fi privit ca un tabel intermediar între user și faceimage.
+	\item \textbf{FaceImage}: conține informații despre imaginile faciale asociate fiecarui user în parte. Este în legatură many to one cu tabelul face, deoarece unei fețe îi pot corespunde mai multe imagini.
+	\item \textbf{Profile}: tabel folosit pentru memorarea informațiilor despre profilul utilizatorului. Este în relație one to one cu tabelul user, fiecărui user corespunzându-i un profil unic.
+	\item \textbf{Course}: entitate folosită pentru memorarea tuturor datelor necesare despre un curs. Acesta este într-o relație de tip many to one cu tabelul utilizator cu următoarea seminificație: un utilizator cu rolul de profesor poate să propună mai multe cursuri. Cu tabelul enrollment acesta este în one to many, un curs putând avea mai multe înscrieri iar cu tabelul attendance tot în one to many la un curs putând fi asociate mai multe prezențe.
+	\item \textbf{Enrollment}: se memorează informații necesare procesului de înscriere la un curs. Este în relație many to one cu tabelul user, deoarece un user se poate înscrie la o mai multe cursuri.
+	\item \textbf{Attendance}: tabel corespuzător înformațiilor legate de prezențe.
+	\item \textbf{History}:  tabel în care se va memora istoricul prezențelor
+\end{itemize}
+\newpage 
+
+\subsection{Tehnologii folosite și detalii de implementare}
+\bigskip
+\subsubsection{Tehnologii folosite}
+
+\quad\space\space Pentru implementarea acestui sistem s-au ales diferite tehnologii (JAVA, JAVA Spring, Flutter, Hibernate, MySQL, Deeplearning4j) alături cu diferite medii de implementare (IntellIJ IDEA).
+\bigskip
+
+\textbf{Limbajul de programare JAVA \cite{arnold2005java}}
+
+\qquad Acesta este un limbaj de programare de nivel înalt, atât compilat cât și interpretat, orientat obiect, bazat pe clase inventat de James Gosiling și dezvoltat de Oracle Corporation. În ciuda faptului că totul în acest limbaj trebuie scris în interiorul unei clase, acesta nu este pur orientat obiect, conținând și tipuri de date primitive.
+
+\qquad Scopul principal pentru care acesta a fost inventat era necesitatea unui limbaj de programare în care codul să fie scris o singura dată și rulat pe cât mai multe sisteme (write once, run anywhere) ce suporta Java fară a mai fi necesară recompilarea.
+
+\qquad Aplicatiile Java sunt compilate în așa numitul bytecode, cod ce poate rula pe orice mașină virtuala Java (JVM), indiferent de arhitectura sistemului de calcul. Sintaxa (fig. \ref{fig:java}) este asemănătoare cu cea a limbajului C/C++, numai că acesta oferă mai puține facilităti low-level. \textbf{\cite{arnold2005java}}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm, height = 3cm]{"hello_world_java".jpg}
+	\caption{Hello word în JAVA \cite{wikipedia_2019}}\label{fig:java}
+\end{figure}
+
+\qquad Principalul motiv pentru care această tehnologie a fost aleasă pentru dezvoltarea acestui sistem este pe de o parte necesitatea unui limbaj de programare cu o performanță ridicată apropiată cât mai mult de cea a limbajului C/C++ iar pe de altă parte necesitatea unui limbaj robust, ce permite și are suport pentru diferite librării ce pot fi utilizate pentru a implementarea cât mai rapidă a unei soluții software.
+\newpage
+
+\textbf{JAVA Spring \cite{tutorialspoint.com}}
+
+\qquad Spring este cea mai populara tehnologie pentru dezvoltarea aplicațiilor enterprise în libajul JAVA. Este o platformă open-source, scrisă inițial de Rod Johnson și prima dată publicată cu licența Apache 2.0.
+
+\qquad Caracteristicile principale ale framework-ului spring pot fi folosite pentru a dezvolta orice aplicație Java, existând și extensii ale acestei tehnologii ce permit crearea de aplicații web peste platforma JAVA EE. \textbf{\cite{tutorialspoint.com}}
+
+\qquad Principalele avantaje ale acestei tehnologii sunt: Dependency Injection și Aspect Orientated Programming. Dependecy Injection (injectarea dependințelor) este un avantaj adus de aceasta platformă, facilitând modul în care obiectele depind unele de altele. Acele depindențe nu sunt nimic altceva decât niște bean-uri (fig. \ref{fig:user_repo}) iar injectarea aceastora reprezintă specificarea intr-o componentă a bean-urilor de care aceasta are nevoie (fig. \ref{fig:di_autowired}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm, height = 2cm]{"di_user_repo".jpg}
+	\caption{Specificarea unui Bean}\label{fig:user_repo}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm, height = 3cm]{"di_autowired".jpg}
+	\caption{Injectarea unei dependințe}\label{fig:di_autowired}
+\end{figure}
+
+
+\qquad Având în vedere că sistemul este dezvoltat pe șablonul de proiectare client-server, scriere tuturor protocoalelor de comunicare necesare unui serviciu REST nu ar fi fost fezabilă, acestă fiind principalul motiv ce stă la baza alegerii acestei tehnologii pentru implementare.
+ 
+\newpage
+\textbf{Flutter \cite{flutterbygoogle}}
+
+\qquad Aceasta este o tehnologie inventata de cei de la Google ce conține mai multe seturi de instrumente pentru crearea aplicațiilor mobile (atât IOS cât și Android), fiind principala metodă pentru crearea aplicațiilor pentru noul sistem de operare, Google Fuchsia.
+
+\qquad Engine-ul framework-ului este scris în C++, iar principalul limbaj de programare pentru acest framework este Dart. Având în vedere că acest framework este scris în C++ performanța tuturor aplicațiilor este una foarte bună apropiindu-se foarte mult de cea a coldului nativ scris fie Java pentru android, fie în Objective-C pentru IOS.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm, height = 10cm]{"flutter_hello_word".jpg}
+	\caption{Hello word in flutter}\label{fig:flutter_hello_word}
+\end{figure}
+
+\qquad Această tehnologie a fost aleasă pentru ușurința prin care se pot dezvolta aplicațiile mobile și pentru obținerea unei performanțe asemănătoare cu cea a codului nativ.
+
+\newpage
+\textbf{Hibernate ORM \cite{o2008object}}
+
+\qquad Hibernate este o tehnologie de convertire a datelor între sisteme diferite (ORM), pentru limbajul JAVA. Acesta oferă soluția pentru maparea unui model orientat obiect intr-o bază de date relațională. Este un software gratuit, distribuit sub licența GNU, inventat de Red Hat în anul 2001.
+
+\qquad Se folosesc, pentru maparile de date fie fișiere XML fie adnotari JAVA (fig. \ref{fig:hibernate}), iar interogările se pot scrie in HQL (hibernate query language).
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm, height = 10cm]{"hibernate".jpg}
+	\caption{Exemplu de mapare folosind adnotari}\label{fig:hibernate}
+\end{figure}
+
+\qquad Aceasta tehnologie a fost aleasă pentru facilitarea comunicării cu baza de date, acelerând procesul de dezvoltare al aplicației.
+
+\newpage
+\textbf{MySQL \cite{dubois1999mysql}}
+
+\qquad MySQL este un sistem de gestiune a bazelor de date relaționale, produs de compania suedeza MySQL AB, fiind cel mai popular SGBD la ora actuală.
+
+\qquad 	Cu toate că este folosit foarte des împreuna cu limbajul de programare PHP, acest framework conține multe API-uri ce îi permit să fie folosit alături de foarte multe limbaje, precum C, C++, C Sharp, Java, pentru accesarea bazelor de date.
+
+\qquad Sintaxa acestui limbaj (fig. \ref{fig::mysql}) este foarte asemănătoare cu cea a limbajului SQL, diferind în foarte puține locuri.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm, height = 5cm]{"mysql".jpg}
+	\caption{Exemplu de interogare scrisă în MySQL}\label{fig::mysql}
+\end{figure} 
+
+\qquad Aceasta tehnologie reprezintă cea mai bună soluție în momentul în care dorim să lucrăm cu Java Hibernate, datorită existenței unei foarte bune compatibilități intre cele două sisteme, iar acest lucru a fost principa cauza pentru alegerea acestui framework pentru baza de date.
+
+\bigskip
+\textbf{Deeplearning4j \cite{team2016deeplearning4j}}
+
+\qquad Aceasta este o librărie de învațare profundă, scirsă pentru Java și totodată o librărie de calcul ce conține numeroși algoritmi de învațare profundă, scrisă în Scala, CUDA, C, C++, Python, Clojure.
+
+\qquad Datorită faptului că acestă librarie este susținută și dezvoltată de foarte multe instituții reprezintă alegerea perfectă pentru o aplicație Java ce folosește algoritmi de învătare automată.
+
+\bigskip
+\textbf{IntelliJ IDEA  \cite{jetbrains}}
+
+\qquad IntelliJ IDEA este o platformă de dezvoltare pentru software dezvoltat de compania JetBrains, lansat în anul 2001. Acesta este deseori folosit pentru facilitatile pe care le ofera (Inteli Sense)	și pentru faptul că suportă o varietate de
+limbaje de programare.
+
+\qquad A fost ales pentru că, după parearea mea, reprezintă cea mai bună alegere pentru scrierea de cod JAVA.
+
+\subsubsection{Antrenarea modelului pentru recunoașterea facială}
+\quad\space Pentru rezolvarea acestei probleme, am ales să folosesc un algoritm de deep-learning (un model) preantrenat, constrâns fiind de limitele hardware, ce a fost reantrenat cu date „custom” (cu imagini ce conțin fețe), imagini preluate din setul de date WiderFace. Este vorba despre modelul \textbf{Tiny YOLO}.
+
+Față de modelul complet YOLO v2, acesta este mai rapid în detecție, căci are mai puține straturi, însă acuratețea acestuia este mai mică decât cea a modelului complet.
+
+Setul de date de antrenament a fost ales pe baza ultimelor descoperiri în domeniu, numeroase lucrări de specialitate făcand referire la aceste imagini când vine vorba de antrenarea modelelor pentru detecție facială, conținând un număr de peste 393000 de poze (fig. \ref{fig::widerface}). Din cauza constrângerilor hardware au fost alese, din acest set de imagini, 2000 de poze.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=6cm, height = 6cm]{"widerface".jpg}
+	\caption{Imagine preluată din setul de date de antrenament WiderFace}\label{fig::widerface}
+\end{figure} 
+
+\newpage
+
+Modelul \textbf{YOLO} funcționează în felul următor: imaginea este împărțită în mai multe regiuni, fiecare avînd rolul de a verifica dacă obiectul ce își are mijlocul în centrul regiunii este sau nu de interes. Totuși, acestui model trebuie să i se spună forma obiectelor, adică, dacă sunt fie mai înalte, fie mai înguste, mai exact, trebuie definite așa numitele anchor-boxes (o pereche de două numere - lațimea și înălțimea unui dreptunghi).
+
+Principala provocare pe care am întâlnit-o, a fost prelucrarea fișierelor de adnotare folosite pentru antrenare, din cauză că biblioteca Deeplearning4j, utilizată pentru inițializarea modelului preantrenat pe imagini, are nevoie ca fișierele de antrenament să fie într-un anumit format, un fomat xml binedefinit, și nu csv (fig. \ref{fig::csv}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm, height = 3cm]{"csv".jpg}
+	\caption{Formatul adnotărilor din setul WiderFace}\label{fig::csv}
+\end{figure} 
+
+În acest fișier(fig. \ref{fig::csv}), datele sunt reprezentate sub formă de cvintete (coordonatele colțului din stânga sus împreună cu lungimea și înălțimea dreptunghiului desenat în jurul zonei din fotografie, în care a fost identificat obiectul căutat).
+
+Pentru antrenare, totuși, avem nevoie de un altfel de format pentru fișierul de adnotare, un format (fig. \ref{fig::adnotare}) in care să specificăm pentru fiecare obiect coordonatele colțului din stanga sus dreapta jos (bounding-box-ul ce înconjoara obiectul).
+
+Se poate observa că în acest fisier se specifică pentru fiecare obiect în parte coordonatele dreptunghiului ce înconjoara obiectul.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=6cm, height = 5.1cm]{"adnotare".jpg}
+	\caption{Formatul adnotărilor}\label{fig::adnotare}
+\end{figure} 
+
+\paragraph{Algoritmul de creare de fișiere pentru adnotare}
+
+\quad\space Primul pas, pentru a reuși sa antrenez modelul a fost scrierea unui algoritm capabil să extragă din acel fișier csv, informații pentru a construi echivalentul său în format xml,  acceptat de modelul antrenat, Tiny YOLO.
+\bigskip
+
+În esență, algoritmul este destul de simplu:
+\begin{enumerate}
+	\item Se citește o imagine din setul de date de antrenament
+	\item Se indentifica zona, din fișierul de adnotări original, în care apare numele imaginii curente
+	\item Citesc numarul N de fețe identificate în această adnotare
+	\item Cât timp nu am citit cele N linii
+	\item Citesc cele 4 numere de interes (x, y, w, h) și ignor celelalte informații despre imagine
+	\item Creez un obiect de tip bndbox (x, y, x+w, y+h) și îl adaug într-un obiect Object 
+	\item Adaug, în lista de obiecte, obiectul creat 
+	\item Repet pasul 1 până când toate imaginile au fost procesate
+	\item Adaug adnotarea și salvez fișierul, sub numele nume\_poza.xml
+\end{enumerate}
+
+
+\begin{figure}[H]
+	\begin{minipage}{0.48\textwidth}
+		\centering
+		\includegraphics[width=10cm, height=5cm]{"adnotari".jpg}
+		\caption{Fisierul obținut}\label{fig:adnotari}
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\textwidth}
+		\centering
+		\includegraphics[width=9cm, height=5cm]{"imagini".jpg}
+		\caption{Imaginilie inițiale}\label{fig:imagini}
+	\end{minipage}\hfill
+\end{figure} 
+
+După ce acești pași au fost efectuați totul este pregătit pentru antrenarea modelului.
+
+
+\paragraph{Algoritmul de scalare al pozelor și de modificare al bounding-box-urilor}
+
+\quad\space\space După, a urmat momentul în care am stabilit înălțimea imaginii (416x416) ce intră în primul layer de convoluție, înălțimea unei celule din grid (13), numărul de clase (1), learning rate-ul (.00001) și numărul de epoci (10). 
+
+Apoi, am modificat ultimul layer al rețelei (layerul de output) pentru a se potrivi problemei mele (l-am modificat astfel încât să poată să întoarcă acele obiecte (coordonatele) ce au dimenisiuni asemănătoare cu cele ale anchor-box-urilor).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm, height = 5cm]{"loss_bad".jpg}
+	\caption{Graficul de loss din timpul antrenării}\label{fig::loss_bad}
+\end{figure} 
+
+Se observă că (fig. \ref{fig::loss_bad}), există perioade în care loss-ul descrește după care crește brusc, ceea ce sugerează că rețeaua nu învață bine iar acest lucru se datorează omiterii a două lucruri importante: 
+\begin{itemize}
+	\item Dacă imaginea este micșorată la 416x416, atunci și coordonatele bounding-box-urilor ar trebui scalate cu factorul de micșorare al pozei
+	\item Dimensiunea anchor-box-urilor ar trebui setată în funcție de forma obiectelor pe care dorim să le identificăm.
+\end{itemize}
+
+Pentru rezolvarea primei probleme, am implementat un algoritm de scalare al pozelor și a coordonatelor din poză, ce respectă următorii pasi:
+
+\begin{enumerate}
+	\item Parcurg pozele din setul de antrenament
+	\item Pentru fiecare poză aplic redimensionarea și scalarea coeficienților
+	\begin{itemize}
+		\item calculez w = RESIZED\_WIDTH / image.width()
+		\item calculez h =  RESIZED\_HEIGHT / image.height()
+		\item calculez boxHeight = (xmax – xmin)
+		\item calculez boxWidth = (ymax – ymin)
+		\item x1 = w * xmin
+		\item x2 = h * ymin
+		\item x2 = x1 + w * boxHeight
+		\item y2 = y1 + h * boxWidth
+	\end{itemize}
+	\item Rescrierea fișierul xml de adnotare corespunzător fiecărei imagini
+\end{enumerate}
+
+După ce am rulat, cu noile date, rezultatele au fost mai bune dar nu satifăcătoare, iar după ajustarea parametrilor ce pot fi configurați (alegerea Adam ca optimizator pentru evitarea exploding-gradients (fig.\ref{fig::exploding_gradients}) și vanish-gradient problem), schimbarea learning rate-ului, am realizat că există un detaliu care îmi scapă și anume identificarea dimensiunii corecte a anchor-box-urilor.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=16cm, height = 3cm]{"exploding_gradients".jpg}
+	\caption{Exploding gradients}\label{fig::exploding_gradients}
+\end{figure} 
+
+\paragraph{Algoritmul K-Means folosit pentru determinarea anchor-box-urilor}
+
+\quad\space\space După o documentare amănunțită, am realizat că nu pot obține rezultate satisfăcătoare cu valorile default pentru anchor-boxes, așa că, trebuia implementat un algoritm pentru determinarea anchor-box-urilor, pe setul actual de imagini.
+
+Ideea pe care am folosit-o, a fost aceea de a folosi un algoritm de clusterizare pentru a împărți datele în BOX\_NUMBER clusteri, iar centroidul fiecărui cluster să reprezinte dimensiunile anchor-box-ului, un algoritm de clusterizare K-Means, inspirat din \textbf{\cite{blog_2018}}.
+
+Însă pentru aceasta trebuia cumva ca bounding-box-urile să fie transformate în puncte, P(x,y), relativ la problema pe care dorim să o rezolvăm.Punctele au fost obtinute după această formulă:
+
+\begin{figure}[H]
+	\centering
+	\begin{minipage}{0.3\linewidth}
+		\begin{equation}
+			x = \frac{(x_{max} - x_{min})}{width} * 32 
+		\end{equation}
+		\begin{equation}
+			y = \frac{(y_{max} - y_{min})}{height} * 32
+		\end{equation}
+	\end{minipage}\hfill
+	\begin{minipage}{0.70\linewidth}
+		\begin{itemize}
+			\item $x_{max}$ și $x_{min}$: reprezintă abscisele coordonatelor bnd-boxurilor
+			\item $y_{max}$ și $y_{min}$: reprezintă ordonatele coordonatelor bnd-boxurilor
+			\item height: reprezintă înalțimea imaginii
+			\item width: reprezintă lațimea imaginii
+			\item 32 reprezintă numărul de transformări pe care le suferă in rețea datele (acestea fiind micșorate de 32 de ori în cadrul rețelei)
+		\end{itemize}
+	\end{minipage}\hfill
+\end{figure}
+
+După rularea algoritmului de cluserizare de date, vom lua drept anchor-boxes valorile centroizilor (prima coordonată reprezentând lătimea iar cea de a doua înălțimea), adică acele puncte ce au  abscisa egală cu media tututor absciselor iar ordonata egală media tuturor ordonatelor din acel cluster.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=16cm, height = 3.5cm]{"good_loss".jpg}
+	\caption{Exploding gradients}\label{fig::good_loss}
+\end{figure} 
+
+Se observă în(fig. \ref{fig::good_loss}) cum rețeaua reușește să învețe, loss-ul scăzând liniar, cu foarte puține variațiuni. După antrenare, modelul obținut este salvat intr-un fișier cu numele \textbf{model.data}
+
+
+\bigskip
+\subsubsection{Încărcarea modelului și integrarea acestuia în sistem}
+
+\quad Modelul salvat anterior este integrat intr-o componentă ce pe baza coordonatelor întoarse de acesta, va extrage din imaginea initială zonele cu fețe, salvandu-le într-o listă. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm, height = 5cm]{"load_model".jpg}
+	\caption{Încărcarea modelului in componentă}\label{fig::load_model}
+\end{figure} 
+
+\bigskip
+\subsubsection{Implementarea sistemului}
+
+\quad\space\space După ce au fost implementate toate componentele necesare procesului de recunoaștere facială s-au dezvoltat, pe rând atât API-urile prin care clientul poate comunica cu server-ul cât și interfața pentru client.
+
+Pentru a spori acuratețea detecția de prezență automată, s-a luat decizia ca pentru fiecare student în parte să se memoreze o listă de imagini(ce conțin fața), obținută prin încărcarea a două videoclipuri (unul în care mișcările capului sunt pe verticală iar celălalt pe orizontală).
+
+Cu ajutorul componentei menționate mai sus se obtine lista tuturor fețelor identificate in acel videoclip (se aplica detecția pe fiecare cadru al videoclipului în parte).
+
+Pentru a memora numai cadre relevante pentru algoritmul de recunoaștere facială, s-a luat decizia ca algoritmul de detecție facială să fie din K în K (fig.\ref{fig::skip_frames}) cadre, obținandu-se astfel imagini cât mai diversificate.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm, height = 5cm]{"skip_frames".jpg}
+	\caption{Eliminarea cadrelor asemănătoare}\label{fig::skip_frames}
+\end{figure} 
+
+Vom reantrena algoritmul de recunoaștere facială (LBPH), cu noile imagini obținute cu fața utilizatorului, iar pentru fiecare imagine, vom folosi drept indentificator ID-ul utilizatorului.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=17cm, height = 3cm]{"retrain".jpg}
+	\caption{Reantrenarea modelului de recunoaștere facială}\label{fig::retrain}
+\end{figure} 
+
+\bigskip
+\paragraph{Algoritmul de prezență automată}
+\quad Pentru efectuarea automată a prezențelor se folosesc ambele componente: componenta de recunoaștere facială și componenta de detecție facilă. Profesorul va încărca un videoclip de maxim 10 secunde al clasei, iar acesta va fi descompus în cadre. Pașii algoritmului de prezență automată sunt:
+
+\begin{enumerate}
+	\item Se alege cadrul curent din lista de cadre disponibilă
+	\item Se identifică zonele din poză in care sunt fețe și se extrag
+	\item Se aplică algoritmul de recunoaștere facială pentru a i se asocia fiecărei poze câte o etichetă
+	\item Se contorizează pentru fiecare etichetă numarul de apariții
+	\item Se trece la cadrul următor și se repetă pasul 1, dacă mai sunt cadre în listă.
+	\item Se numară în câte dintre toate aceste cadre s-a detectat cel puțin o față
+	\item Se împarte numarul de apariții al fiecărei etichete la numarul obținut anterior și se memorează rezultatul obținut
+	\item Dacă procentajul de apariție este mai mare sau egal cu valoarePrag atunci se adaugă prezența și utilizatorul (studentul) va fi notificat 
+\end{enumerate}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=16cm, height = 6cm]{"prezenta".jpg}
+	\caption{Prezența automată}\label{fig::prezenta}
+\end{figure} 
+
+\section{Rezultate}
+
+\subsection{Descrierea setului de date de test și configurația sistemului}
+
+\quad\space Testul a fost executat pe un computer cu un procesor Intel Core i7-8750H de 4,1Ghz, memorie RAM de 16Gb DDR4 și un GPU Nvidia GeForce GTX 1070 SC de 8Gb VRAM. 
+
+Acesta constă în antrenarea rețelei neuronale pe fiecare dintre cele 3 seturi de date și rularea testelor pe fiecare în parte. S-a folosit o proporție de 80-20 pentru datele de antrenare respectiv test.
+
+Seturile de date de antrenament sunt alcătuite din 2000 de imagini in care se regasesc oameni în diferite poziții. Pentru primul test s-au ales 2000 de imagini din setul de date WIDER Face(Easy) \textbf{\cite{yang2016wider}}, pentru cel de al doilea, 2000 de imagini din setul WIDER Face(Medium) \textbf{\cite{yang2016wider}} iar pentru ultimul 2000 de imagini din WIDER Face(Hard) \textbf{\cite{yang2016wider}}.
+
+Dificultatea acestor teste este datorată colplexității imaginilor pe care rețeaua le folosește pentru a învăța. 
+
+În setul de date Wider Face Easy imaginile cu fețele oamenilor sunt clare și la o distanță nu prea îndepărtată pe când în setul Medium și Hard acestea sunt fie mai neclare, fie foarte îndepartate, fie incomplete, rețeaua trebuind să învețe atât texturi cât și caracteristici faciale. 
+
+
+\begin{figure}[!htb]
+	\centering
+	\begin{minipage}{0.33\textwidth}
+		\centering
+		\includegraphics[width=5cm, height=3cm]{"wider_easy".jpg}
+		\caption{WIDER Easy}\label{fig:wider_easy}
+	\end{minipage}
+	\begin{minipage}{0.33\textwidth}
+		\centering
+		\includegraphics[width=5cm, height=3cm]{"wider_medium".jpg}
+		\caption{WIDER Medium}\label{fig:wider_medium}
+	\end{minipage}
+
+	\begin{minipage}{0.33\textwidth}
+		\centering
+		\includegraphics[width=5cm, height=3cm]{"wider_hard".jpg}
+		\caption{WIDER Hard}\label{fig:wider_hard}
+	\end{minipage}
+\end{figure}
+
+
+
+\bigskip
+\bigskip
+\subsection{Rezultatele obținute}
+\bigskip
+
+\quad\space Pentru a măsura perfomanța modelului de detecție s-au folosit urmatoarele metrici: 
+
+\quad \textbf{True Positives(TP)}: reprezintă numărul acelor bounding-box-uri ce au IoU (Intersection over Union) mai mare de 0.5
+
+\quad \textbf{False Positives(FP)}: reprezintă numărul acelor bounding-box-uri ce au IoU (Intersection over Union) mai mic de 0.5 sau aceleora  ce au mai fost detectate
+
+\quad \textbf{True Negatives(TN)}: în cazul acesta, această valoare este 0 deoarece imaginea trebuie să conțină cel puțin un obiect
+
+\quad \textbf{False Negatives(FN)}: reprezintă numărul acelor imagini ce nu au produs bounding-box-uri.
+
+\bigskip
+\begin{itemize}
+	
+	\item Precision: măsoară rația dintre instanțele relavante în raport cu instantele preluate
+		\[
+			\frac{TP}{TP+FP}
+		\]
+	\item Accuracy: măsoară procentajul de instanțe identificate corect de model
+	
+		\[
+			\frac{TP + TN}{TP + TN + FN + FP}
+		\]
+	
+	\item Recall: masoară numărul de instanțe pozitive ce au fost identificate corect
+		\[
+			\frac{TP}{TP + FN}
+		\]
+\end{itemize}
+
+\bigskip
+\begin{center}
+	\begin{tabu} to 0.82\textwidth { | X[l] | X[c] | X[r] | X[cr] | }
+		\hline
+		DataSet            & Accuracy & Precision& Recall \\
+		\hline
+		WIDER Face(Easy)   & 70.35\%  & 72.5\%   & 71.8\% \\
+		\hline
+		WIDER Face(Medium) & 52.12\%  & 65.52\%  & 70.42\% \\
+		\hline
+		WIDER Face(Hard)   & 45.39\%  & 62.35\%  & 63.18\% \\
+		\hline
+	\end{tabu}
+\end{center}
+\bigskip
+
+Se poate observa din acest tabel că rezultatele obținute nu sunt foarte satisfăcătoare, cea mai mare valoare pentru acuratețe fiind 70.35\%. În practică însă s-a constatat că algorimul funcționează destul de bine, reusind să detecteze obiecte la distanțe acceptabile.
+
+Pe de o parte acest rezultat negativ, în opinia mea este datorat numărului mic de imagini necesar pentru antrenare și al constrângerilor hardware iar pe de altă parte, a datelor din acest set de antrenament. 
+
+Faptul că imaginile nu au aceiași dimensiune reprezintă o problemă pentru procesul de învățare, problemă ce a fost rezolvată prin redimensionarea acestora, insă acest proces de redimensionare poate avea impact asupra consistenței datelor, deoarece pot apărea distorsionări ale obiectelor.
+
+Așa cum se observă și din ultima înregistrare a tabelului se pare ca modelul nu se „descurcă bine”, pe imagini ce conțin obiecte foarte îndepărtate, dar acest lucru era de așteptat, deoarece prin folosirea unei rețele neuronale cu un număr mic de straturi(TinyYOLO) se sporește performanța și nu acuratețea. 
+
+
+
+\newpage
+\section{Probleme întâlnite}
+
+\quad\space Prima problemă cu care m-am confrutat a fost accea de a găsi date de antrenament, adnotate, pentru antrenarea rețelei neuronale, deoarece majoritatea seturilor de date pe care le găseam fie nu erau adnotate, fie erau adnotate dar formatul adnotării nu era unul corespunzător problemei de detecție de obiecte. 
+
+După găsirea setului de date de antrenament, urmatoarea problemă a fost alegerea unei biblioteci cu ajutorul căreia să pot antrena un model de recunoaștere de obiecte, nu de la zero, ci un model preantrenat, prentru libajul Java. După o documentație amănunțită, am ales libraria Deepleaning4j.
+
+Un dezavantaj al acestei librarii a fost acela că nu era specificat formatul în care ar trebui să fie adnotările imaginilor, in care sunt specificate chenarele (bounding-box-urile) din jurul fiecărei fețe din poză. 
+
+După ce am aflat formatul datelor, următoarea problemă a fost acceea că formatul acestora era diferit de cel oferit în datele de antrenament, iar pentru a rezolva acest lucru a trebuit ca fiecare adnotare să fie rescrisă în formatul acceptat de modelul de antrenare.
+
+Următoarea problemă întâlnită, a fost alegerea tehnologiei potrivite pentru dezvoltarea aplicației de mobil, ce să permită dezvoltarea rapidă și să ofere o bună performanță și alegerea unei arhitecturi pentru aplicatie (atât pentru server cât și pentru clientul mobil) ce să permită adaugarea funcționalităților noi cu un număr minim de modificări.   
+
+
+\newpage
+\section{Concluzii și direcții viitoare}
+\bigskip
+
+\subsection{Concluzii}
+
+
+\quad\space Prezența la ore are un rol foarte important în obținerea unei bune performanțe academice iar datorită acestui fapt aceste instituții doresc, pe cât de mult se poate, să identifice absenteismul studentilor și să diminueze  numărul de studenți ce nu sunt prezenți la ore. 
+
+Deși există metode clasice de efectuare a prezențelor, acestea s-au dovedit a fi depașite căci, traind în epoca internetului și a informației, totul este se axează pe o cât mai mare viteză, încercandu-se minimizarea timpului necesar efectuarii oricarei sarcini, indiferent de domeniul de provenientă.
+
+Deși există numeroase abordări pentru această problemă, acestea s-au dovedit a fi ori prea scumpe, ori incomplete din punct de vedere al funcționalitătilor oferite, fie prea lente, necesitând zile pentru efectuarea în mod automat al prezenței.
+
+În această lucrare se propune o soluție automată pentru detecția și realizarea automată a prezențelor, bazată pe tehnici de machine learning și computer vison, ce folosește recunoașterea facială pentru identificarea studenților, lasând totuși controlul profesorului în finalizarea rezulatelor, ce poate fi folosită cu succes in orice instituție academica.
+
+
+\subsection{Direcții viitoare}
+
+\quad\space Soluția propusă este fezabila, comportandu-se bine în practică, dar cu toții știm că nimic nu poate fi perfect, mereu existând loc pentru îmbunatățiri. Acest sistem cu toate că se descurcă bine într-un mediu real, poate fi modificat astfel încât să obțină rezultate și mai bune.
+
+Ar putea fi adaugată o funcționalitate prin care la un anumit interval de timp, fișierul în care este salvat modelul pentru recunoaștere facială să fie șters, pentru a forța algoritmul să se antreneze numai cu fețele actuale ale utilizatorilor, eliminând vechile înregistrări. Acest proces pe lângă faptul că ar face ca modelul să fie mai rapid în detecție (căci dimensiuea acestuia va scadea) ar spori și acuratețea, menținandu-se numai date actuale.
+
+Modulul de perisistența a datelor ar putea fi reimplementat astfel încât să se sporească viteza cu care datele sunt accesate din baza de date, adică toate operațiile pe baza de date ar trebui scrise in HQL, evitând folosirea metodelor deja existente.
+
+Adăugarea unei funcționalități prin care profesorul să poată genera rapoarte în format excel referitoare la istoricul prezențelor, statistici legate de prezența sau adaugarea unui subsitem pentru a le aminti studenților ziua și ora la care aceștia ar trebui să aiba o anumită materie (fie ca e curs, seminar sau laborator).
+
+Exstinderea aplicației cu un client web, pentru a putea vedea în timp real acele statitici/rapoarte adăugate. După autentificare, profesorul poate să creeze dinamic rapoarte folosind buissness inteligence, rapoarte ce se actualizează în timp real, care ar putea oferi soluții pentru îmbunătățirea numarului de prezențe al studențiilor la ore.
+
+Folosirea altui model pentru recunoașterea facială. Având în vedere că acest model nu obține o acuratețe atât de bună, comparativ cu cel mai bun detector de obiecte în timp real existent, s-ar putea folosi acel model, sau un API pentru o mai bună detecție facială.
+
+O existindere al acestui sistem ar putea fi folosirea de camere, pentru prezența automată. Asfel profesorul ar putea să precizeze sala, iar sistemul să detecteze în mod automat grupa ce ar trebui să aiba oră in acea clasă. În acest mod, profesorul nu ar trebui să se mai implice în procesul de prezență automată.
+
+Informarea utilizatorului, în mod regulat, deprese situația prezențelor acestuia, prin intermediul poștei electronice (email).
+
+
+ 
+
+\newpage 
+\bibliographystyle{unsrt}
+\bibliography{references}
+\end{document}

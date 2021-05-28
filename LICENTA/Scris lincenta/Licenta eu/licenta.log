@@ -1,0 +1,613 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.29)  24 MAY 2021 09:38
+entering extended mode
+**./licenta.tex
+(licenta.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18> (E:\Latex\tex/latex/base\article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(E:\Latex\tex/latex/base\size12.clo
+File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count179
+\c@section=\count180
+\c@subsection=\count181
+\c@subsubsection=\count182
+\c@paragraph=\count183
+\c@subparagraph=\count184
+\c@figure=\count185
+\c@table=\count186
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (E:\Latex\tex/latex/outlines\outlines.sty
+Package: outlines 2012/1/23 1.1 Ch. Pecheur
+(E:\Latex\tex/latex/base\ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)) (E:\Latex\tex/latex/graphics\graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+(E:\Latex\tex/latex/graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(E:\Latex\tex/latex/graphics\graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+ (E:\Latex\tex/latex/graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (E:\Latex\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(E:\Latex\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen139
+\Gin@req@width=\dimen140
+)
+(E:\Latex\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(E:\Latex\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(E:\Latex\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count187
+\float@exts=\toks16
+\float@box=\box47
+\@float@everytoks=\toks17
+\@floatcapt=\box48
+)
+(E:\Latex\tex/latex/mathtools\mathtools.sty
+Package: mathtools 2021/03/18 v1.25 mathematical typesetting tools
+
+(E:\Latex\tex/latex/latex-tools\calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count188
+\calc@Bcount=\count189
+\calc@Adimen=\dimen141
+\calc@Bdimen=\dimen142
+\calc@Askip=\skip49
+\calc@Bskip=\skip50
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count190
+\calc@Cskip=\skip51
+)
+(E:\Latex\tex/latex/mathtools\mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+(E:\Latex\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip52
+
+For additional information on amsmath, use the `?' option.
+(E:\Latex\tex/latex/amsmath\amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (E:\Latex\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen143
+)) (E:\Latex\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen144
+)
+(E:\Latex\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count191
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count192
+\leftroot@=\count193
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count194
+\DOTSCASE@=\count195
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box49
+\strutbox@=\box50
+\big@size=\dimen145
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count196
+\c@MaxMatrixCols=\count197
+\dotsspace@=\muskip16
+\c@parentequation=\count198
+\dspbrk@lvl=\count199
+\tag@help=\toks19
+\row@=\count266
+\column@=\count267
+\maxfields@=\count268
+\andhelp@=\toks20
+\eqnshift@=\dimen146
+\alignsep@=\dimen147
+\tagshift@=\dimen148
+\tagwidth@=\dimen149
+\totwidth@=\dimen150
+\lineht@=\dimen151
+\@envbody=\toks21
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count269
+\l_MT_multwidth_dim=\dimen152
+\origjot=\skip55
+\l_MT_shortvdotswithinadjustabove_dim=\dimen153
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen154
+\l_MT_above_intertext_sep=\dimen155
+\l_MT_below_intertext_sep=\dimen156
+\l_MT_above_shortintertext_sep=\dimen157
+\l_MT_below_shortintertext_sep=\dimen158
+\xmathstrut@box=\box51
+\xmathstrut@dim=\dimen159
+)
+(E:\Latex\tex/latex/latex-tools\enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks23
+)
+(E:\Latex\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(E:\Latex\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (E:\Latex\tex/generic/iftex\iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count270
+\Gm@cntv=\count271
+\c@Gm@tempcnt=\count272
+\Gm@bindingoffset=\dimen160
+\Gm@wd@mp=\dimen161
+\Gm@odd@mp=\dimen162
+\Gm@even@mp=\dimen163
+\Gm@layoutwidth=\dimen164
+\Gm@layoutheight=\dimen165
+\Gm@layouthoffset=\dimen166
+\Gm@layoutvoffset=\dimen167
+\Gm@dimlist=\toks24
+
+(E:\Latex\tex/latex/geometry\geometry.cfg))
+(E:\Latex\tex/generic/babel\babel.sty
+Package: babel 2021/03/24 3.56 The Babel package
+ (E:\Latex\tex/generic/babel\babel.def
+File: babel.def 2021/03/24 3.56 Babel common definitions
+\babel@savecnt=\count273
+\U@D=\dimen168
+\l@babelnohyphens=\language79
+
+(E:\Latex\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+)
+\bbl@dirlevel=\count274
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(E:\Latex\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(E:\Latex\tex/latex/babel-english\english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for ukenglish
+(babel)             (\language73) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for ukenglish
+(babel)             (\language73) on input line 108.
+))
+(E:\Latex\tex/latex/latex-tools\array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen169
+\ar@mcellbox=\box52
+\extrarowheight=\dimen170
+\NC@list=\toks25
+\extratabsurround=\skip56
+\backup@length=\skip57
+\ar@cellbox=\box53
+)
+(E:\Latex\tex/latex/wrapfig\wrapfig.sty
+\wrapoverhang=\dimen171
+\WF@size=\dimen172
+\c@WF@wrappedlines=\count275
+\WF@box=\box54
+\WF@everypar=\toks26
+Package: wrapfig 2003/01/31  v 3.6
+)
+(E:\Latex\tex/latex/multirow\multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip58
+\multirow@cntb=\count276
+\multirow@dima=\skip59
+\bigstrutjot=\dimen173
+) (E:\Latex\tex/latex/tabu\tabu.sty
+Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
+
+(E:\Latex\tex/latex/varwidth\varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box55
+\sift@deathcycles=\count277
+\@vwid@loff=\dimen174
+\@vwid@roff=\dimen175
+)
+\c@taburow=\count278
+\tabu@nbcols=\count279
+\tabu@cnt=\count280
+\tabu@Xcol=\count281
+\tabu@alloc=\count282
+\tabu@nested=\count283
+\tabu@target=\dimen176
+\tabu@spreadtarget=\dimen177
+\tabu@naturalX=\dimen178
+\tabucolX=\dimen179
+\tabu@Xsum=\dimen180
+\extrarowdepth=\dimen181
+\abovetabulinesep=\dimen182
+\belowtabulinesep=\dimen183
+\tabustrutrule=\dimen184
+\tabu@thebody=\toks27
+\tabu@footnotes=\toks28
+\tabu@box=\box56
+\tabu@arstrutbox=\box57
+\tabu@hleads=\box58
+\tabu@vleads=\box59
+\tabu@cellskip=\skip60
+)
+(E:\Latex\tex/latex/titlesec\titlesec.sty
+Package: titlesec 2019/10/16 v2.13 Sectioning titles
+\ttl@box=\box60
+\beforetitleunit=\skip61
+\aftertitleunit=\skip62
+\ttl@plus=\dimen185
+\ttl@minus=\dimen186
+\ttl@toksa=\toks29
+\titlewidth=\dimen187
+\titlewidthlast=\dimen188
+\titlewidthfirst=\dimen189
+)
+(E:\Latex\tex/latex/titlesec\titletoc.sty
+Package: titletoc 2019/10/16 v2.13 TOC entries
+\ttl@leftsep=\dimen190
+)
+(E:\Latex\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count284
+\l__pdf_internal_box=\box61
+) (licenta.aux
+
+LaTeX Warning: Label `fig:zece' multiply defined.
+
+
+LaTeX Warning: Label `fig:zece' multiply defined.
+
+
+LaTeX Warning: Label `fig:zece' multiply defined.
+
+)
+\openout1 = `licenta.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+ (E:\Latex\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count285
+\scratchdimen=\dimen191
+\scratchbox=\box62
+\nofMPsegments=\count286
+\nofMParguments=\count287
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count288
+\MPscratchDim=\dimen192
+\MPnumerator=\count289
+\makeMPintoPDFobject=\count290
+\everyMPtoPDFconversion=\toks31
+) (E:\Latex\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(E:\Latex\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+[1
+
+{C:/Users/Sorina/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 103.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 103.
+
+(licenta.toc
+Overfull \hbox (8.54555pt too wide) in paragraph at lines 29--29
+ []|| []\OT1/cmr/m/n/12 Anexa 1- Ches-tionarul Com-por-ta-men-tul con-suma-toru
+-lui on-line, tanar 
+ []
+
+)
+\tf@toc=\write3
+\openout3 = `licenta.toc'.
+
+ [1
+
+] [2] (licenta.lof)
+\tf@lof=\write4
+\openout4 = `licenta.lof'.
+
+ [3] [4] [5] [6]
+LaTeX Font Info:    Calculating math sizes for size <16> on input line 133.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <16> not available
+(Font)              size <17.28> substituted on input line 133.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 133.
+
+
+LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 133.
+
+[7]
+<figures/first.png, id=35, 593.21625pt x 330.033pt>
+File: figures/first.png Graphic file (type png)
+<use figures/first.png>
+Package pdftex.def Info: figures/first.png  used on input line 159.
+(pdftex.def)             Requested size: 369.89932pt x 227.62228pt.
+ [8]
+<figures/SECOND.png, id=40, 534.19576pt x 418.56375pt>
+File: figures/SECOND.png Graphic file (type png)
+<use figures/SECOND.png>
+Package pdftex.def Info: figures/SECOND.png  used on input line 168.
+(pdftex.def)             Requested size: 426.79475pt x 341.42981pt.
+ [9 <./figures/first.png>] [10 <./figures/SECOND.png>]
+<figures/third.png, id=49, 508.90125pt x 210.7875pt>
+File: figures/third.png Graphic file (type png)
+<use figures/third.png>
+Package pdftex.def Info: figures/third.png  used on input line 191.
+(pdftex.def)             Requested size: 341.44351pt x 199.17273pt.
+ [11 <./figures/third.png>] [12] [13] [14] [15]
+<figures/fourth.png, id=68, 546.843pt x 320.397pt>
+File: figures/fourth.png Graphic file (type png)
+<use figures/fourth.png>
+Package pdftex.def Info: figures/fourth.png  used on input line 276.
+(pdftex.def)             Requested size: 369.90413pt x 256.08817pt.
+ [16]
+<figures/fifth.png, id=72, 423.38174pt x 245.718pt>
+File: figures/fifth.png Graphic file (type png)
+<use figures/fifth.png>
+Package pdftex.def Info: figures/fifth.png  used on input line 285.
+(pdftex.def)             Requested size: 341.43208pt x 199.18045pt.
+ [17 <./figures/fourth.png>]
+<figures/sixth.png, id=77, 270.41025pt x 165.0165pt>
+File: figures/sixth.png Graphic file (type png)
+<use figures/sixth.png>
+Package pdftex.def Info: figures/sixth.png  used on input line 296.
+(pdftex.def)             Requested size: 284.52916pt x 199.16946pt.
+ [18 <./figures/fifth.png>]
+<figures/seventh.png, id=83, 269.808pt x 166.82326pt>
+File: figures/seventh.png Graphic file (type png)
+<use figures/seventh.png>
+Package pdftex.def Info: figures/seventh.png  used on input line 303.
+(pdftex.def)             Requested size: 284.55418pt x 199.18143pt.
+<figures/eigth.png, id=84, 298.716pt x 164.41425pt>
+File: figures/eigth.png Graphic file (type png)
+<use figures/eigth.png>
+Package pdftex.def Info: figures/eigth.png  used on input line 310.
+(pdftex.def)             Requested size: 284.55344pt x 199.17766pt.
+ [19 <./figures/sixth.png> <./figures/seventh.png>] [20 <./figures/eigth.png>] 
+[21]
+<figures/zece.png, id=97, 519.1395pt x 352.31625pt>
+File: figures/zece.png Graphic file (type png)
+<use figures/zece.png>
+Package pdftex.def Info: figures/zece.png  used on input line 345.
+(pdftex.def)             Requested size: 284.5295pt x 199.16656pt.
+ [22 <./figures/zece.png>]
+Overfull \hbox (23.75468pt too wide) in paragraph at lines 358--359
+[]\OT1/cmr/bx/n/12 Comoditatea tranzac[]iei. \OT1/cmr/m/n/12 Aprox-i-ma-tiv jum
+atate din-tre responden[]i (14 raspunsuri)
+ []
+
+[23]
+Overfull \hbox (9.13713pt too wide) in paragraph at lines 369--370
+\OT1/cmr/m/n/12 on-line per-mite clien[]ilor sa ac-ce-seze feedback-ul de la a
+lte per-soane care au cumparat
+ []
+
+<figures/noua.png, id=106, 521.5485pt x 319.1925pt>
+File: figures/noua.png Graphic file (type png)
+<use figures/noua.png>
+Package pdftex.def Info: figures/noua.png  used on input line 375.
+(pdftex.def)             Requested size: 284.52876pt x 199.16849pt.
+[24 <./figures/noua.png>] [25] [26] [27] [28]
+<figures/prima.jpg, id=124, 1653.17625pt x 695.59875pt>
+File: figures/prima.jpg Graphic file (type jpg)
+<use figures/prima.jpg>
+Package pdftex.def Info: figures/prima.jpg  used on input line 447.
+(pdftex.def)             Requested size: 341.42587pt x 142.25902pt.
+<figures/doi.jpg, id=125, 1653.17625pt x 695.59875pt>
+File: figures/doi.jpg Graphic file (type jpg)
+<use figures/doi.jpg>
+Package pdftex.def Info: figures/doi.jpg  used on input line 453.
+(pdftex.def)             Requested size: 341.42587pt x 142.25902pt.
+ [29 <./figures/prima.jpg>]
+Overfull \hbox (11.533pt too wide) in paragraph at lines 463--464
+[] \OT1/cmr/m/n/12 Pen-tru a iden-ti-fica mo-tivele pen-tru care con-suma-torii
+ on-line prefera sa achizitioneze
+ []
+
+[30 <./figures/doi.jpg>]
+
+Package array Warning: Column M is already defined on input line 493.
+
+[31]
+
+Package array Warning: Column M is already defined on input line 513.
+
+[32]
+Overfull \hbox (7.94276pt too wide) in paragraph at lines 534--535
+[] \OT1/cmr/m/n/12 Refer-i-tor la nivelul de doc-u-mentare a con-suma-to-rilor 
+in-ain-tea plasarii unei comenzi
+ []
+
+<figures/trei.png, id=140, 527.571pt x 165.0165pt>
+File: figures/trei.png Graphic file (type png)
+<use figures/trei.png>
+Package pdftex.def Info: figures/trei.png  used on input line 538.
+(pdftex.def)             Requested size: 398.34186pt x 142.2639pt.
+[33 <./figures/trei.png>]
+<figures/patru.png, id=145, 355.5684pt x 191.7564pt>
+File: figures/patru.png Graphic file (type png)
+<use figures/patru.png>
+Package pdftex.def Info: figures/patru.png  used on input line 551.
+(pdftex.def)             Requested size: 341.434pt x 142.26616pt.
+<figures/cinci.png, id=146, 1653.17625pt x 695.59875pt>
+File: figures/cinci.png Graphic file (type png)
+<use figures/cinci.png>
+Package pdftex.def Info: figures/cinci.png  used on input line 558.
+(pdftex.def)             Requested size: 398.33438pt x 142.25902pt.
+ [34 <./figures/patru.png> <./figures/cinci.png>]
+<figures/sapte.png, id=152, 341.1144pt x 214.401pt>
+File: figures/sapte.png Graphic file (type png)
+<use figures/sapte.png>
+Package pdftex.def Info: figures/sapte.png  used on input line 593.
+(pdftex.def)             Requested size: 341.45186pt x 199.1782pt.
+
+[35 <./figures/sapte.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 600--602
+
+ []
+
+<figures/ana.png, id=157, 397.9668pt x 253.9086pt>
+File: figures/ana.png Graphic file (type png)
+<use figures/ana.png>
+Package pdftex.def Info: figures/ana.png  used on input line 606.
+(pdftex.def)             Requested size: 341.45535pt x 199.16759pt.
+[36] [37 <./figures/ana.png>] [38] [39] [40] [41] [42] (licenta.bbl
+
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
+
+) [43]
+Underfull \hbox (badness 10000) in paragraph at lines 667--670
+
+ []
+
+
+Overfull \hbox (14.44194pt too wide) in paragraph at lines 690--707
+ []  
+ []
+
+[44]
+Overfull \hbox (14.44194pt too wide) in paragraph at lines 711--725
+ []  
+ []
+
+
+Overfull \hbox (14.44194pt too wide) in paragraph at lines 728--745
+ []  
+ []
+
+[45]
+Overfull \hbox (14.44194pt too wide) in paragraph at lines 774--789
+ [] 
+ []
+
+[46] [47] (licenta.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.28pt have occurred.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 5824 strings out of 479321
+ 80861 string characters out of 2873644
+ 437672 words of memory out of 3000000
+ 23181 multiletter control sequences out of 15000+600000
+ 415650 words of font info for 69 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 81i,14n,88p,2496b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\Sorina\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcr
+m1200.pk><E:/Latex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><E:/Latex/fonts/ty
+pe1/public/amsfonts/cm/cmbx6.pfb><E:/Latex/fonts/type1/public/amsfonts/cm/cmbx8
+.pfb><E:/Latex/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><E:/Latex/fonts/type1
+/public/amsfonts/cm/cmr10.pfb><E:/Latex/fonts/type1/public/amsfonts/cm/cmr12.pf
+b><E:/Latex/fonts/type1/public/amsfonts/cm/cmr17.pfb><E:/Latex/fonts/type1/publ
+ic/amsfonts/cm/cmr6.pfb><E:/Latex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><E:
+/Latex/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on licenta.pdf (48 pages, 1125353 bytes).
+PDF statistics:
+ 235 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+
