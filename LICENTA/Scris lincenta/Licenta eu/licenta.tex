@@ -16,7 +16,11 @@
 \usepackage{titlesec}
 \usepackage{titletoc}
 \usepackage{array}
-
+\usepackage{tabularx,ragged2e,booktabs,caption}
+\usepackage{chngcntr}
+\usepackage{pgf-pie}  
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
 
 
 \titleformat{\section}[display]%
@@ -36,6 +40,7 @@
 	\renewcommand{\refname}{Referințe bibliografice}%
 	\renewcommand{\contentsname}{Cuprins}
 	\renewcommand{\listfigurename}{Lista imaginilor}
+	\renewcommand{\listtablename}{Lista tabelelor}
 }
 \addto\captionsenglish{\renewcommand{\chaptername}{Capitolul}}
 %define the page geometry
@@ -105,6 +110,8 @@
 %put the list of figures
 \newpage
 \listoffigures
+\newpage
+\listoftables
 
 %this section is on new page
 \newpage
@@ -151,7 +158,7 @@
 
 \subsection{Comertul electronic}
 \quad \quad\space În ultimii zece ani, in contextul internațional al comunicării digitale, comerțul electronic devine o importantă parte a sistemului de afaceri. Odată ce Internetul a devenit un instrument foarte utilizat si important în comunicare, promovare și tranzacții comerciale, noi platforme s-au dezvoltat pentru a crea strategii competitive. Ca sa putem fi mai clari, voi defini comerțul electronic drept orice formă de tranzacție comercială unde părțile implicate interacționeaza într-un mod electronic.\footnote{Claudia Bobalca, "The Loyal Customers’ Perception Regarding The Online
-	Buying Process", \textit{Central and Eastern European Online Library}, Economie, p.241, https://www.ceeol.com/search/article-detail?id=282663, data accesarii: 29.03.2021}
+	Buying Process", \textit{Central and Eastern European Online Library}, Economie, p.241}
 
 \quad 
 Intr-o economie globala dezvoltata intr-o piata foarte competitiva, orientarea spre consumator nu mai reprezinta doar un trend ci o necesitate pentru companii sa obtina succes. Astfel, o buna intelegere a modului in care consumatorii beneficiaza de proprietatile Internetului, factorii pe care ii iau in considerare pentru a se hotara asupra deciziilor de cumparare in mediul comertului electronic, aduce avantaje semnificative pentru managerii care doresc sa dezvolte strategii de marketing potrivite profilului consumatorilor pe care ii au. Cumparatorii online au acces nelimitat la informatie si au oportunitatea de a alege dintr-o gama larga de optiuni in selectarea produselor si serviciilor potrivite acestora.
@@ -469,21 +476,50 @@ Intr-o economie globala dezvoltata intr-o piata foarte competitiva, orientarea s
 		\qquad Datele culese din sondajul de opinie au fost culese cu ajutorul unui chestionar (vezi Anexa 1), lansat online, in perioada 27 aprilie- 4 mai 2021. Pentru lansarea chestionarului am folosit aplicatia Google Forms. Avantajul utilizarii acestei aplicatii consta in faptul ca raspunsurile primite sunt centralizate si prelucrate in mod automat. Un alt avantaj al utilizarii Google Forms ca mijloc de a distribui un sondaj consta in generarea automata de grafice pe baza raspunsurilor primite. 
 		
 		\qquad Asa cum am mentionat anterior, la sondajul de opinie lansat am primit un numar de 202 de raspunsuri din care 96 nu au fost valide. Practic, validitatea chestionarelor a fost dată de răspunsul pozitiv la întrebările filtru. Astfel, cei 96 de respondenți a căror chestionare completate nu au fost validate, nu s-au încadrat în publicul țintă al prezentei cercetări.  Ca urmare, marimea esantionului sondajului de opinie realizat este de 106 de respondenti. Rezultatele obtinute vor fi prezentate in continuare.
+		\newline
 		
 		\qquad Profilul respondentilor studiului de caz din intrebarile rezultate din intrebarile de identificare este prezentat in continuare:
 		\begin{itemize}
-			\item Din datele obtinute (vezi fig.11) putem observa ca din totalul respondentilor cei mai multi (57,5\%) petrec mai mult de 3 ore online ceea ce subliniaza ca mediul online este foarte accesibil si atragator pentru consumatorii online, 34\% sustin ca petrec cate 2-3 ore , ceea ce tot reprezinta mult avand in vedere contextul cursurilor online, iar 8,5\% dintre respondenti petrec mai putin de 2 ore, ceea ce subliniaza suprasaturatia  fata de mediul online.
+			\item Din datele obtinute (vezi figura 3.1) putem observa ca din totalul respondentilor cei mai multi (57,5\%) petrec mai mult de 3 ore online ceea ce subliniaza ca mediul online este foarte accesibil si atragator pentru consumatorii online, 34\% sustin ca petrec cate 2-3 ore , ceea ce tot reprezinta mult avand in vedere contextul cursurilor online, iar 8,5\% dintre respondenti petrec mai putin de 2 ore, ceea ce subliniaza suprasaturatia  fata de mediul online.
 			\begin{figure}[!htb]
 				\centering
-				\includegraphics[width=13cm, height=6cm]{"figures/prima.jpg"}
-				\caption{Figura 3.1.Repartitia respondentilor dupa numarul mediu de ore petrecut online}\label{fig:zece}
+				\begin{tikzpicture}
+					% We will draw the pie chart here
+					
+					\pie[
+					color = {
+						yellow!90!black, 
+						green!60!black, 
+						red!70},
+					text = legend
+					]
+					{57.5/Mai mult de 3 ore,
+						34/Intre 2-3 ore,
+						8.5/Mai mult de 3 ore}
+						  
+				\end{tikzpicture}
+				\caption{Repartitia respondentilor dupa numarul mediu de ore petrecut online } 
 			\end{figure}
-	\newpage
-		\item Referitor la nivelul de studii absolvit al respondentilor (vezi fig.12), esantionul nostru este format  preponderent de absolventi de studii superioare (mai exact 61,3\%), restul fiind în prezent studenți. Mai mult, din tot eșantionul 22,6\% au studii post-universitare.
-			\begin{figure}[!htb]
+		\newpage
+		\item Referitor la nivelul de studii absolvit al respondentilor (vezi figura 3.2), esantionul nostru este format  preponderent de absolventi de studii superioare (mai exact 61,3\%), restul fiind în prezent studenți. Mai mult, din tot eșantionul 22,6\% au studii post-universitare.
+		\begin{figure}[!htb]
 			\centering
-			\includegraphics[width=13cm, height=6cm]{"figures/doi.jpg"}
-			\caption{Figure 3.2. Repartia respondentilor dupa nivelul de studii absolvit}\label{fig:zece}
+			\begin{tikzpicture}
+				% We will draw the pie chart here
+				
+				\pie[
+				color = {
+					yellow!90!black, 
+					green!60!black, 
+					red!70},
+				text = legend
+				]
+				{38.7/Studii liceale,
+					22.6/Studii universitare,
+					38.7/Studii post-universitare}
+				
+			\end{tikzpicture}
+			\caption{Repartia respondentilor dupa nivelul de studii absolvit} 
 		\end{figure}
 		\item Din perspectiva genului, marea majoritate a respondentilor sunt de gen feminin, cu un procent de 90,6\% care indica faptul ca femeile sunt mai empatice pentru a raspunde la chestionare online deoarece studiile analizate anterior nu au indicat nicio diferenta atat de mare intre cele doua sexe. Astfel, acest lucru nu inseamna ca barbatii achizitioneaza mai putin, deoarece numarul scazut de respondenti de gen masculin reflecta doar o limita a cercetarii noastre.
 		\end{itemize}
@@ -492,15 +528,21 @@ Intr-o economie globala dezvoltata intr-o piata foarte competitiva, orientarea s
 	\begin{enumerate}[(A)]
 		\item Primul obiectiv al studiului nostru: sa identificam ce determina consumatorii online sa achizitioneze din mediul online si cum se informeaza.
 		
-		\qquad Pentru a identifica motivele pentru care consumatorii online prefera sa achizitioneze din mediul online si care este atitudinea lor fata de beneficiile achizitiilor online, am adaugat o intrebare cu 5 itemi de raspuns (Posibilitatea de a realiza comparații, Accesibilitatea 24/24, Oportunitatea de a plăti un preț mai mic, Acces la gama mai larga de produse, Abilitatea de a împărtăși experiențe pe rețelele de socializare), unde respondentii trebuiau sa masoare pe o scara de la 1 la 5 gradul de intensitate al fiecarui item in parte(vezi intrebarea 4 - Anexa 1). Raspunsurile primite sunt reprezentate mai jos(vezi tabelul 3.1). \textbf{Repartitia respondentilor dupa raspunsurile la intrebarea...}
+		\qquad Pentru a identifica motivele pentru care consumatorii online prefera sa achizitioneze din mediul online si care este atitudinea lor fata de beneficiile achizitiilor online, am adaugat o intrebare cu 5 itemi de raspuns (Posibilitatea de a realiza comparații, Accesibilitatea 24/24, Oportunitatea de a plăti un preț mai mic, Acces la gama mai larga de produse, Abilitatea de a împărtăși experiențe pe rețelele de socializare), unde respondentii trebuiau sa masoare pe o scara de la 1 la 5 gradul de intensitate al fiecarui item in parte(vezi intrebarea 4 - Anexa 1). Raspunsurile primite sunt reprezentate mai jos(vezi tabelul \ref{tab:title}).
 		\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
-		\begin{center}
+	\bigskip
+	\bigskip
 			
-			\begin{tabular}{ | M{16em} | M{1.1cm}| M{1.1cm} | M{1.1cm}| M{1.1cm} | M{1.1cm} | } 
+		
+			\begin{tabular}{ | M{12em} | M{1.2cm}| M{1.0cm} | M{1.2cm}| M{1.2cm} | M{2.2cm} | } 
 				\hline
+		& \multicolumn{5}{c|}{Gradul de acord cu afirmatia } \\
+				\hline
+
 				\centering
-	
-				& 1 & 2 & 3 & 4 & 5\\ 
+				 
+				
+				& 1 Deloc & 2      Mic & 3 Mediu & 4 Mare & 5 \qquad Foarte mare \\ 
 				\hline
 				Posibilitatea de a realiza comparatii & 2,8\% & 10,4\%  & 28,3\% & 22,7\% &35,8\%   \\ 
 				\hline
@@ -512,11 +554,12 @@ Intr-o economie globala dezvoltata intr-o piata foarte competitiva, orientarea s
 				Acces la o gamă mai largă de produse &0\%  &4,7\%  & 16\%  & 23,6\% & 55,7\% \\ 
 				\hline
 				Abilitatea de a împărtăși experiența online &33\%  & 13,2\%  &22,7\%  &16\% &14,1\% \\
-				\hline
+				\hline		
 			\end{tabular}
-			\newline
-		\end{center}
-	
+	\captionof{table}{Repartiția respondenților după răspunsurile la întrebarea "In ce masura conteaza pentru tine beneficiile achizitiilor online, mentionate mai jos?" } \label{tab:title} 
+	\bigskip	
+
+		
 	\qquad Asadar, prin raspunsurile obtinute la aceasta intrebare( vezi Tabelul 3.1.) putem deduce urmatoarele:
 	\begin{itemize}
 		\item \textit{accesibilitatea 24/24} si \textit{accesul la o gama mai larga de produse}  (ambele detinand un procent de 55,70\%) sunt principalele beneficii pentru care consumatorii online obisnuiesc sa achizitioneze din mediul online , avantaje ce deosebesc magazinele virtuale de cele traditionale.
@@ -524,13 +567,16 @@ Intr-o economie globala dezvoltata intr-o piata foarte competitiva, orientarea s
 		\item  Pe de alta parte, cel mai putin important beneficiu al comertului electronic ales de respondenti a fost \textit{abilitatea de a impartasi experienta online}, ceea ce indica faptul ca impartasirea experientei personale nu are loc exclusiv in mediul online.
 	\end{itemize}
 	
-	\qquad Pentru a identifica sursele de informare pe care se bazeaza consumatorii online in momentul in care vor sa realizeze achizitii online, am introdus 4 itemi ( Experienta personala, Review-urile de pe site, Opiniile celor apropiati, Informatia oferita de motoarele de cautare), prin care respondentii au putut acorda o nota de la 1 la 5 (in ordine crescatoarea a intensitatii pe care o simte fiecare subiect asupra itemului respectiv)(vezi Intrebarea 5 Anexa 1). Raspunsurile sunt prezentate mai jos(Vezi tabelul 3.2))
+	\qquad Pentru a identifica sursele de informare pe care se bazeaza consumatorii online in momentul in care vor sa realizeze achizitii online, am introdus 4 itemi ( Experienta personala, Review-urile de pe site, Opiniile celor apropiati, Informatia oferita de motoarele de cautare), prin care respondentii au putut acorda o nota de la 1 la 5 (in ordine crescatoarea a intensitatii pe care o simte fiecare subiect asupra itemului respectiv)(vezi Intrebarea 5 Anexa 1). Raspunsurile sunt prezentate mai jos(Vezi tabelul \ref{tab:title}).
 	
 	\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
 	\begin{center}
-		\begin{tabular}{ | M{14em} | M{1.1cm}| M{1.1cm} | M{1.1cm}| M{1.1cm} | M{1.1cm} |} 
+		
+		\begin{tabular}{ | M{13em} | M{1.1cm}| M{1.0cm} | M{1.1cm}| M{1.1cm} | M{2.2cm} |} 
 			\hline
-			& 1 & 2 & 3 & 4 & 5\\ 
+			& \multicolumn{5}{c|}{Gradul de acord cu afirmatia } \\
+			\hline
+			& 1 Deloc & 2 Mic & 3 Mediu & 4  Mare & 5 \qquad Foarte mare\\ 
 			\hline
 			Experienta personala  & 2,8\% & 1,9\% &10,4\%  & 28,3\% & 56,6\% \\ 
 			\hline
@@ -541,16 +587,20 @@ Intr-o economie globala dezvoltata intr-o piata foarte competitiva, orientarea s
 			Informatia oferita de motoarele de cautare & 9,4\% &10,4\%  &34,9\%  &34,9\% & 10,4\% \\ 
 			\hline
 		\end{tabular}
-		\newline
+	\captionof{table}{Repartiția respondenților după răspunsurile la întrebarea "In ce masura esti inuentat de factorii de mai jos atunci cand realizezi achizitii online? "} \label{tab:title} 
+	\bigskip
+		
 	\end{center}
 	\qquad Conform datelor culese, in momentul achizitiei unui produs online, consumatorii se bazeaza cel mai mult pe\textit{ experienta personala} din trecut, detinand cel mai mare procent (84,9\%),urmand apoi cu un procent de 66\% \textit{review-urile de pe site}. Acest fapt denota un aspect neasteptat si anume o incredere mai mare asupra review-urilor online decat in opiniile celor apropiati. Cel mai mic procent (45,3\%) l-a obtinut informatia oferita de motoarele de cautare,acest lucru putand fi datorat fie volumului mare de date disponibile online, fie gradului  scazut de acuratete a informatiei prezente pe internet.
 	
-	\qquad Pentru a identifica elementele care conteaza cel mai mult pentru consumator atunci cand ia decizia de a alege un magazin online in detrimentul altuia, am introdus o intrebare cu 5 itemi(Brand-ul produsului, Usurinta utilizarii site-ului, Politica de Return, Diversitatea gamei de produse, Posibilitatea de a urmari comanda realizata), prin care respondentii au putut acorda o nota de la 1-5 in ordinea crescatoare a intensitatii pe care o simte fiecare subiect asupra item-ului respectiv(vezi intrebarea 5 Anexa 1). Raspunsurile sunt prezentate mai jos.(vezi tabelul 3.3)
+	\qquad Pentru a identifica elementele care conteaza cel mai mult pentru consumator atunci cand ia decizia de a alege un magazin online in detrimentul altuia, am introdus o intrebare cu 5 itemi(Brand-ul produsului, Usurinta utilizarii site-ului, Politica de Return, Diversitatea gamei de produse, Posibilitatea de a urmari comanda realizata), prin care respondentii au putut acorda o nota de la 1-5 in ordinea crescatoare a intensitatii pe care o simte fiecare subiect asupra item-ului respectiv(vezi intrebarea 6 Anexa 1). Raspunsurile sunt prezentate mai jos.(vezi tabelul \ref{tab:title})
 	\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
 		\begin{center}
-		\begin{tabular}{ | M{15em} | M{1.1cm}| M{1.1cm} | M{1.1cm}| M{1.1cm} | M{1.1cm} |} 
+		\begin{tabular}{ | M{12em} | M{1.1cm}| M{1.0cm} | M{1.1cm}| M{1.1cm} | M{2.2cm} |} 
 			\hline
-			& 1 & 2 & 3 & 4 & 5\\ 
+			& \multicolumn{5}{c|}{Gradul de acord cu afirmatia } \\
+			\hline
+			& 1 Deloc & 2 Mic & 3 Mediu & 4  Mare & 5 \qquad Foarte mare\\ 
 			\hline
 			 Brand-ul produsului &1,9\%  &10,4\%  & 41,5\%  &21,7\% &24,5\% \\ 
 			\hline
@@ -563,7 +613,9 @@ Intr-o economie globala dezvoltata intr-o piata foarte competitiva, orientarea s
 			Posibilitatea de a urmari comanda realizata & 2,8\%  & 6,6\%  &18,9\%  &32,0\% &39,6\% \\
 			\hline
 		\end{tabular}
-		\newline
+	\captionof{table}{Repartiția respondenților după răspunsurile la întrebarea "In ce masura conteaza elementele enumarate mai jos atunci cand alegi un magazin online?" } \label{tab:title} 
+	\bigskip
+		
 		\end{center}
 		\qquad Potrivit raspunsurilor primite, am obtinut urmatoarele rezultate:
 		\begin{itemize}
@@ -578,7 +630,7 @@ Intr-o economie globala dezvoltata intr-o piata foarte competitiva, orientarea s
 		\begin{figure}[!htb]
 			\centering
 			\includegraphics[width=14cm, height=5cm]{"figures/trei.png"}
-			\caption{Figure 3.3 Repartizarea respondentilor dupa nivelul de documentare a respondentilor inainte de a comanda online}\label{fig:unuspre}
+			\caption{ Repartizarea respondentilor dupa nivelul de documentare a respondentilor inainte de a comanda online}\label{fig:unuspre}
 		\end{figure}
 	
 	 	\qquad Asadar, prin raspunsurile oferite se observa ca respondentii au un nivel crescut de maturitate, alegand sa se informeze riguros inainte de a alege sa cumpere un produs, deoarece  35,8\% au ales ca se informeaza mult, iar 43,4\%, aproape jumatate, au ales chiar grad maxim de informare. Acest fapt este subliniat si de faptul ca doar 2,8\% din respondenti au ales cea mai mica nota (1) care inseamna informare deloc.
@@ -587,34 +639,70 @@ Intr-o economie globala dezvoltata intr-o piata foarte competitiva, orientarea s
 		\item Al doilea obiectiv al studiului nostru : sa identificam categoriile de produse si frecventa achizitiilor online.
 		
 		\quad Pentru a identifica categoriile de produse cele mai achizitionate in mediul online, am propus acestora sa raspunda care e categoria de produse pe care o cumpara cel mai des online.(vezi intrebarea 7 Anexa 1).
-		
 		\begin{figure}[!htb]
 			\centering
-			\includegraphics[width=13cm, height=6cm]{"figures/patru.png"}
+			\begin{tikzpicture}
+				% We will draw the pie chart here
+				
+				\pie[
+				color = {
+					yellow!90!black, 
+					green!60!black, 
+					red!70,
+					orange!40,
+					yellow!50 },
+				text = legend
+				]
+				{11/Carti si reviste,
+					40 /Haine si incaltaminte,
+					11 /Mancare,
+					5 /Electronice,
+					33/ Accesorii sau produse de ingrijire personala}
+				
+			\end{tikzpicture}
+			\caption{Repartitia respondentilor dupa categoria cea mai achizitionata in perioada feb-april 2021} 
 		\end{figure}
 	
 		\quad Cei mai multi dintre respondenti ( vezi figura 3.4) au raspuns ca\textit{ hainele si incaltamintea} reprezinta cea mai frecventa categorie de produse achizitionata. Pe locul doi se afla \textit{accesoriile/ produsele de ingrijire personala}, iar pe trei,\textit{ cartile si revistele} aflandu-se la egalitate cu \textit{mancarea}. Aceste categorii de produse au fost bunurile care au fost cele mai importante pentru consumatorii online, tineri si educati din Romania in perioada februarie-aprilie 2021.
 	
 		\qquad Pentru a cunoaste frecventa  cu care consumatorii achizitioneaza, in mediul  online, am propus acestora sa raspunda cat de frecvent obisnuiesc ei sa achizitioneze produse sau servicii cu ajutorul internetului fie de pe laptop/telefon sau tableta(vezi intrebarea 8, Anexa 1)
-	
 		\begin{figure}[!htb]
 			\centering
-			\includegraphics[width=16cm, height=7cm]{"figures/cinci.png"}
+			\begin{tikzpicture}
+				% We will draw the pie chart here
+				
+				\pie[
+				color = {
+					yellow!90!black, 
+					green!60!black, 
+					red!70,
+					gray!50},
+				text = legend
+				]
+				{28.3/O data pe luna,
+					9.5/De 2-3 ori pe saptamana,
+					16 /O data pe saptamana,
+					46.2/De 2-3 ori pe luna}
+				
+			\end{tikzpicture}
+			\caption{Repartitia respondentilor dupa categoria cea mai achizitionata in perioada feb-april 2021} 
 		\end{figure}
-
+\newpage
 		\qquad Conform raspunsurilor culese,(vezi Figura 3.5) cei mai multi respondenti (46,2\%) au spus ca achizitioneaza de \textit{2-3 ori pe luna}, fapt ce se incadreaza ca o medie intre des si rar, iar cei mai putini respondenti (9,4\%) au spus ca achizitioneaza de \textit{2-3 ori pe saptamana}.
 	
 		\item Al treilea obiectiv al studiului nostru: Sa identificam problemele aparute si comportamentul post-achizitie.
 \end{enumerate}		
 
-		\quad Pentru a afla ce tip de probleme au intampinat atunci cand au achizitionat un produs online, am adaugat o intrebare cu 5 itemi (Timpul de livrare nu a fost respectat, Produsul a ajuns cu defecte, Au fost costuri mari cu livrarea, Calitate inferioara, Returnarea produsului a fost dificila)prin care respondentii au putut acorda o nota de la 1-5 in ordinea crescatoare a intensitatii pe care o simte fiecare subiect asupra item-ului respectiv(vezi intrebarea 9, Anexa 1). Raspunsurile sunt prezentate mai jos(vezi tabelul 3.4).
+		\quad Pentru a afla ce tip de probleme au intampinat atunci cand au achizitionat un produs online, am adaugat o intrebare cu 5 itemi (Timpul de livrare nu a fost respectat, Produsul a ajuns cu defecte, Au fost costuri mari cu livrarea, Calitate inferioara, Returnarea produsului a fost dificila)prin care respondentii au putut acorda o nota de la 1-5 in ordinea crescatoare a intensitatii pe care o simte fiecare subiect asupra item-ului respectiv(vezi intrebarea 10, Anexa 1). Raspunsurile sunt prezentate mai jos(vezi tabelul 3.4).
 	\newline
 		
 		\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
 		\begin{center}
-			\begin{tabular}{ | M{16em} | M{1.1cm}| M{1.1cm} | M{1.1cm}| M{1.1cm} | M{1.1cm} |} 
+			\begin{tabular}{ | M{14em} | M{1.1cm}| M{1.0cm} | M{1.1cm}| M{1.1cm} | M{2.2cm} |} 
 				\hline
-				& 1 & 2 & 3 & 4 & 5\\ 
+				& \multicolumn{5}{c|}{Gradul de acord cu afirmatia } \\
+				\hline
+				& 1 Deloc & 2 Mic & 3 Mediu & 4  Mare & 5 \qquad Foarte mare\\ 
 				\hline
 				Timpul de livrare nu a fost respectat  &8,5\%  &37,7\%  &27,4\%  &18,9\% &7,5\% \\ 
 				\hline
@@ -627,19 +715,37 @@ Intr-o economie globala dezvoltata intr-o piata foarte competitiva, orientarea s
 				Returnarea produsului a fost dificila & 32,6\%  & 27,4\%  & 18\% & 9,4\% &5,7\% \\
 				\hline
 			\end{tabular}
-	\newline
+		\captionof{table}{Repartiția respondenților după răspunsurile la întrebarea "In ce masura ati intampinat problemele de mai jos atunci cand ati comandat un produs de pe internet?" } \label{tab:title} 
+		\bigskip 
 		\end{center}
 	\qquad\space\space Potrivit datelor culese(vezi tabel 3.4), consumatorii nu au prea intalnit acest tip de probleme atunci cand au plasat o comanda online, fapt dovedit de notele mici acordate problemelor din figura de mai sus. Cea mai intalnita, dar care tot detine un scor nu foarte mare (31,2\%) este \textit{costuri mari cu livrarea}, urmand pe locul doi, cu un procent de 26,4\%, \textit{timpul de livrare care nu a fost respectat} fapt ce subliniaza importanta calitatii livrarii bunurilor in procesul de achizitie online. Problema intalnita cel mai putin a fost \textit{Produsul a ajuns cu defecte} avand un procent de aproape 5\%.
 	
 	\quad Pentru a identifica cum reactioneaza consumatorii  online atunci cand intalnesc o problema cu produsul livrat de la un magazin online, am intrebat cum au actionat ei dupa ce au constat ca bunul primit in urma comenzii, nu este conform cerintelor lor. Raspunsurile sunt prezentate mai jos(vezi figura 3.6).
-	
-	
 	\begin{figure}[!htb]
 		\centering
-		\includegraphics[width=12cm, height=7cm]{"figures/sapte.png"}
+		\begin{tikzpicture}
+			% We will draw the pie chart here
+			
+			\pie[
+			color = {
+				yellow!90!black, 
+				green!60!black, 
+				red!70,
+				gray!50,
+				orange!80},
+			text = legend
+			]
+			{77.4/Am comunicat cu vanzatorul pentru a remedia situatia,
+				5.5/Am povestit persoanelor apropiate,
+				2.8/L-am returnat,
+				13.2/Nu am luat nicio actiune,
+				1/Am scris o recenzie pe blog}
+			
+		\end{tikzpicture}
+		\caption{Repartitia respondentilor dupa problemele pe care le-au intalnit in achizitia unor produse online} 
 	\end{figure}
 
-	\quad Conform raspunsurilor obtinute, am constat ca cei mai multi respondenti, anume un procent de 77,4\% din total au raspuns ca ei comunica problema intalnita vanzatorului/ magazinului de la care a achizitionat bunul pentru a putea remedia si rezolva situatia creata, fapt ce subliniaza inca o data seriozitatea si increderea de care da dovada consumatorul fata de achizitiile din mediul online. Acest lucru evidentiaza profilul stabilit al participantilor, la acest studiu, inca de la inceputul cercetarii. Din pacate, au existat si persoane (13,20\%) care au ales sa nu ia nicio actiune cu privire la bunul achizitionat si neconform cerintelor si asteparilor lor. Au existat si cateva pareri, in minoritate, care au ales sa actioneze diferit si unic precum: impartasirea experientei celor apropiati(2,8\%), returnarea produsului (2,8\%) si scrierea experientei pe un blog (0,9\%).
+	\quad Conform raspunsurilor obtinute, am constat ca cei mai multi respondenti, anume un procent de 77,4\% din total au raspuns ca ei comunica problema intalnita vanzatorului/ magazinului de la care a achizitionat bunul pentru a putea remedia si rezolva situatia creata, fapt ce subliniaza inca o data seriozitatea si increderea de care da dovada consumatorul fata de achizitiile din mediul online. Acest lucru evidentiaza profilul stabilit al participantilor, la acest studiu, inca de la inceputul cercetarii. Din pacate, au existat si persoane (13,20\%) care au ales sa nu ia nicio actiune cu privire la bunul achizitionat si neconform cerintelor si asteparilor lor. Au existat si cateva pareri, in minoritate, care au ales sa actioneze diferit si unic precum: impartasirea experientei celor apropiati(5,5\%), returnarea produsului (2,8\%) si scrierea experientei pe un blog (0,9\%).
 	
 	\quad In ultima parte a analizei datelor culese doresc sa integrez intrebarile deschise de la finalul chestionarului (vezi intrebarea 12 si 13, Anexa 1) alaturi de celelalte intrebari pentru a crea un profil al respondentilor bazat pe cele 3 categorii de varsta (18-21, 22-24, 25-30) si pentru a putea identifica diferentele ce pot aparea intre segmentele de clienti, in functie de categoria de varsta. 
 	
@@ -650,9 +756,24 @@ Intr-o economie globala dezvoltata intr-o piata foarte competitiva, orientarea s
 	\quad Faptul ca procentul raspunsurilor feminine excede procentul raspunsurilor masculine poate indica faptul ca femeile sunt mai empatice la raspunderea de chestionare online decat barbatii sau poate fi datorat implicarii unui numar restrans de respondenti de gen masculin in completarea chestionarului.
 
 	\quad Din procentul de 90,6\% din totalul persoanelor care au raspuns la chestionar, 33\% dintre respondentii de gen feminin au varsta cuprinsa intre 18-21 de ani( abia au terminat studiile liceale sau sunt studente la o facultate), 29\% au varsta cuprinsa intre 22-24 ( sunt absolvente de licenta sau studente la master), 38\% au varsta cuprinsa intre 25-30 de ani (fie sunt absolvente de studii superioare sau studente la doctorat)(vezi figura 3.7).
-		\begin{figure}[!htb]
+	\begin{figure}[!htb]
 		\centering
-		\includegraphics[width=12cm, height=6cm]{"figures/ana.png"}
+		\begin{tikzpicture}
+			% We will draw the pie chart here
+			
+			\pie[
+			color = {
+				yellow!90!black, 
+				green!60!black, 
+				red!70},
+			text = legend
+			]
+			{33/18-21 ani ,
+				29/22-24 ani,
+				38/25-30 ani}
+			
+		\end{tikzpicture}
+		\caption{Repartitia respondentilor dupa problemele pe care le-au intalnit in achizitia unor produse online} 
 	\end{figure}
 	
 \newpage	

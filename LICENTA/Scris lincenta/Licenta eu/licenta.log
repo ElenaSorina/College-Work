@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.29)  29 MAY 2021 20:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.29)  31 MAY 2021 16:35
 entering extended mode
 **./licenta.tex
 (licenta.tex
@@ -288,50 +288,384 @@ Package: titlesec 2019/10/16 v2.13 Sectioning titles
 Package: titletoc 2019/10/16 v2.13 TOC entries
 \ttl@leftsep=\dimen190
 )
+(E:\Latex\tex/latex/latex-tools\tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen191
+\TX@old@table=\dimen192
+\TX@old@col=\dimen193
+\TX@target=\dimen194
+\TX@delta=\dimen195
+\TX@cols=\count284
+\TX@ftn=\toks30
+)
+(E:\Latex\tex/latex/ragged2e\ragged2e.sty
+Package: ragged2e 2021/02/05 v3.0 ragged2e Package
+
+(E:\Latex\tex/latex/everysel\everysel.sty
+Package: everysel 2021/01/20 v2.1 EverySelectfont Package (MS)
+
+(E:\Latex\tex/latex/everysel\everysel-2011-10-28.sty))
+\CenteringLeftskip=\skip63
+\RaggedLeftLeftskip=\skip64
+\RaggedRightLeftskip=\skip65
+\CenteringRightskip=\skip66
+\RaggedLeftRightskip=\skip67
+\RaggedRightRightskip=\skip68
+\CenteringParfillskip=\skip69
+\RaggedLeftParfillskip=\skip70
+\RaggedRightParfillskip=\skip71
+\JustifyingParfillskip=\skip72
+\CenteringParindent=\skip73
+\RaggedLeftParindent=\skip74
+\RaggedRightParindent=\skip75
+\JustifyingParindent=\skip76
+)
+(E:\Latex\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen196
+\lightrulewidth=\dimen197
+\cmidrulewidth=\dimen198
+\belowrulesep=\dimen199
+\belowbottomsep=\dimen256
+\aboverulesep=\dimen257
+\abovetopsep=\dimen258
+\cmidrulesep=\dimen259
+\cmidrulekern=\dimen260
+\defaultaddspace=\dimen261
+\@cmidla=\count285
+\@cmidlb=\count286
+\@aboverulesep=\dimen262
+\@belowrulesep=\dimen263
+\@thisruleclass=\count287
+\@lastruleclass=\count288
+\@thisrulewidth=\dimen264
+)
+(E:\Latex\tex/latex/caption\caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(E:\Latex\tex/latex/caption\caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen265
+\captionmargin@=\dimen266
+\captionwidth=\dimen267
+\caption@tempdima=\dimen268
+\caption@indent=\dimen269
+\caption@parindent=\dimen270
+\caption@hangindent=\dimen271
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count289
+\c@continuedfloat=\count290
+Package caption Info: float package is loaded.
+Package caption Info: wrapfig package is loaded.
+)
+(E:\Latex\tex/latex/chngcntr\chngcntr.sty
+Package: chngcntr 2018/04/09 v1.1a change counter resetting
+Package chngcntr Info: \counterwithout already defined.
+(chngcntr)             Quitting chngcntr on input line 21.
+)
+(E:\Latex\tex/latex/pgf-pie\pgf-pie.sty
+Package: pgf-pie 2021/05/03 v0.5 Some LaTeX macros for pie chart by using PGF/T
+ikz package.
+
+(E:\Latex\tex/latex/pgf/frontendlayer\tikz.sty
+(E:\Latex\tex/latex/pgf/basiclayer\pgf.sty
+(E:\Latex\tex/latex/pgf/utilities\pgfrcs.sty
+(E:\Latex\tex/generic/pgf/utilities\pgfutil-common.tex
+\pgfutil@everybye=\toks31
+\pgfutil@tempdima=\dimen272
+\pgfutil@tempdimb=\dimen273
+
+(E:\Latex\tex/generic/pgf/utilities\pgfutil-common-lists.tex))
+(E:\Latex\tex/generic/pgf/utilities\pgfutil-latex.def
+\pgfutil@abb=\box61
+)
+(E:\Latex\tex/generic/pgf/utilities\pgfrcs.code.tex
+(E:\Latex\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2020/12/27 v3.1.8b (3.1.8b)
+))
+Package: pgf 2020/12/27 v3.1.8b (3.1.8b)
+
+(E:\Latex\tex/latex/pgf/basiclayer\pgfcore.sty
+(E:\Latex\tex/latex/pgf/systemlayer\pgfsys.sty
+(E:\Latex\tex/generic/pgf/systemlayer\pgfsys.code.tex
+Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
+
+(E:\Latex\tex/generic/pgf/utilities\pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks32
+\pgfkeys@temptoks=\toks33
+
+(E:\Latex\tex/generic/pgf/utilities\pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks34
+))
+\pgf@x=\dimen274
+\pgf@y=\dimen275
+\pgf@xa=\dimen276
+\pgf@ya=\dimen277
+\pgf@xb=\dimen278
+\pgf@yb=\dimen279
+\pgf@xc=\dimen280
+\pgf@yc=\dimen281
+\pgf@xd=\dimen282
+\pgf@yd=\dimen283
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count291
+\c@pgf@countb=\count292
+\c@pgf@countc=\count293
+\c@pgf@countd=\count294
+\t@pgf@toka=\toks35
+\t@pgf@tokb=\toks36
+\t@pgf@tokc=\toks37
+\pgf@sys@id@count=\count295
+
+(E:\Latex\tex/generic/pgf/systemlayer\pgf.cfg
+File: pgf.cfg 2020/12/27 v3.1.8b (3.1.8b)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(E:\Latex\tex/generic/pgf/systemlayer\pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2020/12/27 v3.1.8b (3.1.8b)
+
+(E:\Latex\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2020/12/27 v3.1.8b (3.1.8b)
+)))
+(E:\Latex\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfsyssoftpath@smallbuffer@items=\count296
+\pgfsyssoftpath@bigbuffer@items=\count297
+)
+(E:\Latex\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+))
+(E:\Latex\tex/generic/pgf/basiclayer\pgfcore.code.tex
+Package: pgfcore 2020/12/27 v3.1.8b (3.1.8b)
+
+(E:\Latex\tex/generic/pgf/math\pgfmath.code.tex
+(E:\Latex\tex/generic/pgf/math\pgfmathcalc.code.tex
+(E:\Latex\tex/generic/pgf/math\pgfmathutil.code.tex)
+(E:\Latex\tex/generic/pgf/math\pgfmathparser.code.tex
+\pgfmath@dimen=\dimen284
+\pgfmath@count=\count298
+\pgfmath@box=\box62
+\pgfmath@toks=\toks38
+\pgfmath@stack@operand=\toks39
+\pgfmath@stack@operation=\toks40
+)
+(E:\Latex\tex/generic/pgf/math\pgfmathfunctions.code.tex
+(E:\Latex\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex)
+(E:\Latex\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex)
+(E:\Latex\tex/generic/pgf/math\pgfmathfunctions.random.code.tex)
+(E:\Latex\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex)
+(E:\Latex\tex/generic/pgf/math\pgfmathfunctions.base.code.tex)
+(E:\Latex\tex/generic/pgf/math\pgfmathfunctions.round.code.tex)
+(E:\Latex\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex)
+(E:\Latex\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex)))
+(E:\Latex\tex/generic/pgf/math\pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count299
+))
+(E:\Latex\tex/generic/pgf/math\pgfint.code.tex)
+(E:\Latex\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@picminx=\dimen285
+\pgf@picmaxx=\dimen286
+\pgf@picminy=\dimen287
+\pgf@picmaxy=\dimen288
+\pgf@pathminx=\dimen289
+\pgf@pathmaxx=\dimen290
+\pgf@pathminy=\dimen291
+\pgf@pathmaxy=\dimen292
+\pgf@xx=\dimen293
+\pgf@xy=\dimen294
+\pgf@yx=\dimen295
+\pgf@yy=\dimen296
+\pgf@zx=\dimen297
+\pgf@zy=\dimen298
+)
+(E:\Latex\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@path@lastx=\dimen299
+\pgf@path@lasty=\dimen300
+)
+(E:\Latex\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@shorten@end@additional=\dimen301
+\pgf@shorten@start@additional=\dimen302
+)
+(E:\Latex\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfpic=\box63
+\pgf@hbox=\box64
+\pgf@layerbox@main=\box65
+\pgf@picture@serial@count=\count300
+)
+(E:\Latex\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgflinewidth=\dimen303
+)
+(E:\Latex\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@pt@x=\dimen304
+\pgf@pt@y=\dimen305
+\pgf@pt@temp=\dimen306
+)
+(E:\Latex\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(E:\Latex\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(E:\Latex\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(E:\Latex\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfarrowsep=\dimen307
+)
+(E:\Latex\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@max=\dimen308
+\pgf@sys@shading@range@num=\count301
+\pgf@shadingcount=\count302
+)
+(E:\Latex\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+
+(E:\Latex\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfexternal@startupbox=\box66
+))
+(E:\Latex\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(E:\Latex\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(E:\Latex\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(E:\Latex\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)))
+(E:\Latex\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfnodeparttextbox=\box67
+)
+(E:\Latex\tex/generic/pgf/modules\pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(E:\Latex\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@nodesepstart=\dimen309
+\pgf@nodesepend=\dimen310
+)
+(E:\Latex\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2020/12/27 v3.1.8b (3.1.8b)
+))
+(E:\Latex\tex/latex/pgf/utilities\pgffor.sty
+(E:\Latex\tex/latex/pgf/utilities\pgfkeys.sty
+(E:\Latex\tex/generic/pgf/utilities\pgfkeys.code.tex))
+(E:\Latex\tex/latex/pgf/math\pgfmath.sty
+(E:\Latex\tex/generic/pgf/math\pgfmath.code.tex))
+(E:\Latex\tex/generic/pgf/utilities\pgffor.code.tex
+Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
+
+(E:\Latex\tex/generic/pgf/math\pgfmath.code.tex)
+\pgffor@iter=\dimen311
+\pgffor@skip=\dimen312
+\pgffor@stack=\toks41
+\pgffor@toks=\toks42
+))
+(E:\Latex\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
+Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
+
+(E:\Latex\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@plot@mark@count=\count303
+\pgfplotmarksize=\dimen313
+)
+\tikz@lastx=\dimen314
+\tikz@lasty=\dimen315
+\tikz@lastxsaved=\dimen316
+\tikz@lastysaved=\dimen317
+\tikz@lastmovetox=\dimen318
+\tikz@lastmovetoy=\dimen319
+\tikzleveldistance=\dimen320
+\tikzsiblingdistance=\dimen321
+\tikz@figbox=\box68
+\tikz@figbox@bg=\box69
+\tikz@tempbox=\box70
+\tikz@tempbox@bg=\box71
+\tikztreelevel=\count304
+\tikznumberofchildren=\count305
+\tikznumberofcurrentchild=\count306
+\tikz@fig@count=\count307
+
+(E:\Latex\tex/generic/pgf/modules\pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfmatrixcurrentrow=\count308
+\pgfmatrixcurrentcolumn=\count309
+\pgf@matrix@numberofcolumns=\count310
+)
+\tikz@expandcount=\count311
+
+(E:\Latex\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.
+tex
+File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+))) (E:\Latex\tex/latex/pgf-pie\tikzlibrarypie.code.tex
+(E:\Latex\tex/latex/carlisle\scalefnt.sty)
+\pgfpie@angleEnd=\dimen322
+\pgfpie@explodeLength=\count312
+\pgfpie@colorLength=\count313
+\pgfpie@sliceLength=\count314
+))
 (E:\Latex\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count284
-\l__pdf_internal_box=\box61
+\l__color_backend_stack_int=\count315
+\l__pdf_internal_box=\box72
 ) (licenta.aux
 
 LaTeX Warning: Label `fig:zece' multiply defined.
 
 
-LaTeX Warning: Label `fig:zece' multiply defined.
+LaTeX Warning: Label `tab:title' multiply defined.
 
 
-LaTeX Warning: Label `fig:zece' multiply defined.
+LaTeX Warning: Label `tab:title' multiply defined.
+
+
+LaTeX Warning: Label `tab:title' multiply defined.
 
 )
 \openout1 = `licenta.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
  (E:\Latex\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count285
-\scratchdimen=\dimen191
-\scratchbox=\box62
-\nofMPsegments=\count286
-\nofMParguments=\count287
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count288
-\MPscratchDim=\dimen192
-\MPnumerator=\count289
-\makeMPintoPDFobject=\count290
-\everyMPtoPDFconversion=\toks31
+\scratchcounter=\count316
+\scratchdimen=\dimen323
+\scratchbox=\box73
+\nofMPsegments=\count317
+\nofMParguments=\count318
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count319
+\MPscratchDim=\dimen324
+\MPnumerator=\count320
+\makeMPintoPDFobject=\count321
+\everyMPtoPDFconversion=\toks44
 ) (E:\Latex\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -374,16 +708,20 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-[1
+ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 66.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+ [1
 
 {C:/Users/Sorina/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 103.
+(Font)              size <17.28> substituted on input line 108.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 103.
+(Font)              size <17.28> substituted on input line 108.
 
 (licenta.toc
 Overfull \hbox (8.54555pt too wide) in paragraph at lines 29--29
@@ -392,197 +730,242 @@ Overfull \hbox (8.54555pt too wide) in paragraph at lines 29--29
  []
 
 )
-\tf@toc=\write3
-\openout3 = `licenta.toc'.
+\tf@toc=\write4
+\openout4 = `licenta.toc'.
 
  [1
 
 ] [2] (licenta.lof)
-\tf@lof=\write4
-\openout4 = `licenta.lof'.
+\tf@lof=\write5
+\openout5 = `licenta.lof'.
 
- [3] [4] [5] [6] [7]
-LaTeX Font Info:    Calculating math sizes for size <16> on input line 150.
+ [3] (licenta.lot)
+\tf@lot=\write6
+\openout6 = `licenta.lot'.
+
+ [4] [5] [6] [7] [8]
+LaTeX Font Info:    Calculating math sizes for size <16> on input line 157.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <16> not available
-(Font)              size <17.28> substituted on input line 150.
+(Font)              size <17.28> substituted on input line 157.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 150.
+(Font)              size <17.28> substituted on input line 157.
 
 
 LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 150.
+(Font)              size <17.28> substituted on input line 157.
 
-[8]
-<figures/first.png, id=40, 593.21625pt x 330.033pt>
+[9]
+<figures/first.png, id=47, 593.21625pt x 330.033pt>
 File: figures/first.png Graphic file (type png)
 <use figures/first.png>
-Package pdftex.def Info: figures/first.png  used on input line 177.
+Package pdftex.def Info: figures/first.png  used on input line 184.
 (pdftex.def)             Requested size: 369.89932pt x 227.62228pt.
- [9]
-<figures/SECOND.png, id=46, 534.19576pt x 418.56375pt>
+ [10]
+<figures/SECOND.png, id=52, 534.19576pt x 418.56375pt>
 File: figures/SECOND.png Graphic file (type png)
 <use figures/SECOND.png>
-Package pdftex.def Info: figures/SECOND.png  used on input line 186.
+Package pdftex.def Info: figures/SECOND.png  used on input line 193.
 (pdftex.def)             Requested size: 426.79475pt x 341.42981pt.
- [10 <./figures/first.png>] [11 <./figures/SECOND.png>]
-Overfull \hbox (3.6715pt too wide) in paragraph at lines 198--199
+ [11 <./figures/first.png>] [12 <./figures/SECOND.png>]
+Overfull \hbox (3.6715pt too wide) in paragraph at lines 205--206
 \OT1/cmr/m/n/12 subiect frecvent abor-dat ^n con-tex-tul com-por-ta-men-tu-lui
  con-suma-toru-lui on-line. Anx-
  []
 
-[12]
-<figures/third.png, id=59, 508.90125pt x 210.7875pt>
+[13]
+<figures/third.png, id=65, 508.90125pt x 210.7875pt>
 File: figures/third.png Graphic file (type png)
 <use figures/third.png>
-Package pdftex.def Info: figures/third.png  used on input line 216.
+Package pdftex.def Info: figures/third.png  used on input line 223.
 (pdftex.def)             Requested size: 341.44351pt x 199.17273pt.
- [13 <./figures/third.png>] [14] [15] [16] [17] [18] [19]
-Underfull \hbox (badness 3525) in paragraph at lines 298--298
+ [14 <./figures/third.png>] [15] [16] [17] [18] [19] [20]
+Underfull \hbox (badness 3525) in paragraph at lines 305--305
 [][]\OT1/cmr/m/n/10 Statista 2021, https://www.statista.com/statistics/1169383/
 romania-online-shopping-frequency/,
  []
 
-<figures/fourth.png, id=85, 546.843pt x 320.397pt>
+<figures/fourth.png, id=91, 546.843pt x 320.397pt>
 File: figures/fourth.png Graphic file (type png)
 <use figures/fourth.png>
-Package pdftex.def Info: figures/fourth.png  used on input line 301.
+Package pdftex.def Info: figures/fourth.png  used on input line 308.
 (pdftex.def)             Requested size: 369.90413pt x 256.08817pt.
 
-Overfull \hbox (0.29953pt too wide) in paragraph at lines 297--304
+Overfull \hbox (0.29953pt too wide) in paragraph at lines 304--311
 \OT1/cmr/m/n/12 demia Covid19 care a afec-tat in-treaga lume, in-clu-siv Ro-ma-
 nia.[] Ast-fel, multi antreprenori
  []
 
-[20 <./figures/fourth.png>]
-<figures/fifth.png, id=90, 423.38174pt x 245.718pt>
+[21 <./figures/fourth.png>]
+<figures/fifth.png, id=96, 423.38174pt x 245.718pt>
 File: figures/fifth.png Graphic file (type png)
 <use figures/fifth.png>
-Package pdftex.def Info: figures/fifth.png  used on input line 310.
+Package pdftex.def Info: figures/fifth.png  used on input line 317.
 (pdftex.def)             Requested size: 341.43208pt x 199.18045pt.
- [21 <./figures/fifth.png>]
-<figures/sixth.png, id=95, 270.41025pt x 165.0165pt>
+ [22 <./figures/fifth.png>]
+<figures/sixth.png, id=101, 270.41025pt x 165.0165pt>
 File: figures/sixth.png Graphic file (type png)
 <use figures/sixth.png>
-Package pdftex.def Info: figures/sixth.png  used on input line 321.
+Package pdftex.def Info: figures/sixth.png  used on input line 328.
 (pdftex.def)             Requested size: 284.52916pt x 199.16946pt.
-<figures/seventh.png, id=96, 269.808pt x 166.82326pt>
+<figures/seventh.png, id=102, 269.808pt x 166.82326pt>
 File: figures/seventh.png Graphic file (type png)
 <use figures/seventh.png>
-Package pdftex.def Info: figures/seventh.png  used on input line 328.
+Package pdftex.def Info: figures/seventh.png  used on input line 335.
 (pdftex.def)             Requested size: 284.55418pt x 199.18143pt.
-<figures/eigth.png, id=97, 298.716pt x 164.41425pt>
+<figures/eigth.png, id=103, 298.716pt x 164.41425pt>
 File: figures/eigth.png Graphic file (type png)
 <use figures/eigth.png>
-Package pdftex.def Info: figures/eigth.png  used on input line 335.
+Package pdftex.def Info: figures/eigth.png  used on input line 342.
 (pdftex.def)             Requested size: 284.55344pt x 199.17766pt.
- [22 <./figures/sixth.png>] [23 <./figures/seventh.png> <./figures/eigth.png>] 
-[24]
-<figures/zece.png, id=111, 519.1395pt x 352.31625pt>
+ [23 <./figures/sixth.png>] [24 <./figures/seventh.png> <./figures/eigth.png>] 
+[25]
+<figures/zece.png, id=117, 519.1395pt x 352.31625pt>
 File: figures/zece.png Graphic file (type png)
 <use figures/zece.png>
-Package pdftex.def Info: figures/zece.png  used on input line 370.
+Package pdftex.def Info: figures/zece.png  used on input line 377.
 (pdftex.def)             Requested size: 284.5295pt x 199.16656pt.
- [25] [26 <./figures/zece.png>]
-Overfull \hbox (9.13713pt too wide) in paragraph at lines 394--395
+ [26] [27 <./figures/zece.png>]
+Overfull \hbox (9.13713pt too wide) in paragraph at lines 401--402
 \OT1/cmr/m/n/12 on-line per-mite clien[]ilor sa ac-ce-seze feedback-ul de la a
 lte per-soane care au cumparat
  []
 
-<figures/noua.png, id=120, 521.5485pt x 319.1925pt>
+<figures/noua.png, id=126, 521.5485pt x 319.1925pt>
 File: figures/noua.png Graphic file (type png)
 <use figures/noua.png>
-Package pdftex.def Info: figures/noua.png  used on input line 400.
+Package pdftex.def Info: figures/noua.png  used on input line 407.
 (pdftex.def)             Requested size: 284.52876pt x 199.16849pt.
-[27 <./figures/noua.png>] [28] [29] [30] [31]
-<figures/prima.jpg, id=138, 1653.17625pt x 695.59875pt>
-File: figures/prima.jpg Graphic file (type jpg)
-<use figures/prima.jpg>
-Package pdftex.def Info: figures/prima.jpg  used on input line 478.
-(pdftex.def)             Requested size: 369.88013pt x 170.71507pt.
- [32]
-<figures/doi.jpg, id=142, 1653.17625pt x 695.59875pt>
-File: figures/doi.jpg Graphic file (type jpg)
-<use figures/doi.jpg>
-Package pdftex.def Info: figures/doi.jpg  used on input line 485.
-(pdftex.def)             Requested size: 369.88013pt x 170.71507pt.
- [33 <./figures/prima.jpg> <./figures/doi.jpg>]
-Overfull \hbox (11.533pt too wide) in paragraph at lines 495--497
+[28 <./figures/noua.png>] [29] [30] [31] [32]
+Underfull \hbox (badness 10000) in paragraph at lines 478--480
+
+ []
+
+[33]
+Overfull \hbox (2.67474pt too wide) in paragraph at lines 504--524
+\OT1/cmr/m/n/12 nos-tru este for-mat pre-pon-der-ent de ab-sol-venti de studii 
+su-pe-rioare (mai ex-act 61,3%),
+ []
+
+[34]
+Overfull \hbox (11.533pt too wide) in paragraph at lines 531--535
 [] \OT1/cmr/m/n/12 Pen-tru a iden-ti-fica mo-tivele pen-tru care con-suma-torii
  on-line prefera sa achizitioneze
  []
 
-[34]
 
-Package array Warning: Column M is already defined on input line 529.
+Overfull \hbox (2.2275pt too wide) in paragraph at lines 547--547
+ []|\OT1/cmr/m/n/12 10,4%| 
+ []
 
 
-Package array Warning: Column M is already defined on input line 549.
+Overfull \hbox (2.2275pt too wide) in paragraph at lines 556--556
+ []|\OT1/cmr/m/n/12 13,2%| 
+ []
 
 [35]
-<figures/trei.png, id=153, 527.571pt x 165.0165pt>
+
+Package array Warning: Column M is already defined on input line 572.
+
+
+Overfull \hbox (1.0098pt too wide) in paragraph at lines 579--579
+ \OT1/cmr/m/n/12 Mediu| 
+ []
+
+
+Overfull \hbox (2.2275pt too wide) in paragraph at lines 587--587
+ []|\OT1/cmr/m/n/12 10,4%| 
+ []
+
+[36]
+
+Package array Warning: Column M is already defined on input line 598.
+
+
+Overfull \hbox (1.0098pt too wide) in paragraph at lines 604--604
+ \OT1/cmr/m/n/12 Mediu| 
+ []
+
+
+Overfull \hbox (2.2275pt too wide) in paragraph at lines 606--606
+ []|\OT1/cmr/m/n/12 10,4%| 
+ []
+
+[37]
+<figures/trei.png, id=161, 527.571pt x 165.0165pt>
 File: figures/trei.png Graphic file (type png)
 <use figures/trei.png>
-Package pdftex.def Info: figures/trei.png  used on input line 580.
+Package pdftex.def Info: figures/trei.png  used on input line 633.
 (pdftex.def)             Requested size: 398.34186pt x 142.2639pt.
- [36]
-<figures/patru.png, id=158, 355.5684pt x 191.7564pt>
-File: figures/patru.png Graphic file (type png)
-<use figures/patru.png>
-Package pdftex.def Info: figures/patru.png  used on input line 593.
-(pdftex.def)             Requested size: 369.89091pt x 170.72115pt.
- [37 <./figures/trei.png> <./figures/patru.png>]
-<figures/cinci.png, id=164, 1653.17625pt x 695.59875pt>
-File: figures/cinci.png Graphic file (type png)
-<use figures/cinci.png>
-Package pdftex.def Info: figures/cinci.png  used on input line 602.
-(pdftex.def)             Requested size: 455.2429pt x 199.1605pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 610--612
-
- []
-
-[38 <./figures/cinci.png>]
-<figures/sapte.png, id=169, 341.1144pt x 214.401pt>
-File: figures/sapte.png Graphic file (type png)
-<use figures/sapte.png>
-Package pdftex.def Info: figures/sapte.png  used on input line 639.
-(pdftex.def)             Requested size: 341.45186pt x 199.1782pt.
- [39 <./figures/sapte.png>]
-<figures/ana.png, id=174, 397.9668pt x 253.9086pt>
-File: figures/ana.png Graphic file (type png)
-<use figures/ana.png>
-Package pdftex.def Info: figures/ana.png  used on input line 655.
-(pdftex.def)             Requested size: 341.45535pt x 170.71452pt.
- [40] [41 <./figures/ana.png>] [42] [43] [44] [45] [46] (licenta.bbl) [47]
-Underfull \hbox (badness 10000) in paragraph at lines 725--728
+ [38 <./figures/trei.png>] [39]
+Underfull \hbox (badness 10000) in paragraph at lines 697--699
 
  []
 
 
-Overfull \hbox (14.44194pt too wide) in paragraph at lines 748--765
+Overfull \hbox (1.0098pt too wide) in paragraph at lines 706--706
+ \OT1/cmr/m/n/12 Mediu| 
+ []
+
+
+Overfull \hbox (2.2275pt too wide) in paragraph at lines 708--708
+ []|\OT1/cmr/m/n/12 37,7%| 
+ []
+
+
+Overfull \hbox (2.2275pt too wide) in paragraph at lines 710--710
+ []|\OT1/cmr/m/n/12 44,3%| 
+ []
+
+
+Overfull \hbox (2.2275pt too wide) in paragraph at lines 712--712
+ []|\OT1/cmr/m/n/12 26,4%| 
+ []
+
+
+Overfull \hbox (2.2275pt too wide) in paragraph at lines 714--714
+ []|\OT1/cmr/m/n/12 41,5%| 
+ []
+
+
+Overfull \hbox (2.2275pt too wide) in paragraph at lines 716--716
+ []|\OT1/cmr/m/n/12 27,4%| 
+ []
+
+[40]
+Overfull \hbox (34.42053pt too wide) in paragraph at lines 745--746
+ [][] 
+ []
+
+[41] [42] [43] [44] [45] [46] [47] [48] (licenta.bbl) [49]
+Underfull \hbox (badness 10000) in paragraph at lines 847--850
+
+ []
+
+
+Overfull \hbox (14.44194pt too wide) in paragraph at lines 870--887
  []  
  []
 
-[48]
-Overfull \hbox (14.44194pt too wide) in paragraph at lines 769--783
+[50]
+Overfull \hbox (14.44194pt too wide) in paragraph at lines 891--905
  []  
  []
 
 
-Overfull \hbox (14.44194pt too wide) in paragraph at lines 786--803
+Overfull \hbox (14.44194pt too wide) in paragraph at lines 908--925
  []  
  []
 
-[49]
-Overfull \hbox (14.44194pt too wide) in paragraph at lines 832--847
+[51]
+Overfull \hbox (14.44194pt too wide) in paragraph at lines 954--969
  [] 
  []
 
-[50] [51] (licenta.aux)
+[52] [53] (licenta.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
@@ -592,13 +975,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5837 strings out of 479321
- 81143 string characters out of 2873644
- 437668 words of memory out of 3000000
- 23193 multiletter control sequences out of 15000+600000
+ 17608 strings out of 479321
+ 331495 string characters out of 2873644
+ 653510 words of memory out of 3000000
+ 34721 multiletter control sequences out of 15000+600000
  416223 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 81i,14n,88p,1325b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 102i,14n,102p,1325b,1010s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\Sorina\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcr
 m1200.pk><E:/Latex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><E:/Latex/fonts/ty
 pe1/public/amsfonts/cm/cmbx6.pfb><E:/Latex/fonts/type1/public/amsfonts/cm/cmbx8
@@ -610,9 +993,9 @@ atex/fonts/type1/public/amsfonts/cm/cmr7.pfb><E:/Latex/fonts/type1/public/amsfo
 nts/cm/cmr8.pfb><E:/Latex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><E:/Latex/f
 onts/type1/public/amsfonts/cm/cmti10.pfb><E:/Latex/fonts/type1/public/amsfonts/
 cm/cmti12.pfb>
-Output written on licenta.pdf (52 pages, 1192524 bytes).
+Output written on licenta.pdf (54 pages, 906329 bytes).
 PDF statistics:
- 264 PDF objects out of 1000 (max. 8388607)
+ 263 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 68 words of extra memory for PDF output out of 10000 (max. 10000000)
 
