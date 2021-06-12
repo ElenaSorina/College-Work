@@ -1,30 +1,36 @@
 \babel@toc {english}{}
 \contentsline {section}{\textsc {Introducere}}{6}{}%
-\contentsline {section}{\numberline {1} Comportamentul consumatorului online - conținut și tendințe}{9}{}%
+\contentsline {section}{\numberline {1}Comportamentul consumatorului online - conținut și tendințe}{9}{}%
 \contentsline {subsection}{\numberline {1.1}Comertul electronic}{9}{}%
-\contentsline {subsection}{\numberline {1.2}Factori care influenteaza consumatorul online}{10}{}%
-\contentsline {subsection}{\numberline {1.3}Procesul de cumparare al consumatorului online}{14}{}%
-\contentsline {subsubsection}{\numberline {1.3.1}Accesarea informatiei}{14}{}%
-\contentsline {subsubsection}{\numberline {1.3.2}Evaluarea si analiza informatiei }{15}{}%
-\contentsline {subsubsection}{\numberline {1.3.3}Luarea deciziei}{15}{}%
-\contentsline {subsubsection}{\numberline {1.3.4}Mecanismul de reclamatii si recurs}{16}{}%
-\contentsline {subsubsection}{\numberline {1.3.5}Serviciile si interactiunile post-vanzare}{16}{}%
-\contentsline {subsection}{\numberline {1.4}Trend-uri in comportamentul consumatorilor online}{17}{}%
-\contentsline {subsection}{\numberline {1.5}Avantajele achizitiei online}{18}{}%
-\contentsline {subsection}{\numberline {1.6}Dezavantajele achizitiei online}{18}{}%
-\contentsline {section}{\numberline {2}Cercetare secundara privind comportamentul consumatorului online, roman, tanar si educat}{20}{}%
-\contentsline {subsection}{\numberline {2.1}Comertul electronic in Romania}{20}{}%
-\contentsline {subsection}{\numberline {2.2}Cercetarea A}{22}{}%
-\contentsline {subsection}{\numberline {2.3}Cercetarea B}{23}{}%
-\contentsline {subsection}{\numberline {2.4}Cercetarea C}{26}{}%
-\contentsline {section}{\numberline {3}Studiu de caz }{30}{}%
-\contentsline {subsection}{\numberline {3.1}Scop si obiective}{30}{}%
-\contentsline {subsection}{\numberline {3.2}Metodologia cercetarii}{30}{}%
-\contentsline {subsubsection}{\numberline {3.2.1}Metoda cercetarii}{30}{}%
-\contentsline {subsubsection}{\numberline {3.2.2}Profilul respondentilor}{31}{}%
-\contentsline {subsubsection}{\numberline {3.2.3}Instrumentul cercetarii}{31}{}%
-\contentsline {subsection}{\numberline {3.3}Analiza si intepretarea datelor}{33}{}%
-\contentsline {subsection}{\numberline {3.4}Concluzii - studiu de caz}{46}{}%
-\contentsline {section}{\numberline {4}Concluzii}{48}{}%
-\contentsline {section}{\numberline {5}Anexa 1- Chestionarul Comportamentul consumatorului online, tanar si educat din Romania }{50}{}%
+\contentsline {subsection}{\numberline {1.2}Comportamentul consumatorului}{11}{}%
+\contentsline {subsubsection}{\numberline {1.2.1}Importanta comportamentului consumatorului }{11}{}%
+\contentsline {subsubsection}{\numberline {1.2.2}Managementul relatiilor cu clientii - CRM}{12}{}%
+\contentsline {subsubsection}{\numberline {1.2.3}Tipuri de decizii}{12}{}%
+\contentsline {subsubsection}{\numberline {1.2.4}Trend-uri in comportamentul consumatorilor online}{14}{}%
+\contentsline {subsubsection}{\numberline {1.2.5}Marketing Models}{15}{}%
+\contentsline {subsubsection}{\numberline {1.2.6}Consumatorul online vs offline}{16}{}%
+\contentsline {subsection}{\numberline {1.3}Generatiile de consumatori}{18}{}%
+\contentsline {subsection}{\numberline {1.4}Factori care influenteaza comportamentul consumatorului online}{21}{}%
+\contentsline {subsection}{\numberline {1.5}Procesul de cumparare al consumatorului online}{24}{}%
+\contentsline {subsubsection}{\numberline {1.5.1}Accesarea informatiei}{25}{}%
+\contentsline {subsubsection}{\numberline {1.5.2}Evaluarea si analiza informatiei }{25}{}%
+\contentsline {subsubsection}{\numberline {1.5.3}Luarea deciziei}{26}{}%
+\contentsline {subsubsection}{\numberline {1.5.4}Mecanismul de reclamatii si recurs}{26}{}%
+\contentsline {subsubsection}{\numberline {1.5.5}Serviciile si interactiunile post-vanzare}{27}{}%
+\contentsline {subsection}{\numberline {1.6}Beneficiile si provocarile achizitiilor online}{27}{}%
+\contentsline {section}{\numberline {2}Cercetare secundara privind comportamentul consumatorului online, roman, tanar si educat}{29}{}%
+\contentsline {subsection}{\numberline {2.1}Comertul electronic in Romania}{29}{}%
+\contentsline {subsection}{\numberline {2.2}Cercetarea A}{31}{}%
+\contentsline {subsection}{\numberline {2.3}Cercetarea B}{33}{}%
+\contentsline {subsection}{\numberline {2.4}Cercetarea C}{35}{}%
+\contentsline {section}{\numberline {3}Studiu de caz }{41}{}%
+\contentsline {subsection}{\numberline {3.1}Scop si obiective}{41}{}%
+\contentsline {subsection}{\numberline {3.2}Metodologia cercetarii}{42}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}Metoda cercetarii}{42}{}%
+\contentsline {subsubsection}{\numberline {3.2.2}Profilul respondentilor}{42}{}%
+\contentsline {subsubsection}{\numberline {3.2.3}Instrumentul cercetarii}{42}{}%
+\contentsline {subsection}{\numberline {3.3}Analiza si intepretarea datelor}{44}{}%
+\contentsline {subsection}{\numberline {3.4}Concluzii - studiu de caz}{58}{}%
+\contentsline {section}{\textsc {Concluzii }}{60}{}%
+\contentsline {section}{\textsc {Anexa 1- Chestionarul Comportamentul consumatorului online, tanar si educat din Romania }}{64}{}%
 \contentsfinish 

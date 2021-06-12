@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.29)  31 MAY 2021 16:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.29)  12 JUN 2021 16:11
 entering extended mode
 **./licenta.tex
 (licenta.tex
@@ -619,6 +619,11 @@ File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfpie@colorLength=\count313
 \pgfpie@sliceLength=\count314
 ))
+(E:\Latex\tex/latex/colortbl\colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+\everycr=\toks43
+\minrowclearance=\skip77
+)
 (E:\Latex\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count315
@@ -660,12 +665,12 @@ LaTeX Font Info:    ... okay on input line 66.
 \scratchbox=\box73
 \nofMPsegments=\count317
 \nofMParguments=\count318
-\everyMPshowfont=\toks43
+\everyMPshowfont=\toks44
 \MPscratchCnt=\count319
 \MPscratchDim=\dimen324
 \MPnumerator=\count320
 \makeMPintoPDFobject=\count321
-\everyMPtoPDFconversion=\toks44
+\everyMPtoPDFconversion=\toks45
 ) (E:\Latex\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -723,19 +728,19 @@ LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16> not available
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <16> not available
 (Font)              size <17.28> substituted on input line 108.
 
-(licenta.toc
-Overfull \hbox (8.54555pt too wide) in paragraph at lines 29--29
- []|| []\OT1/cmr/m/n/12 Anexa 1- Ches-tionarul Com-por-ta-men-tul con-suma-toru
--lui on-line, tanar 
+(licenta.toc [1
+
+]
+Overfull \hbox (10.85063pt too wide) in paragraph at lines 35--35
+ []|| \OT1/cmr/m/sc/12 Anexa 1- Ches-tionarul Com-por-ta-men-tul con-suma-toru-
+lui on-line, tanar 
  []
 
 )
 \tf@toc=\write4
 \openout4 = `licenta.toc'.
 
- [1
-
-] [2] (licenta.lof)
+ [2] (licenta.lof)
 \tf@lof=\write5
 \openout5 = `licenta.lof'.
 
@@ -758,214 +763,222 @@ LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <16> not available
 LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <16> not available
 (Font)              size <17.28> substituted on input line 157.
 
-[9]
-<figures/first.png, id=47, 593.21625pt x 330.033pt>
+[9] [10] [11] [12] [13] [14] [15]
+<figures/magazin.png, id=68, 575.751pt x 308.95425pt>
+File: figures/magazin.png Graphic file (type png)
+<use figures/magazin.png>
+Package pdftex.def Info: figures/magazin.png  used on input line 243.
+(pdftex.def)             Requested size: 369.9026pt x 170.71263pt.
+ [16 <./figures/magazin.png>] [17]
+<figures/generatii.png, id=77, 625.73775pt x 445.06274pt>
+File: figures/generatii.png Graphic file (type png)
+<use figures/generatii.png>
+Package pdftex.def Info: figures/generatii.png  used on input line 267.
+(pdftex.def)             Requested size: 369.88863pt x 170.7215pt.
+ [18 <./figures/generatii.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 275--275
+[][]\OT1/cmr/m/n/10 Orange, "X, Y, Z sau diferen[]a ^ntre genera[]ii", 13 de-c
+em-brie 2019,
+ []
+
+[19] [20]
+<figures/first.png, id=90, 593.21625pt x 330.033pt>
 File: figures/first.png Graphic file (type png)
 <use figures/first.png>
-Package pdftex.def Info: figures/first.png  used on input line 184.
+Package pdftex.def Info: figures/first.png  used on input line 301.
 (pdftex.def)             Requested size: 369.89932pt x 227.62228pt.
- [10]
-<figures/SECOND.png, id=52, 534.19576pt x 418.56375pt>
+ [21 <./figures/first.png>]
+<figures/SECOND.png, id=95, 534.19576pt x 418.56375pt>
 File: figures/SECOND.png Graphic file (type png)
 <use figures/SECOND.png>
-Package pdftex.def Info: figures/SECOND.png  used on input line 193.
+Package pdftex.def Info: figures/SECOND.png  used on input line 310.
 (pdftex.def)             Requested size: 426.79475pt x 341.42981pt.
- [11 <./figures/first.png>] [12 <./figures/SECOND.png>]
-Overfull \hbox (3.6715pt too wide) in paragraph at lines 205--206
+ [22 <./figures/SECOND.png>]
+Overfull \hbox (3.6715pt too wide) in paragraph at lines 322--323
 \OT1/cmr/m/n/12 subiect frecvent abor-dat ^n con-tex-tul com-por-ta-men-tu-lui
  con-suma-toru-lui on-line. Anx-
  []
 
-[13]
-<figures/third.png, id=65, 508.90125pt x 210.7875pt>
+[23]
+<figures/third.png, id=103, 508.90125pt x 210.7875pt>
 File: figures/third.png Graphic file (type png)
 <use figures/third.png>
-Package pdftex.def Info: figures/third.png  used on input line 223.
-(pdftex.def)             Requested size: 341.44351pt x 199.17273pt.
- [14 <./figures/third.png>] [15] [16] [17] [18] [19] [20]
-Underfull \hbox (badness 3525) in paragraph at lines 305--305
-[][]\OT1/cmr/m/n/10 Statista 2021, https://www.statista.com/statistics/1169383/
-romania-online-shopping-frequency/,
+Package pdftex.def Info: figures/third.png  used on input line 341.
+(pdftex.def)             Requested size: 341.44351pt x 227.6278pt.
+ [24] [25 <./figures/third.png>] [26] [27] [28] [29]
+Underfull \hbox (badness 10000) in paragraph at lines 417--417
+[][]\OT1/cmr/m/n/10 Statista 2021,https://www.statista.com/statistics/1169383/r
+omania-online-shopping-frequency/,
  []
 
-<figures/fourth.png, id=91, 546.843pt x 320.397pt>
+<figures/fourth.png, id=125, 546.843pt x 320.397pt>
 File: figures/fourth.png Graphic file (type png)
 <use figures/fourth.png>
-Package pdftex.def Info: figures/fourth.png  used on input line 308.
-(pdftex.def)             Requested size: 369.90413pt x 256.08817pt.
+Package pdftex.def Info: figures/fourth.png  used on input line 420.
+(pdftex.def)             Requested size: 312.98874pt x 170.71892pt.
 
-Overfull \hbox (0.29953pt too wide) in paragraph at lines 304--311
+Overfull \hbox (3.56339pt too wide) in paragraph at lines 417--423
 \OT1/cmr/m/n/12 demia Covid19 care a afec-tat in-treaga lume, in-clu-siv Ro-ma-
-nia.[] Ast-fel, multi antreprenori
+nia.[]. Ast-fel, multi antreprenori
  []
 
-[21 <./figures/fourth.png>]
-<figures/fifth.png, id=96, 423.38174pt x 245.718pt>
+[30 <./figures/fourth.png>]
+<figures/fifth.png, id=131, 423.38174pt x 245.718pt>
 File: figures/fifth.png Graphic file (type png)
 <use figures/fifth.png>
-Package pdftex.def Info: figures/fifth.png  used on input line 317.
-(pdftex.def)             Requested size: 341.43208pt x 199.18045pt.
- [22 <./figures/fifth.png>]
-<figures/sixth.png, id=101, 270.41025pt x 165.0165pt>
+Package pdftex.def Info: figures/fifth.png  used on input line 429.
+(pdftex.def)             Requested size: 341.43208pt x 227.63428pt.
+ [31 <./figures/fifth.png>]
+<figures/sixth.png, id=136, 270.41025pt x 165.0165pt>
 File: figures/sixth.png Graphic file (type png)
 <use figures/sixth.png>
-Package pdftex.def Info: figures/sixth.png  used on input line 328.
-(pdftex.def)             Requested size: 284.52916pt x 199.16946pt.
-<figures/seventh.png, id=102, 269.808pt x 166.82326pt>
+Package pdftex.def Info: figures/sixth.png  used on input line 440.
+(pdftex.def)             Requested size: 284.52916pt x 170.71669pt.
+<figures/seventh.png, id=137, 269.808pt x 166.82326pt>
 File: figures/seventh.png Graphic file (type png)
 <use figures/seventh.png>
-Package pdftex.def Info: figures/seventh.png  used on input line 335.
-(pdftex.def)             Requested size: 284.55418pt x 199.18143pt.
-<figures/eigth.png, id=103, 298.716pt x 164.41425pt>
+Package pdftex.def Info: figures/seventh.png  used on input line 447.
+(pdftex.def)             Requested size: 284.55418pt x 170.72511pt.
+ [32 <./figures/sixth.png>]
+<figures/eigth.png, id=142, 298.716pt x 164.41425pt>
 File: figures/eigth.png Graphic file (type png)
 <use figures/eigth.png>
-Package pdftex.def Info: figures/eigth.png  used on input line 342.
+Package pdftex.def Info: figures/eigth.png  used on input line 454.
 (pdftex.def)             Requested size: 284.55344pt x 199.17766pt.
- [23 <./figures/sixth.png>] [24 <./figures/seventh.png> <./figures/eigth.png>] 
-[25]
-<figures/zece.png, id=117, 519.1395pt x 352.31625pt>
+ [33 <./figures/seventh.png> <./figures/eigth.png>] [34] [35]
+<figures/zece.png, id=154, 519.1395pt x 352.31625pt>
 File: figures/zece.png Graphic file (type png)
 <use figures/zece.png>
-Package pdftex.def Info: figures/zece.png  used on input line 377.
-(pdftex.def)             Requested size: 284.5295pt x 199.16656pt.
- [26] [27 <./figures/zece.png>]
-Overfull \hbox (9.13713pt too wide) in paragraph at lines 401--402
+Package pdftex.def Info: figures/zece.png  used on input line 492.
+(pdftex.def)             Requested size: 312.98323pt x 227.62123pt.
+ [36 <./figures/zece.png>]
+Overfull \hbox (9.13713pt too wide) in paragraph at lines 517--518
 \OT1/cmr/m/n/12 on-line per-mite clien[]ilor sa ac-ce-seze feedback-ul de la a
 lte per-soane care au cumparat
  []
 
-<figures/noua.png, id=126, 521.5485pt x 319.1925pt>
+[37]
+<figures/noua.png, id=164, 521.5485pt x 319.1925pt>
 File: figures/noua.png Graphic file (type png)
 <use figures/noua.png>
-Package pdftex.def Info: figures/noua.png  used on input line 407.
-(pdftex.def)             Requested size: 284.52876pt x 199.16849pt.
-[28 <./figures/noua.png>] [29] [30] [31] [32]
-Underfull \hbox (badness 10000) in paragraph at lines 478--480
-
- []
-
-[33]
-Overfull \hbox (2.67474pt too wide) in paragraph at lines 504--524
+Package pdftex.def Info: figures/noua.png  used on input line 524.
+(pdftex.def)             Requested size: 312.98721pt x 227.62183pt.
+ [38 <./figures/noua.png>] [39] [40] [41] [42] [43] [44]
+Overfull \hbox (2.67474pt too wide) in paragraph at lines 623--643
 \OT1/cmr/m/n/12 nos-tru este for-mat pre-pon-der-ent de ab-sol-venti de studii 
 su-pe-rioare (mai ex-act 61,3%),
  []
 
-[34]
-Overfull \hbox (11.533pt too wide) in paragraph at lines 531--535
-[] \OT1/cmr/m/n/12 Pen-tru a iden-ti-fica mo-tivele pen-tru care con-suma-torii
- on-line prefera sa achizitioneze
- []
-
-
-Overfull \hbox (2.2275pt too wide) in paragraph at lines 547--547
+[45]
+Overfull \hbox (2.2275pt too wide) in paragraph at lines 663--663
  []|\OT1/cmr/m/n/12 10,4%| 
  []
 
 
-Overfull \hbox (2.2275pt too wide) in paragraph at lines 556--556
+Overfull \hbox (2.2275pt too wide) in paragraph at lines 672--672
  []|\OT1/cmr/m/n/12 13,2%| 
  []
 
-[35]
+[46]
 
-Package array Warning: Column M is already defined on input line 572.
+Package array Warning: Column M is already defined on input line 687.
 
 
-Overfull \hbox (1.0098pt too wide) in paragraph at lines 579--579
+Overfull \hbox (1.0098pt too wide) in paragraph at lines 695--695
  \OT1/cmr/m/n/12 Mediu| 
  []
 
 
-Overfull \hbox (2.2275pt too wide) in paragraph at lines 587--587
+Overfull \hbox (2.2275pt too wide) in paragraph at lines 703--703
  []|\OT1/cmr/m/n/12 10,4%| 
  []
 
-[36]
+[47]
 
-Package array Warning: Column M is already defined on input line 598.
+Package array Warning: Column M is already defined on input line 715.
 
 
-Overfull \hbox (1.0098pt too wide) in paragraph at lines 604--604
+Overfull \hbox (1.0098pt too wide) in paragraph at lines 721--721
  \OT1/cmr/m/n/12 Mediu| 
  []
 
 
-Overfull \hbox (2.2275pt too wide) in paragraph at lines 606--606
+Overfull \hbox (2.2275pt too wide) in paragraph at lines 723--723
  []|\OT1/cmr/m/n/12 10,4%| 
  []
 
-[37]
-<figures/trei.png, id=161, 527.571pt x 165.0165pt>
+[48]
+<figures/trei.png, id=201, 527.571pt x 165.0165pt>
 File: figures/trei.png Graphic file (type png)
 <use figures/trei.png>
-Package pdftex.def Info: figures/trei.png  used on input line 633.
+Package pdftex.def Info: figures/trei.png  used on input line 750.
 (pdftex.def)             Requested size: 398.34186pt x 142.2639pt.
- [38 <./figures/trei.png>] [39]
-Underfull \hbox (badness 10000) in paragraph at lines 697--699
+ [49 <./figures/trei.png>] [50]
+Underfull \hbox (badness 10000) in paragraph at lines 814--816
 
  []
 
 
-Overfull \hbox (1.0098pt too wide) in paragraph at lines 706--706
+Overfull \hbox (1.0098pt too wide) in paragraph at lines 824--824
  \OT1/cmr/m/n/12 Mediu| 
  []
 
 
-Overfull \hbox (2.2275pt too wide) in paragraph at lines 708--708
+Overfull \hbox (2.2275pt too wide) in paragraph at lines 826--826
  []|\OT1/cmr/m/n/12 37,7%| 
  []
 
 
-Overfull \hbox (2.2275pt too wide) in paragraph at lines 710--710
+Overfull \hbox (2.2275pt too wide) in paragraph at lines 828--828
  []|\OT1/cmr/m/n/12 44,3%| 
  []
 
 
-Overfull \hbox (2.2275pt too wide) in paragraph at lines 712--712
+Overfull \hbox (2.2275pt too wide) in paragraph at lines 830--830
  []|\OT1/cmr/m/n/12 26,4%| 
  []
 
 
-Overfull \hbox (2.2275pt too wide) in paragraph at lines 714--714
+Overfull \hbox (2.2275pt too wide) in paragraph at lines 832--832
  []|\OT1/cmr/m/n/12 41,5%| 
  []
 
 
-Overfull \hbox (2.2275pt too wide) in paragraph at lines 716--716
+Overfull \hbox (2.2275pt too wide) in paragraph at lines 834--834
  []|\OT1/cmr/m/n/12 27,4%| 
  []
 
-[40]
-Overfull \hbox (34.42053pt too wide) in paragraph at lines 745--746
+[51]
+Overfull \hbox (68.63232pt too wide) in paragraph at lines 863--864
  [][] 
  []
 
-[41] [42] [43] [44] [45] [46] [47] [48] (licenta.bbl) [49]
-Underfull \hbox (badness 10000) in paragraph at lines 847--850
+[52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] (licenta.bbl) [63]
+Underfull \hbox (badness 10000) in paragraph at lines 980--983
 
  []
 
 
-Overfull \hbox (14.44194pt too wide) in paragraph at lines 870--887
+Overfull \hbox (14.44194pt too wide) in paragraph at lines 1003--1020
  []  
  []
 
-[50]
-Overfull \hbox (14.44194pt too wide) in paragraph at lines 891--905
+[64]
+Overfull \hbox (14.44194pt too wide) in paragraph at lines 1024--1038
  []  
  []
 
 
-Overfull \hbox (14.44194pt too wide) in paragraph at lines 908--925
+Overfull \hbox (14.44194pt too wide) in paragraph at lines 1041--1058
  []  
  []
 
-[51]
-Overfull \hbox (14.44194pt too wide) in paragraph at lines 954--969
+[65]
+Overfull \hbox (14.44194pt too wide) in paragraph at lines 1087--1102
  [] 
  []
 
-[52] [53] (licenta.aux)
+[66] [67] (licenta.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
@@ -975,13 +988,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17608 strings out of 479321
- 331495 string characters out of 2873644
- 653510 words of memory out of 3000000
- 34721 multiletter control sequences out of 15000+600000
- 416223 words of font info for 71 fonts, out of 8000000 for 9000
+ 17667 strings out of 479321
+ 332363 string characters out of 2873644
+ 656613 words of memory out of 3000000
+ 34773 multiletter control sequences out of 15000+600000
+ 416572 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,14n,102p,1325b,1010s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 102i,15n,102p,2320b,1008s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\Sorina\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcr
 m1200.pk><E:/Latex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><E:/Latex/fonts/ty
 pe1/public/amsfonts/cm/cmbx6.pfb><E:/Latex/fonts/type1/public/amsfonts/cm/cmbx8
@@ -992,10 +1005,10 @@ ic/amsfonts/cm/cmr5.pfb><E:/Latex/fonts/type1/public/amsfonts/cm/cmr6.pfb><E:/L
 atex/fonts/type1/public/amsfonts/cm/cmr7.pfb><E:/Latex/fonts/type1/public/amsfo
 nts/cm/cmr8.pfb><E:/Latex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><E:/Latex/f
 onts/type1/public/amsfonts/cm/cmti10.pfb><E:/Latex/fonts/type1/public/amsfonts/
-cm/cmti12.pfb>
-Output written on licenta.pdf (54 pages, 906329 bytes).
+cm/cmti12.pfb><E:/Latex/fonts/type1/public/amsfonts/cm/cmti7.pfb>
+Output written on licenta.pdf (68 pages, 1495472 bytes).
 PDF statistics:
- 263 PDF objects out of 1000 (max. 8388607)
+ 316 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 68 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 78 words of extra memory for PDF output out of 10000 (max. 10000000)
 
