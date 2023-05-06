@@ -1,0 +1,60 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: licenta.aux
+White space in argument---line 24 of file licenta.aux
+ : \citation{usda
+ :                foreign agricultural service_2021}
+I'm skipping whatever remains of this command
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: unsrt.bst
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Database file #1: references.bib
+I was expecting a `,' or a `}'---line 99 of file references.bib
+ : @misc{usda 
+ :            foreign agricultural service_2021, title={Romania: COVID-19 Transforms Romanian Retail and Food Service Sectors}, url={https://www.fas.usda.gov/data/romania-covid-19-transforms-romanian-retail-and-food-service-sectors}, journal={USDA Foreign Agricultural Service}, year={2021}, month={Jun}}
+I'm skipping whatever remains of this entry
+Warning--empty journal in devderea2018consumer
+Warning--empty journal in obradattitudes
+Warning--empty year in obradattitudes
+You've used 23 entries,
+            1791 wiz_defined-function locations,
+            569 strings with 7216 characters,
+and the built_in function-call counts, 4009 in all, are:
+= -- 331
+> -- 176
+< -- 0
++ -- 69
+- -- 46
+* -- 240
+:= -- 631
+add.period$ -- 58
+call.type$ -- 23
+change.case$ -- 20
+chr.to.int$ -- 0
+cite$ -- 26
+duplicate$ -- 178
+empty$ -- 443
+format.name$ -- 46
+if$ -- 887
+int.to.chr$ -- 0
+int.to.str$ -- 23
+missing$ -- 19
+newline$ -- 107
+num.names$ -- 20
+pop$ -- 93
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 89
+stack$ -- 0
+substring$ -- 179
+swap$ -- 21
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 3
+while$ -- 37
+width$ -- 25
+write$ -- 218
+(There were 2 error messages)

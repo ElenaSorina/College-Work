@@ -1,0 +1,198 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{outlines}
+\usepackage{graphicx}
+%\usepackage{times}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage{enumerate}
+\usepackage{geometry}
+\usepackage[english]{babel}
+\usepackage{array}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{tabulary}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{array}
+\usepackage{tabularx,ragged2e,booktabs,caption}
+\usepackage{chngcntr}
+\usepackage{pgf-pie} 
+\usepackage{colortbl} 
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+
+\titleformat{\section}[display]%
+{\null\fontsize{16}{5}\rmfamily\bfseries\filcenter}{CAPITOLUL \thesection}{1em}{}[]
+\titleformat{name = \section, numberless}[block]%
+{\null\fontsize{16}{5}\rmfamily\bfseries\filcenter}{}{1em}{}
+\titlespacing*{\section}{0em}{1em}{1em}
+
+\titlecontents{section}
+[7em] % ie, width of contentslabel + 0.5em
+{\medskip}
+{\contentslabel[\MakeUppercase\chaptername~\thecontentslabel]{7.5em}}%\thecontentslabel
+{\hspace*{-6.5em}}
+{\titlerule*[0.5pc]{.}\contentspage}
+
+\addto{\captionsenglish}{
+	\renewcommand{\refname}{Referințe bibliografice}%
+	\renewcommand{\contentsname}{Cuprins}
+	\renewcommand{\listfigurename}{Lista imaginilor}
+	\renewcommand{\listtablename}{Lista tabelelor}
+}
+\addto\captionsenglish{\renewcommand{\chaptername}{Capitolul}}
+%define the page geometry
+\geometry{
+	a4paper,
+	left=25mm,
+	top=25mm,
+	bottom=25mm,
+	right=25mm,
+}
+\renewcommand{\baselinestretch}{1.5}
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+	{-2.5ex\@plus -1ex \@minus -.25ex}%
+	{1.25ex \@plus .25ex}%
+	{\normalfont\normalsize\bfseries}}
+\makeatother
+\setcounter{secnumdepth}{4} % how many sectioning levels to assign numbers to
+\setcounter{tocdepth}{4}    % how many sectioning levels to show in ToC
+
+\begin{document}
+
+%define the title page
+\begin{titlepage}
+	\begin{center}
+		\vspace{0.5cm}
+		\large {UNIVERSITATEA "BABEȘ-BOLYAI" CLUJ-NAPOCA}
+		
+		\large {FACULTATEA DE STUDII EUROPENE}
+		\\
+		
+		
+		\vspace{6cm}
+		
+		\Huge \textbf{LUCRARE DE DISERTAȚIE}
+		
+		\vspace{2 cm}
+		
+		\vfill
+	\end{center}
+	
+	\begin{flushleft}
+		\large{\textit{Coordonator științific:}} \\
+		\large{Conf. univ. dr. Nicoleta Dorina Racolța-Paina}
+	\end{flushleft}
+	
+	\begin{flushright}
+		\hfill \large {\textit{Absolvent:}} \\
+		\hfill \large {Sorina-Elena Ciucanu}
+	\end{flushright}
+	
+	\begin{center}
+		\vspace{1.5cm}
+		\large \textbf{2023}
+	\end{center}
+\end{titlepage}
+\begin{titlepage}
+	\begin{center}
+		\vspace{0.5cm}
+		\large {UNIVERSITATEA "BABEȘ-BOLYAI" CLUJ-NAPOCA}
+		\\
+		\large {FACULTATEA DE STUDII EUROPENE}
+		\\\large {SPECIALIZAREA MANAGEMENT PERFORMANT}
+		
+		\vspace{2.75cm}
+		
+	
+		\huge Abilitățile(skills) leaderilor de echipă - de la teorie la practica. 
+		
+		\huge O cercetare cantitativa  in domeniul IT
+		\vspace{1.5 cm}
+		
+		\vfill
+	\end{center}
+	
+	\begin{flushleft}
+		\large{\textit{Coordonator științific:}} \\
+		\large{Conf. univ. dr. Nicoleta Dorina Racolța-Paina}
+	\end{flushleft}
+	
+	\begin{flushright}
+		\hfill \large {\textit{Absolvent:}} \\
+		\hfill \large {Sorina-Elena Ciucanu}
+	\end{flushright}
+	
+	\begin{center}
+		\vspace{1.5cm}
+		\Large{Cluj Napoca}
+		
+		\large \textbf{2021}
+	\end{center}
+\end{titlepage}
+\restoregeometry
+\thispagestyle{empty}
+\section*{Declarație}
+\bigskip
+\qquad Prin prezenta declar că Lucrarea de licenţă cu titlul "Studiu de caz" este scrisă de mine şi nu a mai fost prezentată niciodată la o altă facultate sau instituţie de învăţământ superior din ţară sau străinătate. De asemenea, declar că toate sursele utilizate, inclusive cele de pe Internet, sunt indicate în lucrare, cu respectarea regulilor de evitare a plagiatului:
+\begin{enumerate}[-]
+	\item toate fragmentele de text reproduse exact, chiar şi în traducere proprie din altă limbă, sunt scrise între ghilimele şi deţin referinţa precisă a sursei;
+	\item reformularea în cuvinte proprii a textelor scrise de către alţi autori deţine referinţa precisă;
+	\item rezumarea ideilor altor autori deţine referinţa precisă la textul original.
+\end{enumerate}
+
+\vspace{3 cm}
+\begin{flushleft}
+	\large Cluj Napoca,
+\end{flushleft}
+
+
+\begin{flushright}
+	\hfill \large Absolvent \textit{Sorina-Elena Ciucanu} \\
+	\hfill \large {(semnătura olograf)}
+\end{flushright}
+\newpage
+\thispagestyle{empty}
+%put the table of contents
+\tableofcontents
+\thispagestyle{empty}
+%put the list of figures
+\newpage
+\thispagestyle{empty}
+\listoffigures
+\newpage
+\thispagestyle{empty}
+\listoftables
+
+%this section is on new page
+\newpage
+%\nocite{bobalcua2015loyal}
+%\nocite{london_economics_2011}
+%\nocite{duralia2016particularities}
+%\nocite{devderea2018consumer}
+%\nocite{armstrong2014principles}
+%\nocite{orzan2014study}
+%\nocite{obradattitudes}
+%\nocite{sava_2020}
+%\nocite{bighiu2015compulsive}
+%\nocite{gorunescu_2020}
+%\nocite{orangehelp}
+%\nocite{wall_2019}
+%\nocite{ruxandra_andrei_2020}
+%\nocite{sandulescusandulescu2020}
+%\nocite{anastasiei_dospinescu_2019}
+%\nocite{dobre2015personality}
+%\nocite{dumitrescu2015understanding}
+%\nocite{cetinua2018modelling}
+%\nocite{babin_harris_2016}
+%\nocite{usda foreign agricultural service_2021}
+%\nocite{mihaela2019business}
+%\nocite{csandor2013metode}
+%\nocite{fuciu2019usage}
+%\nocite{onete2016analysis}
+	
+
+\end{document}
