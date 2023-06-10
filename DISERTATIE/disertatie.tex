@@ -19,7 +19,9 @@
 \usepackage{tabularx,ragged2e,booktabs,caption}
 \usepackage{chngcntr}
 \usepackage{pgf-pie} 
-\usepackage{colortbl} 
+\usepackage[usestackEOL]{stackengine}
+\usepackage{graphicx}
+\usepackage[normalem]{ulem}
 
 
 \counterwithin{figure}{section}
@@ -62,6 +64,24 @@
 \makeatother
 \setcounter{secnumdepth}{4} % how many sectioning levels to assign numbers to
 \setcounter{tocdepth}{4}    % how many sectioning levels to show in ToC
+
+% define the radio button (can be used to represent a empty / full radio button)
+\makeatletter
+\newcommand*{\radiobutton}{\@ifstar{\radiobuttonON}{\radiobuttonOFF}}
+\makeatother
+\def\radiobuttonON{\raisebox{-1.5pt}{\stackinset{c}{}{c}{.35pt}{$\bullet$}{\scalebox{2}{$\circ$}}}}
+\def\radiobuttonOFF{\raisebox{-1.5pt}{\scalebox{2}{$\circ$}}}
+
+%define the circle command (this can be used in order to represent a circle)
+\newcommand\Circle{%
+  \def\useanchorwidth{T}%
+  \def\stacktype{L}%
+  \raisebox{-1.5pt}{\scalebox{2}{{$\circ$}}}%
+}
+
+% for centering values
+\newcolumntype{P}[1]{>{\centering\arraybackslash}m{#1}}
+\newcommand{\raisedrule}[2][0em]{\leaders\hbox{\rule[#1]{1pt}{#2}}\hfill}
 
 \begin{document}
 
@@ -182,10 +202,10 @@
 \newpage
 	\setcounter{section}{0}
 	\section{Liderul de echipă în organizațiile contemporane}
-\quad \quad\space Într-un context dinamic și competitiv, în care eficiența colaborării și coordonarea echipelor devin din ce în ce mai vitale, liderul echipei (Team Leader) ocupă o poziție centrală în asigurarea succesului și performanței acestora. Prin abilitățile și competențele sale, liderul echipei este capabil să alinieze și să dirijeze echipa spre atingerea obiectivelor organizației. Capitolul următor are ca scop investigarea rolului liderului echipei și a importanței abilităților sale, ce joacă un rol esențial atât la nivelul echipei, cât și la nivelul organizației.
+\quad \quad\space Într-un context dinamic și competitiv, în care eficiența colaborării și coordonarea echipelor devin din ce în ce mai vitale, liderul echipei (Team Leader) ocupă o poziție centrală în asigurarea succesului și performanței acestora. Prin abilitățile și competențele sale, liderul echipei este capabil să alinieze și să dirijeze echipa spre atingerea obiectivelor organizației. Capitolul următor are ca scop investigarea rolului liderului echipei și a importanței abilităților sale, cunoscand ca acesta joacă un rol esențial atât la nivelul echipei, cât și la nivelul organizației.
 		\subsection{ Team leader - oportunități și provocări}
 
-\quad\quad\space În spatele oricărei organizații de succes se află persoane care își iau un angajament față de misiunea acesteia și care conduc alte grupuri de persoane pentru a fi siguri că acțiunile lor conduc la dezvoltarea și creșterea organică a organizației. Una dintre aceste persoane este liderul de echipă și înainte de a analiza despre activitatea și responsabilitățile acestuia este important să adoptăm o definiție clară a acestui concept. Există mai multe definiții ale liderului de echipă, însă în cadrul acestei lucrări ne vom concentra pe definiția dată de dicționarul de Afaceri Cambridge și anume că " team leader-ul  este persoana responsabilă de o echipă".\footnote{Cambridge Business English Dictionary, meaning of team leader in English.} Prin această afirmație se înțelege că liderul de echipă poartă o responsabilitate fundamentală pentru performanța echipei și acționează ca punct central pentru luarea deciziilor, având ca obiectiv principal atingerea obiectivelor organizației.
+\quad\quad\space În spatele oricărei organizații de succes se află persoane care își iau un angajament față de misiunea acesteia și care conduc alte grupuri de persoane pentru a fi siguri că acțiunile lor conduc la dezvoltarea și creșterea organică a organizației. Una dintre aceste persoane este liderul de echipă și înainte de a analiza activitatea și responsabilitățile acestuia este important să adoptăm o definiție clară a acestui concept. Există mai multe definiții ale liderului de echipă, însă în cadrul acestei lucrări ne vom concentra pe definiția dată de dicționarul de Afaceri Cambridge și anume că " team leader-ul  este persoana responsabilă de o echipă".\footnote{Cambridge Business English Dictionary, meaning of team leader in English.} Prin această afirmație se înțelege că liderul de echipă poartă o responsabilitate fundamentală pentru performanța echipei și acționează ca punct central pentru luarea deciziilor, având ca obiectiv principal atingerea obiectivelor organizației.
 
 	\quad\quad Un alt jucător important în succesul unei organizații,care este deseori confundat cu team leader-ul, este managerul. Cu toate că managerii și liderii de echipă sunt implicați în procese de conducere și coordonare, există diferențe semnificative între abordarea și responsabilitățile acestor două roluri. Astfel, pentru a evidenția rolul unui lider de echipa într-o organizație vom face o comparație a caracteristicilor distinctive ale celor doi, evidențiind contribuțiile și impactul fiecăruia în cadrul organizațiilor.\footnote{What is the difference between a leader and a manager?, https://www.roberthalf.jp/en/management-advice/leadership/leader, accesat in data de 21 mai 2023}
 \newpage
@@ -498,22 +518,52 @@
 \setcounter{section}{2}
 	\section{Studiu de caz }
 
-	\quad\quad Prin acest capitol se urmărește identificarea acelor abilitati ce sunt  considerate importante unui team leader pentru a putea obtine succesul organizatiei din care face parte. De asemenea, acest capitol reprezintă partea practică a prezentei lucrări de disertatie și are rolul de a determina diferentele dintre perspectiva membrilor echipei si a team leader-ului privind  aceste abilitati. Datele colectate și rezultatele obținute în urmă prelucrării și interpretării constituie baza pentru organizațiile care doresc să creeze programe pentru dezvoltarea abilitatilor ce sunt necesare unui team leader in diverse contexte actuale.
+	\quad\quad Prin acest capitol se urmărește identificarea acelor abilitati ce sunt  considerate importante unui team leader pentru a putea obtine succesul organizatiei din care face parte. De asemenea, acest capitol reprezintă partea practică a prezentei lucrări de disertatie și are rolul de a determina diferentele dintre perspectiva membrilor echipei si a team leader-ului privind  aceste abilitati. Datele colectate și rezultatele obținute în urmă prelucrării și interpretării constituie baza pentru organizațiile care doresc să creeze programe pentru dezvoltarea abilitatilor ce sunt necesare unui team leader in diverse contexte.
 
 	\subsection{Scop si obiective}
+	\quad% In ultimii trei ani, liderul de echipa s-a apropiat din ce in ce mai mult de membrii echipei, avand in vedere contextele care i-au determinat sa-si adapteze mediul de lucru. Astfel, a existat un accent cat mai mare asupra relatiei dintre cele doua persoane si modul in care acestea pot colabora si contribui la cresterea performantei organizatiei din care fac parte. Acest lucru a rezultat o mai mare atentie asupra comunicari si a transparentei din partea ambelor parti care a ajuns la concluzia ca membrii echipei au nevoie de un lider care sa ii asculte si sa se muleze pe nevoile si asteptarile acestora pentru a putea crea un mediu propice pentru performanta.
+	
+	\quad În ultimii trei ani, a fost observată o tendință crescătoare în care liderii de echipă s-au angajat tot mai mult în relația cu membrii echipei, adaptându-se la contextele specifice care au impus schimbări în mediul de lucru .Această evoluție a amplificat importanța relației dintre lider și membrii echipei, precum și a modului în care aceștia pot colabora și contribui la îmbunătățirea performanței organizaționale. Ca urmare, comunicarea si transparenta au devenit elemente cheie care au contribuit la crearea unui mediu propice pentru dezvoltare, imbunatatire si perfectionare a modului in care un lider de echipa isi poate conduce echipa. Aceasta cercetare isi propune sa afle perspectiva membrilor echipei cu privire la abilitatile necesare conducerii unei echipe si sa o comparam cu perspectiva celor care detin acest rol. Datele rezultate  pot fi folosite de către organizații în programele lor de pregătire și dezvoltare a liderilor de echipă, oferindu-le acestora atât instrumente practice pentru îmbunătățirea abilităților de leadership, cât și o perspectivă de ansamblu asupra relației dintre lider și membrii echipei. Pentru a analiza si mai eficient aceste informatii, ne-am propus 3 obiective ale cercetarii: 
+	\begin{enumerate}[(1)]
+		\item Să identificăm 3-5 competente/skills absolut necesare unui lider de succes.???
+		\item Să identificăm 2-3 competente necesare unui lider de echipa intr-un context hybrid/remote.???
+		\item Să identificăm cum poate un lider de echipa sa-si motiveze si sa sprijine echipa in atingerea obiectivelor profesionale si personale.???
+	\end{enumerate}
+
 
 	\subsection{Metodologia cercetarii}
+
 		\subsubsection{Metoda Cercetarii}
 	\qquad\space Pentru a atinge scopul cercetării și pentru a obține informațiile necesare unei analize cât mai complexe și cât mai detaliate cu referire la tema abordată în această lucrare, am optat pentru o metodă de cercetare cantitativă în locul unei cercetări calitative.
 	\quad Metodă cantitativă pe care am folosit-o în cercetare a fost sondajul de opinie, care este o metodă indirectă de colecatare a datelor. Că și instrument al sondajului de opinie am folosit chestionarul.\footnote{Sandor Dan Sorin, \textit{Metode și Tehnici de Cercetare în Științele Sociale}, 2013, p.133,145}
+
 		\subsubsection{Profilul respondentilor}
-	\quad Profilul stabilit al respondenților pentru cercetarea primară cantitativă a fost angajat al firmei A care lucreaza in domeniul IT, care are  o experienta profesionala de minim 6 luni, din România.Am ales să obțin răspunsurile de la angajații acestei companii pentru a obține o perspectivă specifică a organizației în ansamblul său, pe care toți angajații o împărtășesc.
-		\subsubsection{Instrumentul cercetarii}
+	\quad Profilul stabilit al respondenților pentru cercetarea primară cantitativă a fost angajat al firmei Endava care lucreaza in domeniul IT, care are  o experienta profesionala de minim 6 luni, din România.Am ales să obțin răspunsurile de la angajații acestei companii pentru a obține o perspectivă specifică a organizației în ansamblul său, pe care toți angajații o împărtășesc.
+		
+	\subsubsection{Instrumentul cercetarii}
+
 	\quad Chestionarul (vezi Anexa 1) a fost lansat online cu ajutorul platformei Google Forms și a fost promovat  pe diverse grupuri din interiorul firmei A. Astfel, orice angajat putea completă chestionarul online, iar odată completat acesta intra direct în baza de date. Această tehnică este una destul de rapidă deoarece chestionarul durează 3-5minute maxim pentru a-l completa și nu implică costuri deoarece Google Forms este o platforma gratuită.
 
 	\subsection{Analiza si interpretarea datelor}
 
-	\quad Datele culese din sondajul de opinie au fost culese cu ajutorul unui chestionar (vezi Anexa 1), lansat online, în perioada 20 mai- 10 iunie 2023. Pentru lansarea chestionarului am folosit aplicația Google Forms. Avantajul utilizării acestei aplicații constă în faptul că răspunsurile primite sunt centralizate și prelucrate în mod automat. Un alt avantaj al utilizării Google Forms că mijloc de a distribui un sondaj constă în generarea automată de grafice pe baza răspunsurilor primite. 
+	\quad Datele culese din sondajul de opinie au fost culese cu ajutorul unui chestionar (vezi Anexa 1), lansat online, în perioada 20 mai- 10 iunie 2023. Pentru lansarea chestionarului am folosit aplicația Google Forms. Avantajul utilizării acestei aplicații constă în faptul că răspunsurile primite sunt centralizate și prelucrate în mod automat. Un alt avantaj al utilizării Google Forms că mijloc de a distribui un sondaj constă în generarea automată de grafice pe baza răspunsurilor primite. 	
+
+	\quad Chestionarul (vezi Anexă 1) a cuprins un număr de 14 întrebări obligatorii, unele întrebări fiind cu mai mulți itemi de răspuns pentru a oferi posibilitatea respondenților de a alege răspunsul cel mai apropiat situației personale. Chestionarul a cuprins 9 întrebări închise și doar 6 deschise. Am optat pentru această structură a întrebărilor deoarece în cazul întrebărilor închise se răspunde rapid și ușor – aspecte care conduc la creșterea ratei de răspuns la chestionar. Întrebările deschise  ajută la culegerea de date de profunzime, extrem de relevante pentru cercetare.  Pentru a înțelege mai bine structura chestionarului l-am împărțit în 3 secțiuni astfel:
+
+\begin{enumerate}[(1)]
+			\item\textbf{Întrebările de la 1-2}  sunt întrebări filtru care stabilesc dacă respondentul se încadrează în profilul stabilit pentru această cercetare și anume membru al unei echipe ce presteaza servicii/produse in domeniul IT si cu minim 6 luni de cand lucreaza in acest domeniu. Chestionarul fiind realizat în limba română, implict ne-am adresat angajatilor români. 
+			\item\textbf{Întrebările de la 3-10} reprezintă chestionarul propriu zis, care de asemenea le-am grupat în 5 grupe.
+		\begin{enumerate}[(a)]
+			\item Prin \textbf{întrebarea 3} am dorit să spargem gheata cu o intrebare simpla despre cum isi vede respondentul echipa.
+			\item Prin \textbf{întrebările 4 și 6} să identificăm ce importanta au competentele hard/soft ale unui team leader pentru respondenti.
+			\item Prin \textbf{întrebările 5,8,9} am vrut sa identificam ce competente trebuie sa aiba un lider de echipa pentru a obtine succesul, intr-un mediu hybrid si pe viitor.
+			\item Prin \textbf{întrebarea 7} am dorit să observam ce modalitati sunt utilizate de team leader pentru a-si motiva si sprijini membrii echipei in atingerea obiectivelor lor.
+		\end{enumerate}
+		\item\textbf{Întrebările de la 10-14} sunt cele care completează profilul respondentului cu caracteristici că: team leader/team member, rolul pe care il ocupa in echipa,experienta profesionala, tipul de echipa in care activeaza si dimensiunea echipei din care face parte. Am decis să culegem aceste informații pentru a putea apoi să încadrăm respodentii într-o anumită categorie, fapt ce ne va ajută la analiză datelor.
+	\end{enumerate}
+
+
+
 
 	\subsection{ Concluzii- studiu de caz}
 
@@ -528,6 +578,7 @@
 
 	
 	
+
 
 
 
@@ -556,12 +607,113 @@
 
 
 
+% chestionar goes here
+\newpage
+	\section*{Anexa 1 - Analiza abilităților de leadership - cazul echipelor de IT }	
+	\addcontentsline{toc}{section}{\textsc{Anexa 1 - Analiza abilităților de leadership - cazul echipelor de IT }}
 
+	\thispagestyle{empty}
+	 
+	% introduction
+	\qquad\space Bună :)
 
+      \quad Eu sunt Sorina, studentă la master Management Performant, Facultatea de Studii Europene, UBB. Scopul acestui chestionar este să culeg date despre abilitățile unui lider de echipă din ambele perspective (atât a liderului cât și a membrilor echipei), pentru a realiza partea practică a lucrării mele de disertație. Răspunsurile tale sunt foarte importante pentru studiul de caz.
 
+	\quad Te asigur că toate informațiile furnizate vor fi tratate cu confidențialitate și vor fi utilizate exclusiv în scop didactic.
 
+	\quad Îți mulțumesc anticipat pentru timpul acordat completării acestui chestionar.
+	\newline
 
+	%questions 
+	\begin{enumerate}
+		\item Ești membru al unei echipe ce prestează servicii/produse în domeniul IT?
+			\begin{itemize}
+				\item[\radiobutton] Da
+				\item[\radiobutton] Nu
+			\end{itemize}
+		\item Ai minim 6 luni de când lucrezi în acest domeniu?
+			\begin{itemize}
+				\item[\radiobutton] Da
+				\item[\radiobutton] Nu
+			\end{itemize}
+		\item Care sunt primele 3 idei/cuvinte care îți vin în minte când te gândești la echipa ta?
 
-
-
+			 Raspunsul tău este: \rule{27.25em}{0.15mm}
+		\newpage
+		\item Cât de important este pentru tine ca un team leader sa aibă următoarele  hard skills? 
+			\begin{center}
+				\begin{tabular}{ P{11em} P{4.4em} P{4.4em} P{4.4em} P{4.4em}  P{2.5em}}
+				               		      & Deloc important & Puțin important & Destul de important & Foarte important & Esențial \\ 
+				 Certificări profesionale                & \Circle & \Circle & \Circle & \Circle & \Circle \\ 
+				 Cunoștiințe tehnice  & \Circle & \Circle & \Circle & \Circle & \Circle \\
+				 Înțelegerea securității datelor  & \Circle & \Circle & \Circle & \Circle & \Circle \\
+				 Cunoașterea ceremoniilor aferente & \Circle & \Circle & \Circle & \Circle & \Circle \\ 
+				 Înțelegerea proceselor de business & \Circle & \Circle & \Circle & \Circle & \Circle \\ 
+				 Stabilire și interpretare de KPI`s   & \Circle & \Circle & \Circle & \Circle & \Circle
+				\end{tabular}
+			\end{center}
+		\item Care ar fi după tine 3 abilități pe care ar trebui să le aibă un team leader de succes?
+			 Raspunsul tău este: \rule{27.25em}{0.15mm}
+		\item Cât de important este pentru tine ca un team leader sa aibă următoarele soft skills?
+			\begin{center}
+				\begin{tabular}{ P{6.5em} P{4.4em} P{4.4em} P{4.4em} P{4.4em}  P{4.4em}}
+				               		      & Deloc important & Puțin important & Destul de important & Foarte important & Esențial \\ 
+				 Creativitate  & \Circle & \Circle & \Circle & \Circle & \Circle \\ 
+				 Inteligență emoțională  & \Circle & \Circle & \Circle & \Circle & \Circle \\
+				 Abilități de comunicare  & \Circle & \Circle & \Circle & \Circle & \Circle \\
+				 Adaptabilitate & \Circle & \Circle & \Circle & \Circle & \Circle \\ 
+				 Managementul timpului & \Circle & \Circle & \Circle & \Circle & \Circle \\ 
+				 Delegarea sarcinilor   & \Circle & \Circle & \Circle & \Circle & \Circle
+				\end{tabular}
+			\end{center}
+		
+		\item Propune 2-3 modalități prin care un lider de echipa poate să motiveze și să sprijine membrii echipei în atingerea obiectivelor lor personale și profesionale?
+			\newline
+			Raspunsul tău este: \rule{27.25em}{0.15mm}
+		\item Spune-mi trei abilități esențiale pe care un lider ar trebui să le aibă într-un mediu de lucru remote/hybrid?
+			\newline
+			 Raspunsul tău este: \rule{27.25em}{0.15mm}
+		\item Ce abilitate crezi că ar fi importantă pentru team leaders în viitor?
+			\newline
+			Raspunsul tău este: \rule{27.25em}{0.15mm}
+		\item Care e poziția pe care o ocupi în echipă?
+			\begin{itemize}
+				\item[\radiobutton] Team Leader
+				\item[\radiobutton] Team Member
+			\end{itemize}
+		\item Care este rolul tău în echipă?
+			\begin{itemize}
+				\item[\radiobutton] Software Developer
+				\item[\radiobutton] Designer UI/UX
+				\item[\radiobutton] Scrum Master
+				\item[\radiobutton] DevOps Engineer
+				\item[\radiobutton] Project Manager
+				\item[\radiobutton] Business Analyst
+				\item[\radiobutton] Software Tester/QA Engineer
+				\item[\radiobutton] Solution Architect
+				\item[\radiobutton] Security Tester/Engineer
+				\item[\radiobutton] Altele
+			\end{itemize}
+		\item Ce experiență profesională ai pe postul ocupat?
+			\begin{itemize}
+				\item[\radiobutton] Sub 1 an
+				\item[\radiobutton] Intre 1 și 5 ani
+				\item[\radiobutton] Peste 5 ani
+			\end{itemize}
+		\item În ce tip de echipă activezi?
+			\begin{itemize}
+				\item[\radiobutton] Echipă hybrid
+				\item[\radiobutton] Echipă remote
+				\item[\radiobutton] Echipă on-site
+			\end{itemize}
+		\item Câți membrii ai în echipa ta în prezent?
+			\begin{itemize}
+				\item[\radiobutton] Sub 10
+				\item[\radiobutton] Intre 10 și 15 
+				\item[\radiobutton] Peste 15
+			\end{itemize}
+	\end{enumerate}
+	
+	\quad Îți mulțumesc pentru timpul acordat și pentru feedback-ul tău valoros în cadrul acestui chestionar. Prin contribuția ta, ajuți la identificarea punctelor tari și posibilităților de îmbunătățire pentru a crea un mediu de lucru mai productiv și satisfăcător pentru toți :)
+	
 \end{document}
